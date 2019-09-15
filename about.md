@@ -7,7 +7,7 @@ layout: page
 I'm a proactive, experienced leader with a track record of delivery quality solutions in fintech, cloud services, threats security, and data breach protection.
 
 ![Markdowm Image][14]{: style="float: left; width:140px; margin-left:35px; margin-right: 35px"}
-Currently I'm CTO in <b>Spinbackup Inc</b> ([spinbackup.com][3]) and I manage IT Team & Product Team. 
+Currently I'm VP of Engineering in <b>Spinbackup Inc</b> ([spinbackup.com][3]) and I manage IT Team & Product Team. 
 Spinbackup is a cloud data protection company based in San Francisco, 
 which protects SaaS Data against Loss and Leak disasters in the cloud.
 Spinbackup was founded in 2016, and currently has over 35 employees with R&D centers in Eastern Europe.
@@ -19,7 +19,7 @@ Today <b>Spinbackup</b> is [Google Cloud Partner][12] for Cloud Data Protection 
 
 ![Markdowm Image][10]{: style="float: left; width:200px; margin-right: 10px"}
 
-Before Spinbackup I worked as Deputy Head of IT in VTB Bank (UA) , which occupies the leading
+Before Spinbackup I worked as Deputy CIO in VTB Bank (UA) , which occupies the leading
 position in the world (in 2014 it occupied 66th position [in the World][5]) 
 and manage centre of IT innovation, 
 where I was implementing key project "The Digital Bank" (Bank without branches, only digital services)
