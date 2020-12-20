@@ -67,4 +67,4 @@ In my free time I am writing articles for my site and popular resources. ([Habra
 [11]: /assets/images/fuib_logo.jpg
 [12]: https://youtu.be/omjqnFmMmyo?t=616
 [13]: https://gsuite.google.com/marketplace/app/spinbackup_security_backup/829029953048
-[14]: /assets/images/spinbackup-logo.png
+[14]: /assets/images/spin_logo.png
