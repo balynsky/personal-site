@@ -7,19 +7,23 @@ layout: page
 I'm a proactive, experienced leader with a track record of delivery quality solutions in fintech, cloud services, threats security, and data breach protection.
 
 ![Markdowm Image][14]{: style="float: left; width:140px; margin-left:35px; margin-right: 35px"}
-Currently I'm VP of Engineering in <b>Spinbackup Inc</b> ([spinbackup.com][3]) and I manage IT Team & Product Team. 
-Spinbackup is a cloud data protection company based in San Francisco, 
-which protects SaaS Data against Loss and Leak disasters in the cloud.
-Spinbackup was founded in 2016, and currently has over 35 employees with R&D centers in Eastern Europe.
+Currently I'm VP of Engineering in <b>Spin Technology Inc</b> ([spin.ai][3]) and I manage IT Team & Product Team. 
+Spin Technology is a cloud data protection company protecting enterprises against ransomware, human error and other 
+external threats. Our solutions extend security on G Suite and Office 365 environments and 
+protect organizations against Data Leak & Data Loss in the cloud by backing up 
+sensitive data to a secure cloud storage. Our Artificial Intelligence provides 24x7 
+monitoring and detection against harmful threats and identifies business risks while 
+our automated runbooks and deploy powerful countermeasures to ensure continuous operation.
+Spin Technology was founded in 2016, and currently has over 45 employees with R&D centers in Eastern Europe.
 
 
-Today <b>Spinbackup</b> is [Google Cloud Partner][12] for Cloud Data Protection and has highest rate on the [G Suite Marketplace][13]
+Today <b>Spin Technology</b> is [Google Cloud Partner][12] for Cloud Data Protection and has highest rate on the [G Suite Marketplace][13]
 
 ----
 
 ![Markdowm Image][10]{: style="float: left; width:200px; margin-right: 10px"}
 
-Before Spinbackup I worked as Deputy CIO in VTB Bank (UA) , which occupies the leading
+Before Spin Technology I worked as Deputy CIO in VTB Bank (UA) , which occupies the leading
 position in the world (in 2014 it occupied 66th position [in the World][5]) 
 and manage centre of IT innovation, 
 where I was implementing key project "The Digital Bank" (Bank without branches, only digital services)
@@ -52,7 +56,7 @@ In my free time I am writing articles for my site and popular resources. ([Habra
 
 [1]: https://about.pumb.ua/en/presscenter/news/item/1024-pumb-online-1-za-reytyngom-forbes-ukrayina
 [2]: http://forbes.net.ua/magazine/forbes/1332660-zaputannye-seti
-[3]: https://spinbackup.com
+[3]: https://spin.ai
 [4]: /assets/images/spinbackup_numbers.png
 [5]: https://finparty.ru/ratings/19514/
 [6]: https://about.pumb.ua/en/presscenter/news/item/1341-pumb-uviyshov-do-top-5-ukrayinskikh-bankiv-v-ryadi-nominatsiy-zgidno-reytingu-vidannya-dengi-
