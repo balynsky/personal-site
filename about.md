@@ -6,7 +6,12 @@ layout: page
 
 I'm a proactive, experienced leader with a track record of delivery quality solutions in fintech, cloud services, threats security, and data breach protection.
 
-![Markdowm Image][14]{: style="float: left; width:140px; margin-left:35px; margin-right: 35px"}
+<table>
+<tr>
+<td>
+![Markdowm Image][14]{: style="float: left; width:140px; margin-left:35px; margin-right: 35px"
+</td>
+<td>
 Currently I'm VP of Engineering in <b>Spin Technology Inc</b> ([spin.ai][3]) and I manage IT Team & Product Team. 
 Spin Technology is a cloud data protection company protecting enterprises against ransomware, human error and other 
 external threats. Our solutions extend security on G Suite and Office 365 environments and 
@@ -16,13 +21,12 @@ monitoring and detection against harmful threats and identifies business risks w
 our automated runbooks and deploy powerful countermeasures to ensure continuous operation.
 Spin Technology was founded in 2016, and currently has over 45 employees with R&D centers in Eastern Europe.
 
-
 Today <b>Spin Technology</b> is [Google Cloud Partner][12] for Cloud Data Protection and has highest rate on the [G Suite Marketplace][13]
-
-----
-
-![Markdowm Image][10]{: style="float: left; width:200px; margin-right: 10px"}
-
+</td>
+</tr>
+<tr>
+<td>![Markdowm Image][10]{: style="float: left; width:200px; margin-right: 10px"}</td>
+<td>
 Before Spin Technology I worked as Deputy CIO in VTB Bank (UA) , which occupies the leading
 position in the world (in 2014 it occupied 66th position [in the World][5]) 
 and manage centre of IT innovation, 
@@ -30,11 +34,13 @@ where I was implementing key project "The Digital Bank" (Bank without branches, 
 
 I've created a slide to show high-level concept of 
 <a href="//www.slideshare.net/SergeyBalynsky/digital-bank-63076513" title="the Digital Bank" target="_blank">the Digital Bank</a>
-
-----
-
-![Markdowm Image][11]{: style="float: left; width:200px; margin-right: 10px"}
-  
+</td>
+</tr>
+<tr>
+<td>
+![Markdowm Image][11]{: style="float: left; width:200px; margin-right: 10px"
+</td>
+<td>
 Before VTB Bank, I worked as Head of IT Department in First Ukrainian International Bank ([in top 5][6] 
 in various nominations in Ukraine), where I managed some teams in key projects in IT Department.
 
@@ -49,6 +55,9 @@ The most valuable projects are:
 For the implementation of projects was awarded the Chairman of the Board ([link][7] & [link][8])
 
 My e-Banking application is recognized by Forbes as the best Internet Banking in Ukraine ([source][1] & [source:ru][2]).
+</td>
+</tr>
+</table>
 
 ----
 
