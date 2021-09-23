@@ -23,9 +23,9 @@ permalink: /:title/
 # analytics-piwik-id: 1
 
 # if you don't want comments in your posts, leave categories empty
-disqus:
-  shortname: balynsky-com           # enter this from your disqus account
-  categories: [blog]                # only show disqus for posts that have these categories
+#disqus:
+#  shortname: balynsky-com           # enter this from your disqus account
+#  categories: [blog]                # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
 facebook: balynsky.sergey
@@ -60,14 +60,14 @@ authors:
 width: large
 
 # if you don't need pagination, comment the *paginate* configs below
-# paginate: 5
-# paginate_path: "blog/:num/"
+#paginate: 5
+#paginate_path: "blog/:num/"
 
 # if you don't need projects, comment the *projects* configs below
 #projects: false
 
 # if you don't need "about" or "blog", comment them out below
-about: true
+about: false
 blog: true
 
 # do you want to show the "read time" of the posts?
@@ -83,7 +83,7 @@ related: true
 post-advance-links: [blog]
 
 # show author block at the end of a post ?
-show-author: true
+show-author: false
 
 # do you want some animations?
 animation: true
@@ -92,8 +92,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-gist
   - jekyll-feed
-  - jemoji
   - jekyll-admin
+  - jekyll-paginate
 
 jekyll-mentions:
     base_url: http://balynsky.com

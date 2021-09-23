@@ -1,0 +1,25 @@
+---
+layout: default
+---
+{% include header.html %}
+
+<!-- Home Section Start -->
+<section class="home" id="home">
+    <div class="home-content">
+        <div class="text">
+            <div class="text-one">Hello,</div>
+            <div class="text-two">I'm {{ site.name }}</div>
+            <div class="text-three">{{ site.bio }}</div>
+        </div>
+    </div>
+</section>
+
+{% include about-section.html %}
+
+{% include about-skills.html %}
+
+{% include about-services.html %}
+
+{% include about-contactme.html %}
+
+{% include footer.html %}

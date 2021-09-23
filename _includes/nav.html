@@ -1,39 +1,90 @@
-<nav class="{% if page.title == "Home" %}nav-home{% else %}nav{% endif %}">
-    <ul class="list">
-        {% if page.title != "Home" %}
-            <li class="item">
-                <a class="link" href="{{ site.url }}/">Home</a>
-            </li>
-        {% endif %}
-
-        {% if site.blog == true %}
+<nav>
+    <div class="navbar">
+        <div class="logo"><a href="#">Personal site</a></div>
+        <ul class="menu">
+            {% if page.title != "Home" %}
+            <li><a href="{{ site.url }}/">Home</a></li>
+            {% endif %}
+            {% if site.blog == true %}
             {% if page.title != "Blog" %}
-                <li class="item">
-                    <a class="link" href="{{ site.url }}/blog">Blog</a>
-                </li>
-            {% endif %}
-        {% endif %}
-
-        {% if site.projects == true %}
-            {% if page.title != "Projects" %}
-                <li class="item">
-                    <a class="link" href="{{ site.url }}/projects">Projects</a>
-                </li>
-            {% endif %}
-        {% endif %}
-
-        {% if site.about == true %}
-            {% if page.title != "About" %}
-                <li class="item">
-                    <a class="link" href="{{ site.url }}/about">About</a>
-                </li>
-            {% endif %}
-        {% endif %}
-
-        {% if site.resume == true %}
-            <li class="item">
-                <a class="link" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}{{ site.url }}/{{ site.resume-url }}{% endif %}">Résumé</a>
+            <li>
+                <a href="{{ site.url }}/blog">Blog</a>
             </li>
-        {% endif %}
-    </ul>
+            {% endif %}
+            {% endif %}
+            <li><a href="{{ site.url }}/#about">About</a></li>
+            <li><a href="{{ site.url }}/#skills">Skills</a></li>
+            <li><a href="{{ site.url }}/#services">Services</a></li>
+            <li><a href="{{ site.url }}/#contact">Contact</a></li>
+            <div class="cancel-btn">
+                <i class="fas fa-times"></i>
+            </div>
+        </ul>
+        <div class="media-icons">
+            {% if site.facebook %}
+            <a data-title="facebook.com/{{ site.facebook }}" href="http://facebook.com/{{ site.facebook }}"
+               target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            {% endif %}
+
+            {% if site.twitter %}
+            <a class="link" data-title="twitter.com/{{ site.twitter }}" href="http://twitter.com/{{ site.twitter }}"
+               target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            {% endif %}
+
+            {% if site.linkedin %}
+            <a class="link" data-title="linkedin.com/in/{{ site.linkedin }}"
+               href="http://linkedin.com/in/{{ site.linkedin }}" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            {% endif %}
+
+            {% if site.youtube %}
+            <a class="link" data-title="youtube.com/{{ site.youtube }}" href="http://youtube.com/{{ site.youtube }}"
+               target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+            {% endif %}
+
+            {% if site.github %}
+            <a class="link" data-title="github.com/{{ site.github }}" href="https://github.com/{{ site.github }}"
+               target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            {% endif %}
+
+            {% if site.stackoverflow %}
+            <a class="link" data-title="stackoverflow.com/users/{{ site.stackoverflow }}"
+               href="http://stackoverflow.com/users/{{ site.stackoverflow }}" target="_blank">
+                <i class="fab fa-stack-overflow"></i>
+            </a>
+            {% endif %}
+
+            {% if site.medium %}
+            <a class="link" data-title="medium.com/@{{ site.medium }}" href="https://medium.com/@{{ site.medium }}"
+               target="_blank">
+                <i class="fab fa-medium"></i>
+            </a>
+            {% endif %}
+
+            {% if site.habrahabr %}
+            <a class="link" data-title="https://habrahabr.ru/users/{{ site.habrahabr }}"
+               href="https://habrahabr.ru/users/{{ site.habrahabr }}/posts" target="_blank">
+                <i class="far fa-microphone"></i>
+            </a>
+            {% endif %}
+
+            {% if site.email %}
+            <a class="link" data-title="{{ site.email }}" href="mailto:{{ site.email }}">
+                <i class="far fa-envelope"></i>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
 </nav>

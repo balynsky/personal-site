@@ -1,3 +1,18 @@
-<footer class="footer-main">
-    {{ site.name }} © {{ site.time | date: '%Y' }} <a class="link" href="{{ site.url }}/feed.xml" target="_blank"><svg class="icon icon-rss"><use xlink:href="#icon-rss"></use></svg></a>
+<!-- Footer Section Start -->
+<footer>
+    <div class="text">
+        <span>{{ site.name }} © {{ site.time | date: '%Y' }}</span>
+        <a href="{{ site.url }}/feed.xml" target="_blank">
+            <svg fill="#FFF">
+                <use xlink:href="#icon-rss"></use>
+            </svg>
+        </a>
+    </div>
 </footer>
+<!-- Move to up button -->
+<div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+</div>
+
+<script src="/assets/js/script-new.js"></script>
+
