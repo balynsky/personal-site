@@ -77,6 +77,13 @@
             </a>
             {% endif %}
 
+            {% if site.slideshare %}
+            <a class="link" data-title="https://www.slideshare.net/{{ site.slideshare }}"
+               href="https://www.slideshare.net/{{ site.slideshare }}" target="_blank">
+                <i class="far fa-slideshare"></i>
+            </a>
+            {% endif %}
+
             {% if site.email %}
             <a class="link" data-title="{{ site.email }}" href="mailto:{{ site.email }}">
                 <i class="far fa-envelope"></i>
