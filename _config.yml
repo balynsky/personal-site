@@ -28,20 +28,20 @@ permalink: /:title/
 #  categories: [blog]                # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: balynsky.sergey
-# twitter: mytwitter
+facebook: sergiy.balynsky
+twitter: balynsky
 # google: mygoogle
-# instagram: myinstagram
+instagram: sergiy.balynsky
 # pinterest: mypinterest
 linkedin: balynsky
-# youtube: myyoutube
+youtube: balynsky
 # spotify: myspotify
 github: balynsky
 # lastfm: mylastfm
-# stackoverflow: 7044681/mystackoverflow
+stackoverflow: 35450849/sergiy-balynsky
 # quora: userquora
 # reddit: username
-# medium: medium
+medium: balynsky
 # vimeo: myvimeo
 # lanyrd: mylanyrd
 email: leeifmail@gmail.com
@@ -50,7 +50,7 @@ habrahabr: balynsky
 authors:
     balynsky:
         name: Sergiy Balynsky
-        bio: VPE
+        bio: Vice President of Engineering
         external-image: true
         picture: https://avatars2.githubusercontent.com/u/11942037
 
