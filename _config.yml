@@ -97,4 +97,4 @@ plugins:
   - jekyll-paginate
 
 jekyll-mentions:
-    base_url: http://balynsky.com
+    base_url: https://balynsky.com
