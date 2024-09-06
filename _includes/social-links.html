@@ -95,6 +95,12 @@
         </a>
     {% endif %}
 
+    {% if site.crunchbase %}
+    <a class="link" data-title="https://www.crunchbase.com/person/{{ site.crunchbase }}" href="https://www.crunchbase.com/person/{{ site.crunchbase }}" target="_blank">
+        <svg class="icon icon-google"><use xlink:href="#icon-google"></use></svg>
+    </a>
+    {% endif %}
+
     {% if site.habrahabr %}
     <a class="link" data-title="https://habrahabr.ru/users/{{ site.habrahabr }}" href="https://habrahabr.ru/users/{{ site.habrahabr }}/posts" target="_blank">
         <svg class="icon icon-microphone"><use xlink:href="#icon-microphone"></use></svg>
