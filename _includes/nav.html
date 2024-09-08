@@ -77,10 +77,17 @@
             </a>
             {% endif %}
 
+            {% if site.crunchbase %}
+            <a class="link" data-title="www.crunchbase.com/person/{{ site.crunchbase }}"
+               href="https://www.crunchbase.com/person/{{ site.crunchbase }}" target="_blank">
+                <i class="fa-solid fa-money-bill-trend-up"></i>
+            </a>
+            {% endif %}
+
             {% if site.slideshare %}
             <a class="link" data-title="https://www.slideshare.net/{{ site.slideshare }}"
                href="https://www.slideshare.net/{{ site.slideshare }}" target="_blank">
-                <i class="far fa-slideshare"></i>
+                <i class="fa-brands fa-slideshare"></i>
             </a>
             {% endif %}
 

@@ -8,6 +8,7 @@ tag:
 - Spring boot
 category: blog
 author: balynsky
+sitemap: false
 description: Написание рабочего прототипа Altered Carbon Backup без использования Spring Cloud
 ---
 

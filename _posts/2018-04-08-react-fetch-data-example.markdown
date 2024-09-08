@@ -10,6 +10,7 @@ tag:
 - Frontend
 category: blog
 author: balynsky
+sitemap: false
 description: Типовой сценарий загрузки данных с использованием React/Redux
 ---
 

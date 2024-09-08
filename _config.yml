@@ -46,8 +46,8 @@ medium: balynsky
 # lanyrd: mylanyrd
 email: leeifmail@gmail.com
 slideshare : SergeyBalynsky
-habrahabr: balynsky
 crunchbase: sergiy-balynsky
+habrahabr: balynsky
 
 authors:
     balynsky:
@@ -96,6 +96,7 @@ plugins:
   - jekyll-feed
   - jekyll-admin
   - jekyll-paginate
+  - jekyll-sitemap
 
 jekyll-mentions:
     base_url: https://balynsky.com

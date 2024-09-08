@@ -10,6 +10,7 @@ tag:
 - ITIL
 category: blog
 author: balynsky
+sitemap: false
 description: Автоматизация работы ИТ службы в Банке
 ---
 #### Начало

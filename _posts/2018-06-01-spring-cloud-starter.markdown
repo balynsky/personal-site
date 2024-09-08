@@ -8,6 +8,7 @@ tag:
 - Spring boot
 category: blog
 author: balynsky
+sitemap: false
 description: Spring Cloud для построения проекта с микросервисной архитектурой
 ---
 

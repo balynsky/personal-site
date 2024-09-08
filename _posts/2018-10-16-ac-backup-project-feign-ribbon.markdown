@@ -9,6 +9,7 @@ tag:
 - Spring cloud
 category: blog
 author: balynsky
+sitemap: false
 description: Feign, Ribbon для коммуникации между сервисами
 ---
 

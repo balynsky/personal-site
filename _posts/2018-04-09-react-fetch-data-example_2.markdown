@@ -10,6 +10,7 @@ tag:
 - Frontend
 category: blog
 author: balynsky
+sitemap: false
 description: Типовой сценарий загрузки данных с использованием React/Redux
 ---
 
@@ -132,7 +133,7 @@ class RedditInfoList extends React.Component {
                      maxHeight: "70vh",
                      overflowX: "hidden",
                      overflowY: "auto",
-                     position: "relative",
+                     position: "relative"
                  }}>
                 {data.map((item, index) => (
                     <RedditInfoItem key={index}

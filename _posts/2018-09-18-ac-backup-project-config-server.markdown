@@ -9,6 +9,7 @@ tag:
 - Spring cloud
 category: blog
 author: balynsky
+sitemap: false
 description: Конфигурирование проекта. Использование Spring Cloud Config
 ---
 
