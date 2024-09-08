@@ -16,10 +16,13 @@ layout: compress
 
     {% include favicon.html %}
 
-    {% include schema.html %}
+    {% if layout.custom_schema == true %}
+        {% include schema.html %}
+    {% endif %}
 
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "
+    /feed.xml" }}" />
 
     <link rel="stylesheet" href="/assets/css/style-new.css">
     <!-- Fontawesome CDN Link -->
