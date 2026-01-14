@@ -1,43 +1,111 @@
 <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfilePage",
-        "dateCreated": "2024-09-01T12:34:00-05:00",
-        "dateModified": "2024-09-10T14:53:00-05:00",
-        "mainEntity": {
-            "@type": "Person",
-            "name": "Sergiy Balynsky",
-            "alternateName": "balynsky",
-            "givenName": "Sergiy",
-            "familyName": "Balynsky",
-            "email": "leeifmail@gmail.com",
-            "birthDate" : "1986-04-18",
-            "jobTitle": "VP of Engineering",
-            "nationality" : "Ukraine",
-            "worksFor" : "Spin.AI",
-            "description": "I'm a proactive, experienced leader with a track record of delivery quality solutions in fintech, cloud services, threats security, and data breach protection.",
-            "image": "https://avatars2.githubusercontent.com/u/11942037",
-            "sameAs": [
-                "https://facebook.com/sergiy.balynsky",
-                "https://twitter.com/balynsky",
-                "https://linkedin.com/in/balynsky",
-                "https://youtube.com/balynsky",
-                "https://github.com/balynsky",
-                "https://stackoverflow.com/users/35450849/sergiy-balynsky",
-                "https://medium.com/@balynsky",
-                "https://habrahabr.ru/users/balynsky/posts",
-                "https://www.slideshare.net/SergeyBalynsky",
-                "https://www.crunchbase.com/person/sergiy-balynsky"
+{
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "dateCreated": "2024-09-01T12:34:00-08:00",
+    "dateModified": "{{ site.time | date_to_xmlschema }}",
+    "mainEntity": {
+        "@type": "Person",
+        "@id": "https://www.balynsky.com/#person",
+        "name": "Sergiy Balynsky",
+        "alternateName": ["Sergey Balynsky", "balynsky"],
+        "givenName": "Sergiy",
+        "familyName": "Balynsky",
+        "email": "mail@balynsky.com",
+        "url": "https://www.balynsky.com",
+        "jobTitle": "VP of Engineering",
+        "description": "Engineering executive with 17+ years of experience in cloud security, fintech, and enterprise SaaS. VP of Engineering at Spin.AI, leading teams building AI-powered data protection platform serving 1,500+ organizations worldwide.",
+        "image": "https://avatars2.githubusercontent.com/u/11942037",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Los Angeles",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+        },
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Donetsk National Technical University",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Ukraine"
+            }
+        },
+        "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "degree",
+            "educationalLevel": "Master's degree",
+            "about": "Comparable to U.S. graduate-level program in Management Information Systems"
+        },
+        "knowsAbout": [
+            "Cloud Security",
+            "SaaS Architecture",
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Microservices",
+            "FinTech",
+            "Engineering Leadership",
+            "Data Protection",
+            "Google Cloud Platform",
+            "AWS",
+            "Kubernetes"
+        ],
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "VP of Engineering",
+            "occupationLocation": {
+                "@type": "Country",
+                "name": "United States"
+            },
+            "skills": "Cloud Architecture, Team Leadership, Product Development, AI/ML, SaaS Security"
+        },
+        "worksFor": {
+            "@type": "Organization",
+            "@id": "https://spin.ai/#organization",
+            "name": "Spin.AI",
+            "url": "https://spin.ai",
+            "description": "AI-powered SaaS security platform protecting enterprises against ransomware and data breaches",
+            "foundingDate": "2016",
+            "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "minValue": 50,
+                "maxValue": 100
+            },
+            "award": [
+                "5x Global InfoSec Award Winner 2023",
+                "Forrester Wave SSPM Strong Performer",
+                "GigaOm SSPM Radar Strong Performer",
+                "Gartner Representative Vendor in Backup as a Service"
             ]
-        }
+        },
+        "award": [
+            "5x Global InfoSec Awards at RSA Conference 2023",
+            "Google Cloud Partner for SaaS Data Protection"
+        ],
+        "sameAs": [
+            "https://www.linkedin.com/in/balynsky",
+            "https://github.com/balynsky",
+            "https://twitter.com/balynsky",
+            "https://www.crunchbase.com/person/sergiy-balynsky",
+            "https://medium.com/@balynsky",
+            "https://stackoverflow.com/users/35450849/sergiy-balynsky",
+            "https://www.slideshare.net/SergeyBalynsky",
+            "https://www.facebook.com/sergiy.balynsky",
+            "https://www.youtube.com/@balynsky"
+        ]
     }
+}
 </script>
 <script type="application/ld+json">
-    {
-        "@context" : "https://schema.org",
-        "@type" : "WebSite",
-        "name" : "Personal website: Sergiy Balynsky",
-        "url" : "https://www.balynsky.com/"
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.balynsky.com/#website",
+    "name": "Sergiy Balynsky - VP of Engineering",
+    "url": "https://www.balynsky.com/",
+    "description": "Personal website of Sergiy Balynsky, VP of Engineering at Spin.AI specializing in cloud security, SaaS architecture, and engineering leadership.",
+    "author": {
+        "@id": "https://www.balynsky.com/#person"
     }
+}
 </script>
 

@@ -1,14 +1,28 @@
 name: Sergiy Balynsky
-bio: Chief Technology Officer / VP of Engineering
+bio: VP of Engineering
+career_start: 2008
 
-description: A blog about technology and stuff related
+# SEO settings
+title: Sergiy Balynsky - VP of Engineering | Cloud Security & SaaS Expert
+tagline: Engineering Leader specializing in Cloud Security, SaaS, and AI
+description: Sergiy Balynsky is a VP of Engineering at Spin.AI with 17+ years of experience in cloud security, fintech, and enterprise SaaS. Based in Los Angeles, CA.
+locale: en_US
+keywords: "VP of Engineering, Cloud Security, SaaS, AI, Spin.AI, Engineering Leadership, Los Angeles"
 
 external-image: true
 picture: https://avatars2.githubusercontent.com/u/11942037
 
+# Social sharing image (for Twitter/LinkedIn cards)
+og_image: https://avatars2.githubusercontent.com/u/11942037
+
+# Twitter card settings
+twitter:
+  username: balynsky
+  card: summary
+
 resume: false
 resume-external: true
-resume-url: https://google.com/?q=my+resume
+resume-url: https://www.linkedin.com/in/balynsky
 
 url: https://www.balynsky.com
 # your url: http://USERNAME.github.io

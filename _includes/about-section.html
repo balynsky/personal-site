@@ -10,33 +10,37 @@
                 <!--
                                 <div class="topic">About Me</div>
                 -->
-                <p>I'm a proactive, experienced leader with a track record of delivering quality solutions in fintech,
-                    cloud services, threat detection, and data breach protection.
+                {% assign current_year = site.time | date: '%Y' | plus: 0 %}
+                {% assign years_exp = current_year | minus: site.career_start %}
+                <p>Engineering executive based in <b>Los Angeles, CA</b> with {{ years_exp }}+ years of experience
+                    delivering mission-critical solutions in cloud security, fintech, and enterprise SaaS.
+                    I specialize in scaling engineering teams and building products that protect business-critical data.
                 </p>
                 <br/>
                 <p>
                     <img src="/assets/images/spin_logo.png"
                          style="float: left; width:140px; margin-left:35px; margin-right: 35px" alt="Spin Technology"/>
-                    Currently I'm VP of Engineering in <b>Spin Technology Inc</b> (<a href="https://spin.ai">spin.ai</a>) and I manage the IT team and product team.
-                    Spin Technology is a cloud data protection company protecting enterprises against ransomware, human
-                    error and other
-                    external threats. Our solutions extend security on Google Workspace, Microsoft 365, Salesforce and Slack environments and
-                    protect organizations against Data Leak & Data Loss in the cloud by backing up
-                    sensitive data to a secure cloud storage. Our AI provides 24/7
-                    monitoring and detection against harmful threats and identifies business risks while
-                    our automated runbooks deploy powerful countermeasures to ensure continuous operation.
-                    Spin Technology was founded in 2016, and currently has over 80 employees with R&D centers in Eastern
-                    Europe.
+                    As VP of Engineering at <b>Spin.AI</b> (<a href="https://spin.ai">spin.ai</a>),
+                    I lead engineering and product teams building an AI-powered SaaS security platform
+                    that protects <b>1,500+ organizations worldwide</b>. The company has raised
+                    <b>$16M+ in funding</b> from investors including Blueprint Equity and Santa Barbara Venture Partners.
                 </p>
                 <br/>
                 <p>
-                    Today <b>Spin Technology</b> is <a href="https://youtu.be/omjqnFmMmyo?t=616">Google Cloud Partner</a> for Cloud Data Protection and has the highest rating on the <a href="https://gsuite.google.com/marketplace/app/spinbackup_security_backup/829029953048">Google Workspace Marketplace</a>
+                    <b>What I've accomplished:</b><br/>
+                    • Scaled engineering team and delivered platform serving <b>1,500+ organizations</b> worldwide<br/>
+                    • Led product development recognized with <b>5x Global InfoSec Awards</b> at <a href="https://spin.ai/news/spin-ai-wins-five-global-infosec-awards-including-editors-choice-during-rsa-conference-2023/">RSA Conference 2023</a><br/>
+                    • Built integrations resulting in <b>Google Cloud Partnership</b> and <a href="https://spin.ai/news/spin-ai-brings-powerful-all-in-one-saas-security-platform-to-google-cloud-marketplace/">Marketplace availability</a><br/>
+                    • Drove product recognition by <b>Forrester, Gartner, and GigaOm</b> as industry leader in SSPM
                 </p>
-<!--
+                <br/>
+                <p>
+                    Previously led engineering teams at fintech startups and banking institutions, managing 100+ engineers.
+                    M.S. from Donetsk National Technical University (comparable to a U.S. graduate-level program in Management Information Systems).
+                </p>
                 <div class="button">
-                    <button>Show full CV</button>
+                    <button onclick="location.href='https://www.linkedin.com/in/balynsky';">View Full Profile</button>
                 </div>
--->
             </div>
         </div>
     </div>
