@@ -1,5 +1,5 @@
 ---
-title: "Написание рабочего прототипа Altered Carbon Backup без использования Spring Cloud"
+title: "Building a Working Prototype of Altered Carbon Backup Without Spring Cloud"
 layout: post
 date: 2018-08-04 10:00
 image: /assets/images/markdown.jpg
@@ -9,38 +9,31 @@ tag:
 category: blog
 author: balynsky
 sitemap: false
-description: Написание рабочего прототипа Altered Carbon Backup без использования Spring Cloud
+description: Building a working prototype of Altered Carbon Backup without Spring Cloud
 ---
 
-[Содержание серии статей #Про Spring Cloud][1]
+[Article series table of contents #About Spring Cloud][1]
 
-В данной серии статей будем реализовывать базовое приложение без использования
-микросервисной архитектуры. Для этого будем использовать придуманную мной техническую схему:
+In this series of articles, we'll be building a basic application without using microservice architecture. To do this, we'll use the following technical diagram that I designed:
 ![Markdowm Image][2]{: style="width:780px" }
 
-### Структура исходного кода
-В моей практике, в проектах, в которых я участвовал, использовался принцип разделения любого сервиса на 3 части:
-* Модель данных
-* Клиент для вызова сервиса 
-* Реализация сервиса
+### Source Code Structure
+In my experience, the projects I've worked on followed the principle of dividing any service into 3 parts:
+* Data model
+* Service client
+* Service implementation
 
-Таким образом для работы с моделями данных сервиса достаточно подключить проект с моделями, а для вызова сервиса -
-проект с клиентом сервиса. 
+This way, to work with a service's data models, you simply include the model project, and to call the service, you include the service client project.
 
->Альтернативой данному подходу, который я встречал в других проектах, является дублирование
-кода модели и клиента в каждом сервисе потребителе. При этом дублирование подразумевает реализацию только тех методов клиента 
-и полей модели, которые необходимы данному сервису. Так как это сильно увеличивает операцинные расходы на сопровождение
-данного решения, я не считаю этот подход оптимальным.
+>An alternative approach I've seen in other projects is duplicating the model and client code in each consuming service. This duplication involves implementing only those client methods and model fields that the particular service needs. Since this significantly increases the operational cost of maintaining the solution, I don't consider this approach optimal.
 
-Рассмотрим на примере реализации сервиса Storage: для него были созданы несколько проектов для разделения на 
-описанные ранее части:
+Let's look at the example of the Storage service implementation. We created several projects to separate the parts described above:
 * storage-model
 * storage-client
 * storage-service
 
-#### Модель данных
-Начнем описание с модели данных (проект storage-model). Модель данных сервиса состоит из одного класса SoulEntity, который описывает
-сущность, которую мы планируем бекапить.
+#### Data Model
+Let's start with the data model (the storage-model project). The service data model consists of a single class called SoulEntity, which describes the entity we plan to back up.
 
 ```java
 package com.balynsky.ac.storage;
@@ -61,13 +54,11 @@ public class SoulEntity implements Serializable {
 }
 ```
 
-Для сокращения написания кода используется lombok, почитать о нем подробнее можно по [ссылке][4]. В документации можно
-ознакомиться с используемыми в проекте аннотациями.
+To reduce boilerplate code, we use Lombok. You can read more about it [here][4]. The documentation covers all the annotations used in the project.
 
-#### Клиент сервиса
+#### Service Client
 
-Для написание клиента мы будем использовать класс RestTemplate, предоставляемый фреймворком Spring. Для начала опишем 
-интерфейс для описания клиента:
+For writing the client, we'll use the RestTemplate class provided by the Spring framework. Let's start by defining the client interface:
 
 ```java
 package com.balynsky.ac.storage;
@@ -76,9 +67,9 @@ public interface StorageResource {
 	 SoulEntity saveSoul(SoulEntity soul);
 }
 ```
-Интерфейс содержит единственный метод, который сохраняет получаемый объект и возвращает его сохраненную версию.
+The interface contains a single method that saves the received object and returns its persisted version.
 
-Следующим шагом опишем его реализацию:
+Next, let's write the implementation:
 ```java
 package com.balynsky.ac.storage.impl;
 
@@ -112,12 +103,11 @@ public class StorageResourceImpl implements StorageResource {
 	}
 }
 ```
-Клиент в конструкторе принимает RestTemplate и Url сервера, где расположен сервис. Непосредственно в методе идет вызов 
-метода Rest контроллера.
+The client accepts a RestTemplate and a server URL in its constructor. The method itself calls the REST controller endpoint.
 
-#### Реализация сервиса
+#### Service Implementation
 
-Начнем с описание конфигурационного файла проекта (_application.yml_)
+Let's start with the application configuration file (_application.yml_):
 ```yaml
 spring:
   h2:
@@ -135,13 +125,11 @@ server:
   port: 9082
 ```
 
-Как видим из конфигурации, для хранения данных будем использовать in-memory DB - H2. Также мы задаем порт, на котором
-будет запущен наш сервер и активируем консоль H2 для удобства доступа к данным. 
+As you can see from the configuration, we're using an in-memory database — H2 — for data storage. We also set the port on which our server will run and enable the H2 console for convenient data access.
 
-Для инициализации БД в папке resources были созданы файлы _schema.sql_ и _data.sql_. Первый файл автоматически создает
-структуру БД, второй заполняет ее первоначальными данными. Подробнее об этом механизме можно почитать по [ссылке][5]
+To initialize the database, we created _schema.sql_ and _data.sql_ files in the resources folder. The first file automatically creates the database structure, and the second populates it with initial data. You can learn more about this mechanism [here][5].
 
-Непосредственно создание источника данных и регистрация его в контексте выполняется в классе DatabaseConfig:
+The actual data source creation and registration in the context is handled by the DatabaseConfig class:
 
 ```java
 package com.balynsky.ac.storage.config;
@@ -164,10 +152,10 @@ public class DatabaseConfig {
 }
 ```
 
-Схема прикладных уровней приложения описана на картинке ниже:  
+The application layer diagram is shown in the image below:
 ![Markdowm Image][6]{: style="height:380px" }
 
-Точкой входа является контроллер, реализация которого описана ниже:
+The entry point is the controller, whose implementation is shown below:
 ```java
 package com.balynsky.ac.storage.controller;
 
@@ -201,20 +189,17 @@ public class StorageController {
 
 }
 ```
-В реализации мы вызывем сервис, который возвращает нам сохраненную сущность или null если не произошло сохранение. 
-Соответвенно наш контроллер возвращает или 201 HTTP Code (Created) или 400 (Bad Request) соответственно.
+In the implementation, we call the service, which returns the persisted entity or null if the save operation failed. Accordingly, our controller returns either HTTP 201 (Created) or HTTP 400 (Bad Request).
 
-Реализацию сервиса и репозитория для доступа к данным можно посмотреть в Github репозитории.
+The service and repository implementations for data access can be found in the GitHub repository.
 
-Покажем как осуществляется вызов сервиса Storage в нашем основном сервисе BackupService (см. схему). Для этого в 
-файле настройки приложения _application.yml_ добавим адрес ресурса:
+Let's demonstrate how the Storage service is called from our main BackupService (refer to the diagram). To do this, we'll add the resource address to the application configuration file _application.yml_:
 ```yaml
 resource:
   storage: http://localhost:9082
 ```
 
-И создадим конфигурацию для объявления клиентов сервиса (класс RestSeviceConfig), в которой создадим клиент для 
-сервиса Storage
+Then we'll create a configuration for declaring service clients (the RestServiceConfig class), where we'll create a client for the Storage service:
 
 ```java
 package com.balynsky.ac.backup.config;
@@ -239,12 +224,12 @@ public class RestSeviceConfig {
 }
 ```
 
-Соответственно далее мы можем выполнить inject c использванием аннотации @Autowired.
+From here, we can inject the resource using the @Autowired annotation.
 
-### Проверка работы проекта
-Для проверки работы нашего сервиса мы используем RestClient, встроенный в IntellijIdea
+### Testing the Project
+To test our service, we'll use the built-in RestClient in IntelliJ IDEA.
 
-Запрос:
+Request:
 ```
 POST http://localhost:9080/backup-service/backup
 Accept: */*
@@ -256,11 +241,11 @@ Cache-Control: no-cache
   "body": "body"
 }
 ```
-Ответ:
+Response:
 ```
 POST http://localhost:9080/backup-service/backup
 
-HTTP/1.1 201 
+HTTP/1.1 201
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
 Date: Tue, 18 Sep 2018 16:11:06 GMT
@@ -274,15 +259,12 @@ Date: Tue, 18 Sep 2018 16:11:06 GMT
 Response code: 201; Time: 68ms; Content length: 35 bytes
 ```
 
-Как видим, мы получили 201 HTTP code (Created) и созданную сущность в БД с идентификатором 3.
+As we can see, we received HTTP 201 (Created) and the newly created entity in the database with ID 3.
 
-### Итоги:
-На этом шаге мы создали прототип проекта без использования Spring Cloud. Опытный читатель может заметить значительное 
-количество архитектурных и программных просчетов. Но данные моменты сделаны специально, так как в дальнейшем данный проект
-будет интегрирован с Spring Cloud и большинство данных проблем будет решено. В более поздних статьях будет показано за счет каких 
-инструментов и подходов они решаются.
+### Summary:
+In this step, we created a project prototype without using Spring Cloud. Experienced readers may notice a significant number of architectural and coding shortcomings. However, these were made intentionally, as the project will be integrated with Spring Cloud in future articles, and most of these issues will be addressed. Later articles will demonstrate which tools and approaches are used to resolve them.
 
-Проект опубликован в [репозитории на GitHub][3] 
+The project is published in the [GitHub repository][3].
 
 [1]: /spring-cloud-starter
 [2]: /assets/images/posts/2018-08-01/1.jpg

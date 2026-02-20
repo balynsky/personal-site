@@ -1,5 +1,5 @@
 ---
-title: "Конфигурирование проекта. Использование Spring Cloud Config"
+title: "Project Configuration with Spring Cloud Config"
 layout: post
 date: 2018-09-18 10:00
 image: /assets/images/markdown.jpg
@@ -10,29 +10,20 @@ tag:
 category: blog
 author: balynsky
 sitemap: false
-description: Конфигурирование проекта. Использование Spring Cloud Config
+description: Project configuration with Spring Cloud Config
 ---
 
-Данная статья является частью статей об использование Spring Cloud [#Про Spring Cloud][1].
+This article is part of the series on Spring Cloud [#About Spring Cloud][1].
 
 
-### Немного теории
-Проект Spring Cloud Config предназначен для управления конфигурациями в облачном решении. Проект предлагает централизованное
-хранилище конфигураций приложений, которое легко может масштабироваться горизонтально. В качестве источника 
-конфигураций используется файловая система, GIT, SVN, Hashicorp Vault, JDBC Backend. Также можно использовать композитные источники данных.
-В данной статье мы будем использовать файловую систему.
+### A Bit of Theory
+The Spring Cloud Config project is designed for managing configurations in a cloud environment. It provides a centralized configuration store for applications that can easily scale horizontally. Configuration sources include the file system, Git, SVN, HashiCorp Vault, and JDBC Backend. Composite data sources can also be used. In this article, we'll be using the file system.
 
-По умолчанию Spring Cloud Config отдает файлы, соответствующие имени запрашивающего Spring приложения. Также могут учитываться
-активные Spring profiles и свойства label проекта (параметр spring.cloud.config.label в конфигурации проекта). 
+By default, Spring Cloud Config serves files matching the name of the requesting Spring application. It can also take into account active Spring profiles and the project's label property (the spring.cloud.config.label parameter in the project configuration).
 
-> Имя приложения указывает в параметре _spring.application.name_. Как правило, в проектах указывается одно имя приложения в 
-этом параметре. НО, запрета на использования нескольких имен для данного параметра нет и Spring Cloud Config Server
-умеет работать с несколькими именами, записанными через запятую (например, _spring.application.name = a,b,c_). Данную 
-возможность можно использовать для подгрузки конфигурации из нескольких файлов одновременно. Аналогично данное утверждение
-применимо для профайлов (параметр _spring.profiles.active_)
+> The application name is specified in the _spring.application.name_ parameter. Typically, projects use a single application name in this parameter. HOWEVER, there's no restriction on using multiple names — Spring Cloud Config Server can work with multiple names separated by commas (e.g., _spring.application.name = a,b,c_). This feature can be used to load configuration from multiple files simultaneously. The same applies to profiles (the _spring.profiles.active_ parameter).
 
-Для конфигурирования приложения могут использоваться файлы: .properties, .yml, .yaml. Порядок формирования конфигурации
-(по увеличению приоритета параметров):
+The following file types can be used for application configuration: .properties, .yml, .yaml. The order of configuration resolution (in increasing priority) is:
 * application.yml
 * application-{profile}.yml
 * {application.name}.yml
@@ -41,25 +32,16 @@ description: Конфигурирование проекта. Использов
 * {label}/application-{profile}.yml
 * {label}/{application.name}-{profile}.yml
 
-Встраивание Spring Cloud Config в любое приложение можно разделить на два основных подхода: Config First Bootstrap или Discovery First Bootstrap.
-В первом случае инициализация идет через сервер управления конфигурациями, таким образом приложению необходимо знать где расположен 
-Spring Cloud Config Server (параметр spring.cloud.config.url, по умолчанию поиск идет по адресу http://config:8888) и данные 
-для аутентификации, если они применяются. Во втором случае
-доступ к Spring Cloud Config Server осуществляется через Service Discovery, который имеет данные о местоположении сервиса конфигурации. 
-Им может выступать Eureka Service Discovery или Hashicorp Consul.
-Для защиты точек доступа Spring Cloud Config Server может применяться Spring Security, поэтому мы не ограничены в механизме защиты точек доступа.
+Integrating Spring Cloud Config into any application can be divided into two main approaches: Config First Bootstrap or Discovery First Bootstrap. In the first case, initialization goes through the configuration management server, meaning the application needs to know where the Spring Cloud Config Server is located (the spring.cloud.config.url parameter, which defaults to http://config:8888) along with authentication credentials if applicable. In the second case, access to the Spring Cloud Config Server is done through Service Discovery, which has information about the configuration service location. This can be Eureka Service Discovery or HashiCorp Consul.
+Spring Security can be used to protect Spring Cloud Config Server endpoints, so there are no limitations on the security mechanisms for the endpoints.
 
-> В реальной жизни при старте микросервисной инфраструктуры Spring Cloud Config Server может быть запущен позже других сервисов, 
-поэтому рекомендуется настроить механизм повтора запроса конфигурации в случае неуспешного первого обращения. Для этого 
-необходимо подключить две зависимости _spring-retry_ и _spring-boot-starter-aop_ и установить параметр _spring.cloud.config.fail-fast=true_.
-Настройки механизма повтора находятся в разделе _spring.cloud.config.retry.*_
+> In real-world scenarios, when starting a microservice infrastructure, the Spring Cloud Config Server might start after other services. Therefore, it's recommended to configure a retry mechanism for configuration requests in case the initial call fails. To do this, add the _spring-retry_ and _spring-boot-starter-aop_ dependencies and set the _spring.cloud.config.fail-fast=true_ parameter. Retry settings are configured under _spring.cloud.config.retry.*_
 
-### Создание сервера конфигурации
+### Creating the Configuration Server
 
-Первым шагом необходимо создать новый модуль в gradle в директории _./backend_ с именем _config-server_
+First, we need to create a new Gradle module in the _./backend_ directory named _config-server_.
 
-Настроим содержимое файла _gradle.build_ следующим образом. Напоминаю, что переменные версий (такие как _bootGradlePlugin_ 
-или _springCloudConfig_) вынесены в базовый _build.gradle_ в директории _./backend_
+Let's configure the _gradle.build_ file as follows. As a reminder, version variables (such as _bootGradlePlugin_ or _springCloudConfig_) are defined in the parent _build.gradle_ in the _./backend_ directory.
 
 ```groovy
 buildscript {
@@ -89,8 +71,7 @@ dependencies {
 }
 ```
 
-Также необходимо создать базовый класс _ConfigServerApplication.java_ для запуска Spring Boot приложения. Для создания 
-встроенного (embedded) Config Server необходиом добавить аннотацию _@EnableConfigServer_
+We also need to create a base _ConfigServerApplication.java_ class to launch the Spring Boot application. To create an embedded Config Server, add the _@EnableConfigServer_ annotation:
 
 ```java
 package com.balynsky.ac.config.server;
@@ -108,9 +89,7 @@ public class ConfigServerApplication {
 }
 ```
 
-Так же необходимо настроить параметры приложение, указав активный профайд "native", чтобы поиск конфигурации осуществлялся
-в файловой системе (по умолчанию источником конфигураций используется GIT репозиторий). Для этого в каталоге _resources_
-необходимо создать файл _bootstrap.yml_ следующего содержимого:
+We also need to configure the application settings by specifying the "native" active profile, so that configuration lookup is performed in the file system (by default, a Git repository is used as the configuration source). To do this, create a _bootstrap.yml_ file in the _resources_ directory with the following content:
 
 ```yaml
 spring:
@@ -123,25 +102,18 @@ spring:
   application:
     name: config-server
 ```
- > Мы задали параметр _spring.cloud.config.bootstrap = true_, чтобы Config Server также инициировал свои
- настройки из конфигурационного хранилища (в нашем случае - файловой системе)
+ > We set the _spring.cloud.config.bootstrap = true_ parameter so that the Config Server also initializes its own settings from the configuration store (in our case, the file system).
 
-Чтобы указать где расположено конфигурационное хранилище, используется параметр _spring.cloud.config.native.searchLocations_. 
-Если параметр не задан, поиск осуществляется в дефолтных: classpath:/, classpath:/config/, file:./, file:./config/
+To specify where the configuration store is located, use the _spring.cloud.config.native.searchLocations_ parameter. If not set, the default locations are: classpath:/, classpath:/config/, file:./, file:./config/
 
-В реальных проектах не рекомендуется помещать конфигурации внутрь jar приложения, но для тестового стенда, в нашем случае
-мы поместим конфигурации в _classpath:/config/_. Для этого в каталоге _resources_ проекта _config-server_ создадим 
-каталог config, в котором создадим следующие файлы:
+In real-world projects, it's not recommended to embed configurations inside the application JAR, but for our test environment, we'll place the configurations in _classpath:/config/_. To do this, create a config directory in the _resources_ folder of the _config-server_ project, and create the following files:
 * application.yml
 * config-server.yml
 * backup-service.yml
 * storage-service.yml
 * user-service.yml
 
-При запуске проекта мы имеем ошибку _java.lang.IllegalStateException: You need to configure a uri for the git repository_
-из за включенного параметра _bootstrap = true_, 
-которая описана в [Issue][4]. Поэтому временно применим обходное решение из данного тикета (используем профайл _composite_),
-для этого изменим _bootstrap.yml_
+When starting the project, we encounter the error _java.lang.IllegalStateException: You need to configure a uri for the git repository_ due to the enabled _bootstrap = true_ parameter, as described in this [Issue][4]. Therefore, we'll temporarily apply the workaround from that ticket (using the _composite_ profile) by modifying _bootstrap.yml_:
 
 ```yaml
 spring:
@@ -157,17 +129,16 @@ spring:
     name: config-server
 ```
 
-В файле настройки _config-server.yml_ укажем порт, на котором должен запуститься сервис (по умолчанию идет запуск на 8080):
+In the _config-server.yml_ settings file, we'll specify the port on which the service should start (the default is 8080):
 
 ```yaml
 server:
   port: 8888
 ```
 
-### Подключение к Spring Config Server
+### Connecting to the Spring Config Server
 
-Опишем подключение к конфигурационному серверу для проекта storage-service, остальные проекты подключаются аналогичным образом.
-Само подключение конфигурации начнем с добавления необходимых зависимостей:
+Let's describe the connection to the configuration server for the storage-service project; the other projects are configured in the same way. We'll start by adding the required dependencies:
 
 ```groovy
 dependencies {
@@ -178,12 +149,9 @@ dependencies {
     // ...
 }
 ```
-Как описывалось ранее зависимости _spring-retry_ и _spring-boot-starter-aop_ необходимы для обеспечения механизма
-повтора запроса конфигурации с сервера, если при первом обращении была получена ошибка (например, сервер не был инициирован)
+As mentioned earlier, the _spring-retry_ and _spring-boot-starter-aop_ dependencies are needed to provide a retry mechanism for configuration requests from the server in case the initial call returns an error (e.g., the server hasn't started yet).
 
-Следующий шаг, мы переносим содержимое файла _backup-service/.../resources/application.yml_ в файл _backup-service.yml_ 
-в проекте _config-server_. Вместо него необходимо создать файл _bootstrap.yml_, в котором укажем данные для подключения
-к конфигурационному серверу. Содержимое файла _bootstrap.yml_:
+Next, we move the contents of the _backup-service/.../resources/application.yml_ file to the _backup-service.yml_ file in the _config-server_ project. In its place, we need to create a _bootstrap.yml_ file specifying the connection details for the configuration server. Contents of _bootstrap.yml_:
 
 ```yaml
 spring:
@@ -195,8 +163,7 @@ spring:
     name: backup-service
 ```
 
-После запуска приложения в логах можно увидеть записи подключения к конфигурационному серверу и получения 
-конфигурации:
+After starting the application, the logs will show entries for connecting to the configuration server and retrieving the configuration:
 
 ```
 c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
@@ -204,16 +171,15 @@ c.c.c.ConfigServicePropertySourceLocator : Located environment: name=backup-serv
 b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='classpath:/config/backup-service.yml'}]}
 ```
 
-Аналогичным образом изменяем два оставшихся приложения: _storage-service_ и _user-service_. 
+The remaining two applications — _storage-service_ and _user-service_ — are modified in the same way.
 
-### Итоги:
+### Summary:
 
-В рамках этой статьи, мы научили наши приложения получать конфигурацию с внешнего источника (Spring Config Server),и 
-у нас получилась следующая архитектура нашего проекта:
+In this article, we taught our applications to retrieve configuration from an external source (Spring Config Server), resulting in the following project architecture:
 
 ![Markdowm Image][2]{: style="width:780px" }
 
-Проект опубликован в [репозитории на GitHub][3] 
+The project is published in the [GitHub repository][3].
 
 [1]: /spring-cloud-starter
 [2]: /assets/images/posts/2018-09-18/1.jpg

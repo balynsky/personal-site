@@ -1,5 +1,5 @@
 ---
-title: "Загрузка данных с использованием React/Redux ч.1"
+title: "Fetching Data with React/Redux Part 1"
 layout: post
 date: 2018-04-08 10:00
 image: /assets/images/markdown.jpg
@@ -11,21 +11,20 @@ tag:
 category: blog
 author: balynsky
 sitemap: false
-description: Типовой сценарий загрузки данных с использованием React/Redux
+description: A typical data fetching scenario using React/Redux
 ---
 
-Статья будет посвящена созданию типового сценария по загрузке данных с использованием  React/Redux в виде
-просто списка данных. Для нашего примера возьмем API с сайта reddit.com
+This article covers building a typical data fetching scenario using React/Redux to display a simple list of data. For our example, we'll use the API from reddit.com.
 
-Почитать об React можно [здесь][3], о Redux [здесь][4]
+You can read more about React [here][3] and about Redux [here][4].
 
-Для начала создадим базовый проект на React
+Let's start by creating a basic React project:
 
 ```
 npx create-react-app infinity-scroll
 ```
 
-Зайдем в каталог проекта и добавим необходимые модули
+Navigate to the project directory and add the required modules:
 
 ```
 npm install --save react-redux <br/>
@@ -33,10 +32,9 @@ npm install --save-dev redux-devtools <br/>
 npm install --save thunk
 ```
 
-Создание проекта начнем с описания действий
+We'll begin by defining the actions.
 
-**Действия (action)** — это структура, которая передает данные из вашего приложения в хранилище. 
-По соглашению, действия должны иметь строковое поле type, которое указывает на тип исполняемого действия.
+**Actions** are structures that transmit data from your application to the store. By convention, actions must have a string `type` field that indicates the type of action being performed.
 
 ```javascript
 export const REDDIT_INFO_REQUESTED_FIRST_PAGE = 'REDDIT_INFO_REQUESTED_FIRST_PAGE';
@@ -66,13 +64,11 @@ const receiveError = (error) => {
     }
 };
 ```
-В результате мы создали функции отвечающие за старт процесса получения данных с сайта и за обработку результатов (успешное 
-выполнение или ошибка)
+As a result, we created functions responsible for initiating the data fetching process and handling the results (either a successful response or an error).
 
-Идем дальше
+Let's move on.
 
-**Генераторы действий (action generators)** — функции, которые создают действия. В Redux генераторы действий 
-являются чистыми функциями.
+**Action creators** are functions that create actions. In Redux, action creators are pure functions.
 
 ```javascript
 export const fetchRedditData = () => (dispatch, getState) => {
@@ -87,13 +83,9 @@ export const fetchRedditData = () => (dispatch, getState) => {
         });
 };
 ```
-Мы описали функцию для получения информации с сайта, в начале функции мы оповещаем store о начале операции (requestData),
-а по результатам выполнения вызываем соответствующую функцию (receiveData или receiveError).
+Here we defined a function for fetching data from the site. At the beginning of the function, we notify the store that the operation has started (requestData), and based on the result, we call the appropriate function (receiveData or receiveError).
 
-**Редьюсеры** отвечают за модификации состояний приложения. Это функции со следующим контрактом 
-(previousState, action) => newState. Очень важно никогда изменять исходное состояние в редьюсере. 
-Вместо этого необходимо создавать новое состояние на базе свойств previousState. 
-В противном случае это может иметь нежелательные последствия.
+**Reducers** are responsible for modifying application state. They are functions with the following contract: (previousState, action) => newState. It's very important to never mutate the original state in a reducer. Instead, you should create a new state based on the properties of previousState. Failing to do so can lead to unintended side effects.
 
 ```javascript
 import * as ActionTypes from '../actions';
@@ -143,15 +135,11 @@ export default function RedditStore(state = getInitialState(), action) {
     }
 }
 ```
-Так как для каждого action должен быть свой обработчик в reducer, мы создали обрабочик для наших 3 действий. При получении
-REDDIT_INFO_REQUESTED_FIRST_PAGE - мы устанавливаем флаг isFetching, что означает что запрос в процессе выполнения. В 
-дальнейшем на этот статус можно завязать отображение loader'а или помочь избежать выполнения нескольких параллельных запросов
-на данный источник.
+Since each action must have its own handler in the reducer, we created handlers for our 3 actions. When REDDIT_INFO_REQUESTED_FIRST_PAGE is received, we set the isFetching flag, which indicates that a request is in progress. Later, this status can be used to display a loader or to prevent multiple concurrent requests to the same data source.
 
-Подробнее о типах состояний можно прочитать в статье [The 5 Types Of React Application State][1] (James K Nelson)
+For more details on state types, check out the article [The 5 Types Of React Application State][1] by James K Nelson.
 
-Теперь зарегистрируем наш Store, для этого изменим App.js, добавив туда создания store и обверку Provider со ссылкой
-на созданный store.
+Now let's register our Store. To do this, we'll modify App.js by adding store creation and wrapping it with a Provider that references the created store.
 
 ```javascript
 const store = createStore(combineReducers({RedditStore}), applyMiddleware(thunk, createLogger()));
@@ -175,9 +163,7 @@ class App extends Component {
 export default App;
 ```
 
-Как видим в классе App мы добавили новый компонент RedditInfoList. Данный компонент является Smart комонентом. Его основное 
-назначение - подписка на изменения store и выполнения операций по манипуляции с данными. Ниже 
-представлен его код:
+As you can see, in the App class we added a new component called RedditInfoList. This component is a Smart component. Its primary purpose is to subscribe to store changes and perform data manipulation operations. Here is its code:
 
 ```javascript
 import React from 'react';
@@ -225,13 +211,11 @@ const mapDispatchToProps = dispatch => {
 export default connect(mapStateToProps, mapDispatchToProps)(RedditInfoList)
 ```
 
-Основное внимание стоит уделить нижней части файла, где используется функция connect. Она связывает RedditInfoList через
-функции mapStateToProps и mapDispatchToProps с генераторами действий и стором с одной стороны и props с другой.
+Pay special attention to the bottom part of the file, where the connect function is used. It links RedditInfoList through mapStateToProps and mapDispatchToProps to the action creators and the store on one side, and to props on the other.
 
-Теперь рассмотрим компонент RedditInfoItem, в нашем случае это уже Dummy компонент (то есть компонент, отвественный только
-за отображением данных)
+Now let's look at the RedditInfoItem component. In our case, this is a Dumb component (meaning a component responsible solely for rendering data).
 
-Код его представлен ниже:
+Here is its code:
 ```javascript
 export class RedditInfoItem extends React.Component {
     static propTypes = {
@@ -257,16 +241,12 @@ export class RedditInfoItem extends React.Component {
     }
 }
 ```
-Стоит обратить внимание на секцию propTypes, которая описывает входные props для данного компонента. Декларирование 
-типов является хорошой практикой. Если вы захотите задать дефолтные значения для props, можно воспользоваться 
-аналогичным объявлением defaultProps. Почитать [подробнее][5] 
+Note the propTypes section, which describes the input props for this component. Declaring types is a good practice. If you want to set default values for props, you can use a similar declaration called defaultProps. Read [more here][5].
 
-Теперь, если запустить приложение, мы увидим следующую картинку (не стоит обращать внимание на дизайн, так как вывод
-информации сделан исключительно для примера):
+Now, if we run the application, we'll see the following screen (don't mind the design — the output is purely for demonstration purposes):
 ![Markdowm Image][2]{: style="width:780px"}
 
-Что нам не хватает - добавить в код отображение loader на время загрузки данных, для этого мы модифицируем класс RedditInfoList
-в части функции render:
+What's still missing is a loader displayed while the data is being fetched. To add this, we'll modify the render function of the RedditInfoList class:
 ```javascript
 render() {
     let {data, isFetching} = this.props.reddit;
@@ -288,11 +268,9 @@ render() {
         )
 }
 ```
-Таким образом, пока идет получение информации из источника данных (установлен флаг isFetching), будет отображаться надпись 
-"Loading"
+This way, while data is being fetched from the source (i.e., the isFetching flag is set), the text "Loading" will be displayed.
 
-По итогам статьи мы создали просто пример на React/Redux для получения и отображения информации с использованием
-стороннего API. 
+In summary, we created a simple React/Redux example for fetching and displaying data from a third-party API.
 
 [1]: http://jamesknelson.com/5-types-react-application-state/
 [2]: /assets/images/posts/2018-04-08/1.png

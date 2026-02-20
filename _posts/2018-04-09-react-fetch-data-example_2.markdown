@@ -1,5 +1,5 @@
 ---
-title: "Загрузка данных с использованием React/Redux для компонента Infinity Scroll ч.2"
+title: "Fetching Data with React/Redux for an Infinity Scroll Component Part 2"
 layout: post
 date: 2018-04-09 10:00
 image: /assets/images/markdown.jpg
@@ -11,14 +11,12 @@ tag:
 category: blog
 author: balynsky
 sitemap: false
-description: Типовой сценарий загрузки данных с использованием React/Redux
+description: A typical data fetching scenario using React/Redux
 ---
 
-Данная статья является продолжением первой части, в данной статье я познакомлю Вас с отображением информации 
-с использованием UX паттерана Infinity Scroll.
+This article is a continuation of Part 1. Here, I'll walk you through displaying data using the Infinity Scroll UX pattern.
 
-Начнем с API, для этого добавим новый екшн REDDIT_INFO_REQUESTED_MORE_DATA и добавим его к другим, в итоге у нас 
-получится:
+Let's start with the API. We'll add a new action called REDDIT_INFO_REQUESTED_MORE_DATA alongside the existing ones, resulting in:
 
 ```javascript
 export const REDDIT_INFO_REQUESTED_FIRST_PAGE = 'REDDIT_INFO_REQUESTED_FIRST_PAGE';
@@ -35,12 +33,12 @@ const requestMoreData = () => {
 };
 ```
 
-Также необходимо добавить генератор действий для нового action:
+We also need to add an action creator for the new action:
 
 ```javascript
 export const fetchMoreData = () => (dispatch, getState) => {
     dispatch(requestMoreData());
-    return fetch("https://www.reddit.com/subreddits/popular/.json?after=" 
+    return fetch("https://www.reddit.com/subreddits/popular/.json?after="
                    + getState().RedditStore.reddit.skipToken)
         .then(response => response.json())
         .then(responseJson => {
@@ -51,9 +49,9 @@ export const fetchMoreData = () => (dispatch, getState) => {
         });
 };
 ```
-Как видим, мы должны передать в вызов API skipToken из прошлого запроса. Для его получения мы используем функцию getState
+As you can see, we need to pass the skipToken from the previous request in the API call. To retrieve it, we use the getState function.
 
-Также нам необхоимо изменить reducer
+We also need to update the reducer:
 ```javascript
 export default function RedditStore(state = getInitialState(), action) {
     switch (action.type) {
@@ -99,16 +97,16 @@ export default function RedditStore(state = getInitialState(), action) {
     }
 }
 ```
-Таким образом при получении данных, мы добавляем их к ранее загруженному списку.
+This way, when new data is received, it gets appended to the previously loaded list.
 
-Следующий шаг - модифицировать RedditInfoList, и мы добавляем туда 
+The next step is to modify RedditInfoList. Here's what we add:
 ```javascript
 class RedditInfoList extends React.Component {
 
     _onScroll = () => {
         let {isFetching} = this.props.reddit;
         if (!isFetching && this.scrollElement) {
-            if (this.scrollElement.scrollTop === 
+            if (this.scrollElement.scrollTop ===
                              (this.scrollElement.scrollHeight - this.scrollElement.offsetHeight)) {
                 this.props.fetchMoreData();
             }
@@ -149,17 +147,11 @@ class RedditInfoList extends React.Component {
 
 }
 ```
-Основные изменения: мы добавляем туда метод onScroll, который будет вызываться всякий раз при использовании прокрутки. В 
-нем мы анализируем, нужно ли нам запросить новые данные. Так же мы создаем ссылку на наш div (который используется как
-контейнер с прокруткой) с использованием ref. Почитать об этом механизме можно [здесь][3].
+The key changes are: we added an onScroll method that fires every time the user scrolls. Inside it, we check whether we need to fetch more data. We also create a reference to our div (which serves as the scrollable container) using ref. You can read more about this mechanism [here][3].
 
-Теперь если запустить наш пример, мы увидим список из 25 элементов и, если долистать его до конца - пойдет запрос на догрузку 
-новой информации. Что можно увидеть и в логах консоли браузера
+Now, if we run our example, we'll see a list of 25 items, and scrolling to the bottom will trigger a request to load more data. This can also be observed in the browser's console logs.
 
-Немного углубимся, как можно заметить - ухудшилась производительность. Это стало из за того, что при любом
-изменении состояния RedditInfoList постоянно происходит перерисовка RedditInfoItem. Чтобы убедится в этом, добавим в 
-RedditInfoItem в метод render вывод данных в консоль
-
+Let's dig a little deeper. You may notice that performance has degraded. This is because any state change in RedditInfoList causes a re-render of every RedditInfoItem. To verify this, let's add a console log inside RedditInfoItem's render method:
 
 ```javascript
     render() {
@@ -167,18 +159,13 @@ RedditInfoItem в метод render вывод данных в консоль
         ...
     }
 ```
-Давайте посмотрим на результат выполнения в консоле браузера:
+Let's look at the output in the browser console:
 
 ![Markdowm Image][1]{: style="width:780px"}
 
-Мы видим, что после получения данных на шаге 1 происходит отрисовка все объектов на шаге 2 (25 записей),
-далее, когда мы запрашиваем информацию следующей страницы, мы отрисовываем еще раз эти объекты на странице(во время получения
-REDDIT_INFO_REQUESTED_MORE_DATA), а 
-уже после получения информации еще раз отрисовываем 25 старых записей и еще 25 новых. Это не является корректным
-поведением, так как информация не изменилась и ее нет смысла перерисовывать. 
+We can see that after receiving the data in step 1, all items are rendered in step 2 (25 records). Then, when we request the next page, these items are rendered again (during REDDIT_INFO_REQUESTED_MORE_DATA), and after receiving the response, the 25 existing records are rendered once more along with 25 new ones. This is incorrect behavior — since the data hasn't changed, there's no reason to re-render it.
 
-Поэтому давайте научим React не перерисовывать компонент. Для этого мы переопределим метод shouldComponentUpdate 
-в классе RedditInfoItem. Он возвращает значение типа bool, которое указывает на необходимость перерисовать компонент.
+So let's teach React not to re-render the component. We'll do this by overriding the shouldComponentUpdate method in the RedditInfoItem class. It returns a boolean value indicating whether the component needs to be re-rendered.
 
 ```javascript
     shouldComponentUpdate(nextProps, nextState) {
@@ -187,19 +174,15 @@ REDDIT_INFO_REQUESTED_MORE_DATA), а
             || nextProps.headerTitle !== this.props.headerTitle;
     }
 ```
-В это методе мы анализируем - изменились ли props компонента, отвечающие за его отображение. Я убрал из сравнения 
-header_size, так как по логике при не измененном состоянии остальных свойств, header_size не должен меняться. 
+In this method, we check whether the props responsible for rendering the component have changed. I excluded header_size from the comparison because logically, if the other properties haven't changed, header_size shouldn't change either.
 
-И попробуем повторить данный эксперимент 
+Let's repeat the experiment:
 
 ![Markdowm Image][2]{: style="width:780px"}
 
-И теперь мы видим, что произошла отрисовка только новых записей после получения информации от API. 
+Now we can see that only the new records are rendered after receiving data from the API.
 
-Резюмируя, хочу обратить внимание, что в React очень важно понимать внутренний LifeCycle компонентов, чтобы не получить
-проблем с производительностью или отображением. Особенно следует уделять внимание новостям, так как некоторые изменения
-платформы (которая достаточно молодая) кардинально изменяют подходы к созданию компонентов. [Пример][4] такой записи на 
-официальном блоге проекта.
+In conclusion, I'd like to emphasize that in React, it's very important to understand the internal lifecycle of components to avoid performance or rendering issues. It's especially important to keep up with the latest updates, as some changes to the platform (which is still relatively young) can fundamentally alter the approach to building components. [Here's an example][4] of such an announcement on the official project blog.
 
 [1]: /assets/images/posts/2018-04-09/1.png
 [2]: /assets/images/posts/2018-04-09/2.png

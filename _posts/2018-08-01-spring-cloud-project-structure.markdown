@@ -1,5 +1,5 @@
 ---
-title: "Построение каркаса приложения Altered Carbon Backup"
+title: "Building the Altered Carbon Backup Application Skeleton"
 layout: post
 date: 2018-08-01 10:00
 image: /assets/images/markdown.jpg
@@ -10,93 +10,84 @@ tag:
 category: blog
 author: balynsky
 sitemap: false
-description: Построение каркаса приложения Altered Carbon Backup
+description: Building the Altered Carbon Backup application skeleton
 ---
 
-[Содержание серии статей #Про Spring Cloud][1]
+[Article series table of contents #About Spring Cloud][1]
 
-В данной серии статей будем реализовывать базовое приложение с использованием
-микросервисной архитектуры. Для этого будем использовать придуманную мной техническую схему:
+In this series of articles, we'll be building a basic application using microservice architecture. To do this, we'll use the following technical diagram that I designed:
 ![Markdowm Image][4]{: style="width:780px" }
 
-Система имеет 2 основных компонента: BackupService (отвечает за бекап данных) и CleanupService (отвечает за 
-периодическую подчистку устаревших версих для копий данных). 
+The system has 2 main components: BackupService (responsible for data backup) and CleanupService (responsible for periodically cleaning up outdated data copies).
 
-На схеме присутствуют еще два вспомагательных сервиса: ClientInfo (получение данных по пользователю) и Storage 
-(непосредственно сервис для хранения информации)
+The diagram also shows two auxiliary services: ClientInfo (retrieves user data) and Storage (the actual data storage service).
 
-### Структура проекта
-Создание структуры исходного кода проекта. Системой управления сборкой мы будем использовать Gradle, 
-для которой мы создадим мультимодульный проект.
+### Project Structure
+Let's set up the source code structure. We'll use Gradle as our build management system, creating a multi-module project.
 
-Пойдем по шагам:
-1. Создадим директория проекта:
+Let's go step by step:
+1. Create the project directory:
 ```
 mkdir ac-backup
 cd ac-backup
 ```
 
-2. Создадим новый проект gradle
+2. Initialize a new Gradle project:
 ```
 gradle init
 ```
-Результатом выполнения команды будет следующая структура
+Running this command will produce the following structure:
 ```
 .
 ├── build.gradle
 ├── gradle
-│   └── wrapper
-│       ├── gradle-wrapper.jar
-│       └── gradle-wrapper.properties
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
 ├── gradlew
 ├── gradlew.bat
 └── settings.gradle
 ```
-Как мы видим были созданы все необходимые файлы и директороии Gradle проекта. Детальнее прочитать 
-про струтуру проекта можно на официальном [сайте][2] системы сборки Gradle. 
-Остается только заменить содержимое файла build.gradle на 
+As we can see, all the necessary Gradle project files and directories have been created. You can read more about the project structure on the official Gradle [website][2].
+All that's left is to replace the contents of the build.gradle file with:
 ```groovy
 allprojects {
     repositories {
-        jcenter() 
+        jcenter()
     }
 }
 ```
-3. Добавление модуля для аггрегации кода бекенд части проекта.
+3. Adding a module to aggregate the backend code.
 ```
 mkdir backend
 cd backend
 ```
-Создадим build.gradle, для группы наших бекенд проектов, в которую будут входить проекты
-управления микросервисной архитектурой и бизнес сервисы. По аналогии создадим проекты frontend, infrastructure
+Let's create a build.gradle for our group of backend projects, which will include both the microservice management projects and the business services. Similarly, we'll create frontend and infrastructure projects.
 
-Итоговая структура проекта:
+The final project structure:
 ```
 .
 ├── backend
-│   └── build.gradle
+│   └── build.gradle
 ├── frontend
-│   └── build.gradle
+│   └── build.gradle
 ├── gradle
-│   └── wrapper
-│       ├── gradle-wrapper.jar
-│       └── gradle-wrapper.properties
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
 ├── infrastructure
-│   └── build.gradle
+│   └── build.gradle
 ├── build.gradle
 ├── gradlew
 ├── gradlew.bat
 └── settings.gradle
 ```
 
-### Создание сервиса бекапа
+### Creating the Backup Service
 
-Следующим шагом мы приступим к созданию основного сервиса для бекапа данных, его создадим по аналогии с другими
-проектами в директории backend. Также не забываем добавлять проект в файл _settings.gradle_. Для сервиса выбрано имя
-_backup-service_.
+Next, we'll create the main service for data backup, following the same approach as the other projects in the backend directory. Don't forget to add the project to the _settings.gradle_ file. The service is named _backup-service_.
 
-Теперь начнем разработку непосредственно самого сервиса. Для начала необходимо подключить зависимости для создания
-проекта Spring Boot. Для этого в _build.gradle_ необходимо добавить:
+Now let's start developing the service itself. First, we need to add the dependencies for creating a Spring Boot project. Add the following to _build.gradle_:
 ```groovy
 buildscript {
     repositories {
@@ -121,8 +112,7 @@ dependencies {
 }
 
 ```
-Я рекомендую выносить управление версиями компонентов (если они будут встречаться в нескольких похожих проектов)
-на уровень выше. В нашем случае я добавил в _build.gradle_ в каталоге backend:
+I recommend moving version management for components (if they appear in multiple similar projects) up one level. In our case, I added the following to _build.gradle_ in the backend directory:
 ```groovy
 subprojects {
     // ... ... ...
@@ -134,9 +124,7 @@ subprojects {
 
 ```
 
-Теперь создадим наш первый контроллер (заглушка для первого этапа) для бекапа сознания мафа. Первым шагом
-будет объявление точки входа приложения, для этого создадим класс _BackupApplication_ в пакете
-_com.balynsky.ac.backup_ со следующим содержимым:
+Now let's create our first controller (a stub for the first stage) for backing up a meth's consciousness. The first step is to declare the application entry point. Create a _BackupApplication_ class in the _com.balynsky.ac.backup_ package with the following content:
 ```java
 package com.balynsky.ac.backup;
 
@@ -152,9 +140,7 @@ public class BackupApplication {
 }
 
 ```
-Вот так просто мы объявили наше Spring Boot приложение, теперь оно готово для старта и мы можем его запустить.
-Но перед его запуском давайте добавим наш первый контроллер. Для этого создадим класс BackupController, 
-который на первом этапе будет выводить в консоль параметр, пришедший в теле запроса и отправлять ответ.
+Just like that, we've declared our Spring Boot application — it's now ready to start and we can run it. But before launching, let's add our first controller. Create the BackupController class, which at this stage will simply log the parameter from the request body to the console and send a response.
 ```java
 package com.balynsky.ac.backup.controller;
 
@@ -164,7 +150,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BackupController {
-	
+
 	@PostMapping(path = "/backup-service/backup")
 	public ResponseEntity backupSoul(String soul) {
 		System.out.println("New Soul " + soul);
@@ -173,22 +159,21 @@ public class BackupController {
 
 }
 ```
-Теперь нам остается запустить приложение и проверить работу нашего контроллера.
+Now all that's left is to start the application and test our controller.
 ```
 curl -i -X POST -d "soul=newSoul" http://localhost:8080/backup-service/backup
-HTTP/1.1 201 
+HTTP/1.1 201
 Content-Length: 0
 Date: Sat, 25 Aug 2018 18:01:05 GMT
 ```
-Как видим, наш сервис вернул 201 код, который мы задали в контроллере. 
+As we can see, our service returned the 201 status code that we set in the controller.
 
-P.S. Написание тестов для SpringBoot приложения я вынес в отдельную статью, поэтому для проверки работы сервиса 
-используется CURL.
+P.S. Writing tests for a SpringBoot application is covered in a separate article, so here we're using CURL to verify the service.
 
-### Итоги:
-На первом шаге мы создали базовую структуру проекта, подключили SpringBoot и написали наш первый контроллер.
+### Summary:
+In this first step, we created the basic project structure, added SpringBoot, and wrote our first controller.
 
-Проект опубликован в [репозитории на GitHub][3] 
+The project is published in the [GitHub repository][3].
 
 [1]: /spring-cloud-starter
 [2]: https://gradle.org

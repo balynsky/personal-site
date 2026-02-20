@@ -1,5 +1,5 @@
 ---
-title: "Spring Cloud для построения проекта с микросервисной архитектурой"
+title: "Spring Cloud for Building a Microservice Architecture Project"
 layout: post
 date: 2018-06-01 10:00
 image: /assets/images/markdown.jpg
@@ -9,33 +9,29 @@ tag:
 category: blog
 author: balynsky
 sitemap: false
-description: Spring Cloud для построения проекта с микросервисной архитектурой
+description: Spring Cloud for building a microservice architecture project
 ---
 
-В данной серии статей будем реализовывать базовое приложение с использованием
-микросервисной архитектуры
+In this series of articles, we'll be building a basic application using microservice architecture.
 
-Статьи:
+Articles:
 
-- [Построение каркаса приложения][3]
-- [Написание рабочего прототипа Altered Carbon Backup без использования Spring Cloud][4]
-- [Конфигурирование проекта. Использование Spring Cloud Config][5]
-- [Feign, Ribbon для коммуникации между сервисами][6]
-- Service Discovery, регистрация и обнаружение сервисов
-- Мониторинг сервисов с помощью Boot admin 
+- [Building the Application Skeleton][3]
+- [Building a Working Prototype of Altered Carbon Backup Without Spring Cloud][4]
+- [Project Configuration with Spring Cloud Config][5]
+- [Feign and Ribbon for Inter-Service Communication][6]
+- Service Discovery: Registering and Discovering Services
+- Service Monitoring with Boot Admin
 - Hystrix
 - Spring Security, OAuth 2.0
-- Использование Terraform для управления инфраструктурой
-- Использование контейниризации для проекта (проект Docker)
-- Деплой приложений с использованием Ansible
-- Api Gateway как единая точка входа
+- Using Terraform for Infrastructure Management
+- Using Containerization for the Project (Docker)
+- Deploying Applications with Ansible
+- API Gateway as a Single Entry Point
 
-Для построения приложения будем решать следующую задачу: будем строить систему бекапа сознания мафов. 
-Думаю все видели фильм _Видоизмененный углерод / Altered Carbon_, который и ляжет в основу 
-нашего воображаемого проекта  :)
+For our application, we'll be solving the following task: building a consciousness backup system for meths. I'm sure you've all seen the show _Altered Carbon_, which will serve as the foundation for our imaginary project :)
 
-
-Почитать о самом сериале можно на следующем [ресурсе][2]
+You can read more about the show at this [link][2].
 ![Markdowm Image][1]
 
 
