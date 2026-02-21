@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 430" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="gG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8DCA0"/>
+      <stop offset="100%" stop-color="#6BAF3A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===== TOOLTIP CALLOUTS (same size 210x100, each centered above its block) ===== -->
+
+  <!-- Left tooltip: centered on Change Request (center=115), pointer at 50% -->
+  <rect x="10" y="8" width="210" height="100" rx="6" fill="#FFF3CD" stroke="#D4A830" stroke-width="1.5"/>
+  <polygon points="97,108 115,126 133,108" fill="#FFF3CD" stroke="#D4A830" stroke-width="1.5"/>
+  <polygon points="99,108 115,124 131,108" fill="#FFF3CD"/>
+  <text font-size="10.5" fill="#333">
+    <tspan x="115" y="28" text-anchor="middle">A registered request for changes</tspan>
+    <tspan x="115" y="42" text-anchor="middle">to automated systems, in which</tspan>
+    <tspan x="115" y="56" text-anchor="middle">the initiator recorded requirements,</tspan>
+    <tspan x="115" y="70" text-anchor="middle">reason for initiation, and</tspan>
+    <tspan x="115" y="84" text-anchor="middle">expected benefits</tspan>
+  </text>
+
+  <!-- Center tooltip: centered on Service Request (center=400) -->
+  <rect x="275" y="8" width="250" height="100" rx="6" fill="#FFF3CD" stroke="#D4A830" stroke-width="1.5"/>
+  <polygon points="382,108 400,126 418,108" fill="#FFF3CD" stroke="#D4A830" stroke-width="1.5"/>
+  <polygon points="384,108 400,124 416,108" fill="#FFF3CD"/>
+  <text font-size="10.5" fill="#333">
+    <tspan x="400" y="28" text-anchor="middle">A request registered in the EDMS</tspan>
+    <tspan x="400" y="42" text-anchor="middle">for information, consultation,</tspan>
+    <tspan x="400" y="56" text-anchor="middle">or a standard change, accessing</tspan>
+    <tspan x="400" y="70" text-anchor="middle">an IT service from the</tspan>
+    <tspan x="400" y="84" text-anchor="middle">IT Service Catalog</tspan>
+  </text>
+
+  <!-- Right tooltip: centered on Incident (center=715), pointer at 50% -->
+  <rect x="610" y="8" width="210" height="100" rx="6" fill="#FFF3CD" stroke="#D4A830" stroke-width="1.5"/>
+  <polygon points="697,108 715,126 733,108" fill="#FFF3CD" stroke="#D4A830" stroke-width="1.5"/>
+  <polygon points="699,108 715,124 731,108" fill="#FFF3CD"/>
+  <text font-size="10.5" fill="#333">
+    <tspan x="715" y="28" text-anchor="middle">An event that is not part of</tspan>
+    <tspan x="715" y="42" text-anchor="middle">standard service operations</tspan>
+    <tspan x="715" y="56" text-anchor="middle">and that causes, or may cause,</tspan>
+    <tspan x="715" y="70" text-anchor="middle">an interruption or degradation</tspan>
+    <tspan x="715" y="84" text-anchor="middle">of service quality</tspan>
+  </text>
+
+  <!-- ===== MAIN CATEGORY BOXES ===== -->
+
+  <rect x="35" y="138" width="155" height="44" rx="4" fill="#E8F4FD" stroke="#D4A830" stroke-width="2"/>
+  <rect x="35" y="138" width="6" height="44" rx="2" fill="#D4A830"/>
+  <text x="115" y="156" text-anchor="middle" fill="#2C5F8A" font-size="14" font-weight="bold">Change</text>
+  <text x="115" y="172" text-anchor="middle" fill="#2C5F8A" font-size="14" font-weight="bold">Request</text>
+
+  <rect x="280" y="138" width="240" height="44" rx="4" fill="#5B9BD5"/>
+  <text x="400" y="156" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Service</text>
+  <text x="400" y="172" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Request</text>
+
+  <rect x="650" y="138" width="130" height="44" rx="4" fill="#5B9BD5"/>
+  <text x="715" y="165" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Incident</text>
+
+  <!-- ===== BRANCH LINES (Service Request → 3 sub-types) ===== -->
+  <line x1="340" y1="182" x2="245" y2="240" stroke="#5B9BD5" stroke-width="1.5"/>
+  <line x1="400" y1="182" x2="430" y2="240" stroke="#5B9BD5" stroke-width="1.5"/>
+  <line x1="460" y1="182" x2="580" y2="240" stroke="#5B9BD5" stroke-width="1.5"/>
+
+  <!-- ===== SUB-TYPE BOXES (shifted right so Change Request arrow at x=115 is clear) ===== -->
+
+  <rect x="145" y="242" width="200" height="50" rx="4" fill="#D6E8F7" stroke="#5B9BD5" stroke-width="1.5"/>
+  <text x="245" y="263" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">Standard SR</text>
+  <text x="245" y="279" text-anchor="middle" fill="#555" font-size="11">(catalog selection)</text>
+
+  <rect x="365" y="242" width="130" height="50" rx="4" fill="#D6E8F7" stroke="#5B9BD5" stroke-width="1.5"/>
+  <text x="430" y="263" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">Non-standard</text>
+  <text x="430" y="279" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">SR</text>
+
+  <rect x="515" y="242" width="140" height="50" rx="4" fill="#D6E8F7" stroke="#5B9BD5" stroke-width="1.5"/>
+  <text x="585" y="263" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">Information</text>
+  <text x="585" y="279" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">Request</text>
+
+  <!-- ===== VERTICAL ARROWS DOWN TO IT BAR ===== -->
+
+  <!-- Change Request (blue) — x=115, left of all sub-boxes (start at x=145) -->
+  <line x1="115" y1="182" x2="115" y2="378" stroke="#5B9BD5" stroke-width="2.5"/>
+  <polygon points="109,378 115,390 121,378" fill="#5B9BD5"/>
+
+  <!-- Standard SR (yellow, SLA) -->
+  <line x1="245" y1="292" x2="245" y2="378" stroke="#E8A317" stroke-width="2.5"/>
+  <polygon points="239,378 245,390 251,378" fill="#E8A317"/>
+  <text x="228" y="345" fill="#666" font-size="11" font-weight="bold" transform="rotate(-90,228,345)">SLA</text>
+
+  <!-- Non-standard SR (blue) -->
+  <line x1="430" y1="292" x2="430" y2="378" stroke="#5B9BD5" stroke-width="2"/>
+  <polygon points="424,378 430,390 436,378" fill="#5B9BD5"/>
+
+  <!-- Information Request (blue) -->
+  <line x1="585" y1="292" x2="585" y2="378" stroke="#5B9BD5" stroke-width="2"/>
+  <polygon points="579,378 585,390 591,378" fill="#5B9BD5"/>
+
+  <!-- Incident (yellow, SLA) — x=715, right of all sub-boxes (end at x=655) -->
+  <line x1="715" y1="182" x2="715" y2="378" stroke="#E8A317" stroke-width="2.5"/>
+  <polygon points="709,378 715,390 721,378" fill="#E8A317"/>
+  <text x="732" y="290" fill="#666" font-size="11" font-weight="bold" transform="rotate(-90,732,290)">SLA</text>
+
+  <!-- ===== BOTTOM BAR ===== -->
+  <rect x="20" y="388" width="780" height="36" rx="4" fill="url(#gG)"/>
+  <text x="410" y="412" text-anchor="middle" fill="white" font-size="20" font-weight="bold" font-style="italic">Information Technology Department</text>
+</svg>

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 410" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4472C4"/>
+    </marker>
+  </defs>
+
+  <!-- ===== LEFT SIDE: Scattered input channel boxes ===== -->
+
+  <!-- Email (salmon/pink) -->
+  <rect x="8" y="108" width="95" height="38" rx="4" fill="#E8A090"/>
+  <text x="55" y="132" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">Email</text>
+
+  <!-- Phone (green) -->
+  <rect x="125" y="62" width="95" height="38" rx="4" fill="#90C090"/>
+  <text x="172" y="86" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">Phone</text>
+
+  <!-- Viber / SMS (yellow) -->
+  <rect x="45" y="162" width="100" height="38" rx="4" fill="#F0D060"/>
+  <text x="95" y="186" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">Viber / SMS</text>
+
+  <!-- External Systems Tier 1 (teal) -->
+  <rect x="165" y="152" width="108" height="50" rx="4" fill="#70B0B0"/>
+  <text x="219" y="173" text-anchor="middle" fill="white" font-size="10.5" font-weight="bold">External Systems</text>
+  <text x="219" y="189" text-anchor="middle" fill="white" font-size="10.5" font-weight="bold">(Tier 1)</text>
+
+  <!-- Planned Tasks (light blue) -->
+  <rect x="135" y="228" width="108" height="40" rx="4" fill="#A0C8E8"/>
+  <text x="189" y="253" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">Planned Tasks</text>
+
+  <!-- External Systems Tier 3 (red/pink) -->
+  <rect x="8" y="285" width="110" height="48" rx="4" fill="#E8A090"/>
+  <text x="63" y="305" text-anchor="middle" fill="white" font-size="10.5" font-weight="bold">External Systems</text>
+  <text x="63" y="321" text-anchor="middle" fill="white" font-size="10.5" font-weight="bold">(Tier 3)</text>
+
+  <!-- ===== "Ad hoc" LABELS WITH CURVED ARROWS ===== -->
+
+  <!-- Ad hoc 1: top-far-left, curved arrow sweeping down to Email (x=8-103, y=108) -->
+  <text x="2" y="48" fill="#4472C4" font-size="12" font-style="italic" transform="rotate(-40,22,48)">Ad hoc</text>
+  <path d="M25,58 Q35,80 35,103" fill="none" stroke="#4472C4" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- Ad hoc 2: top-center, curved arrow down toward Phone (x=125-220, y=62) -->
+  <text x="118" y="30" fill="#4472C4" font-size="12" font-style="italic" transform="rotate(-20,138,30)">Ad hoc</text>
+  <path d="M148,36 Q160,48 162,57" fill="none" stroke="#4472C4" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- Ad hoc 3: left-center, horizontal arrow right toward Viber/SMS (x=45, y=162) -->
+  <text x="2" y="172" fill="#4472C4" font-size="12" font-style="italic">Ad hoc</text>
+  <line x1="8" y1="180" x2="42" y2="180" stroke="#4472C4" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- Ad hoc 4: above External Systems, arrow down (x=165-273, y=152) -->
+  <text x="218" y="125" fill="#4472C4" font-size="12" font-style="italic">Ad hoc</text>
+  <path d="M238,130 Q240,140 240,148" fill="none" stroke="#4472C4" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- (no Ad hoc for Planned Tasks — they are not ad hoc) -->
+
+  <!-- Ad hoc 6: bottom-far-left, curved arrow up toward Ext Systems T3 (x=8-118, y=285) -->
+  <text x="2" y="370" fill="#4472C4" font-size="12" font-style="italic" transform="rotate(30,22,370)">Ad hoc</text>
+  <path d="M35,360 Q42,345 42,333" fill="none" stroke="#4472C4" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- ===== CENTER: Vertical line ===== -->
+  <line x1="400" y1="30" x2="400" y2="378" stroke="#666" stroke-width="2.5"/>
+
+  <!-- ===== Question mark and "What matters?" ===== -->
+  <text x="345" y="175" text-anchor="middle" fill="#5B9BD5" font-size="55" font-weight="bold">?</text>
+  <text x="345" y="205" text-anchor="middle" fill="#555" font-size="13" font-weight="bold">What matters?</text>
+
+  <!-- ===== Thick green arrow (right-pointing, crosses the vertical line) ===== -->
+  <polygon points="408,191 452,191 452,181 488,198 452,215 452,205 408,205" fill="#8BAF3A"/>
+
+  <!-- ===== NUMBERED BOXES 1-6 (stacked vertically) ===== -->
+
+  <rect x="492" y="60" width="40" height="36" rx="3" fill="#3A5A8C"/>
+  <text x="512" y="84" text-anchor="middle" fill="white" font-size="14" font-weight="bold">1</text>
+
+  <rect x="492" y="108" width="40" height="36" rx="3" fill="#3A5A8C"/>
+  <text x="512" y="132" text-anchor="middle" fill="white" font-size="14" font-weight="bold">2</text>
+
+  <rect x="492" y="156" width="40" height="36" rx="3" fill="#5B9BD5"/>
+  <text x="512" y="180" text-anchor="middle" fill="white" font-size="14" font-weight="bold">3</text>
+
+  <rect x="492" y="204" width="40" height="36" rx="3" fill="#5B9BD5"/>
+  <text x="512" y="228" text-anchor="middle" fill="white" font-size="14" font-weight="bold">4</text>
+
+  <rect x="492" y="252" width="40" height="36" rx="3" fill="#8BAFC8"/>
+  <text x="512" y="276" text-anchor="middle" fill="white" font-size="14" font-weight="bold">5</text>
+
+  <rect x="492" y="300" width="40" height="36" rx="3" fill="#8BAFC8"/>
+  <text x="512" y="324" text-anchor="middle" fill="white" font-size="14" font-weight="bold">6</text>
+
+  <!-- ===== BULLET POINTS (right of numbered boxes 1-4) ===== -->
+  <text fill="#333" font-size="12">
+    <tspan x="548" y="84">&#x2022; 80% of tasks arrive ad hoc</tspan>
+    <tspan x="548" y="118">&#x2022; task priorities constantly change</tspan>
+    <tspan x="548" y="152">&#x2022; no ability to plan work</tspan>
+    <tspan x="548" y="186">&#x2022; no coherent approach to system development</tspan>
+    <tspan x="548" y="220">&#x2022; no "established rules" for implementing changes</tspan>
+  </text>
+
+  <!-- ===== PIE CHART (top-right corner) ===== -->
+  <!-- 3D Pie Chart (larger): depth band -->
+  <path d="M775,65 A60,40 0 0,0 895,65 L895,81 A60,40 0 0,1 775,81 Z" fill="#2A4A72"/>
+  <!-- 20% slice depth (right side) -->
+  <path d="M835,65 L835,81 A60,40 0 0,0 895,81 L895,65 A60,40 0 0,1 835,65" fill="#6A8FB0"/>
+
+  <!-- Top face: 80% base (dark blue) -->
+  <ellipse cx="835" cy="62" rx="60" ry="40" fill="#3A5A8C"/>
+  <!-- 20% slice (72° = 20%) -->
+  <path d="M835,62 L835,22 A60,40 0 0,1 892,49.6 Z" fill="#8BAFC8"/>
+  <!-- Slice divider lines -->
+  <line x1="835" y1="62" x2="835" y2="22" stroke="#fff" stroke-width="0.7" opacity="0.4"/>
+  <line x1="835" y1="62" x2="892" y2="49.6" stroke="#fff" stroke-width="0.7" opacity="0.4"/>
+
+  <!-- Labels -->
+  <text x="800" y="58" fill="white" font-size="16" font-weight="bold">80%</text>
+  <text x="798" y="76" fill="white" font-size="12">Ad hoc</text>
+  <text x="855" y="45" text-anchor="middle" fill="white" font-size="12" font-weight="bold">20%</text>
+
+  <!-- ===== CONCLUSION: Orange arrow + text (bottom-right) ===== -->
+  <line x1="680" y1="280" x2="680" y2="350" stroke="#E8923A" stroke-width="3"/>
+  <polygon points="673,350 680,365 687,350" fill="#E8923A"/>
+
+  <text x="548" y="380" fill="#333" font-size="13">Service delivery <tspan font-weight="bold" font-size="15">SIGNIFICANTLY</tspan></text>
+  <text x="548" y="400" fill="#333" font-size="13"><tspan font-weight="bold" font-size="15">LAGS</tspan> behind business needs.</text>
+</svg>

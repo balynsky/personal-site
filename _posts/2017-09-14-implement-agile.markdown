@@ -1,5 +1,5 @@
 ---
-title: "Внедрение элементов гибких методологий в Банке"
+title: "Implementing Agile Elements in a Bank"
 layout: post
 date: 2017-09-14 10:00
 image: /assets/images/markdown.jpg
@@ -11,96 +11,95 @@ tag:
 category: blog
 author: balynsky
 sitemap: false
-description: Внедрение элементов гибких методологий в Банке
-# jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'
+description: Implementing agile methodology elements in a Bank
 ---
 
-Ранее я рассказывал, что основная деятельность Банка в части ИТ процессов, была организована на ITIL. Исключением стал только процесс управления изменениями. Вторая (и заключительная) часть посвящена внедрению элементов гибких методологий в Банке в процессах управления изменениями в ИТ.
+Previously, I described how the Bank's core IT processes were organized around ITIL. The only exception was the change management process. This second (and final) part covers the implementation of agile methodology elements in the Bank's IT change management processes.
 
-### Описание проблемы
+### Problem Description
 
-Я столкнулся со следующими проблемами при анализе существовавшего процесса:
+I encountered the following problems when analyzing the existing process:
 
-* 80% задач поступает ad hoc
-* приоритеты задач постоянно меняются
-* нет возможности осуществлять планирование работ
-* отсутствует гармоничность в развитии систем
-* нет «установленных правил игры» при реализации изменений
+* 80% of tasks arrive ad hoc
+* Task priorities constantly change
+* No ability to plan work
+* No coherent approach to system development
+* No "established rules of the game" for implementing changes
 
 ![Markdowm Image][1]{: style="width:780px" }
 
-Как внутренний эффект – эмоциональное выгорание персонала, падение производительности труда, отсутствие эффекта новаторства. 
+The internal effects included employee burnout, declining productivity, and a lack of innovation.
 
-Основная цель Банка – максимально быстро и качественно выводить новые продукты на рынок. Почему этого не происходило? Я покажу три самых распространенных сценария. Уверен их можно встретить и в других финансовых организациях.
+The Bank's primary goal was to bring new products to market as quickly and with as high quality as possible. Why wasn't this happening? I'll demonstrate three of the most common scenarios. I'm sure they can be found in other financial organizations as well.
 
-Для наглядности будем запускать новый кредитный продукт – Кредитная карта. Заказчиком будет выступать розничный бизнес, основной исполнитель – внешний подрядчик (будем использовать модель аутсорсинга, которая распространена в ряде организаций), внутреннее ИТ выполняет сервисную функцию. И самое главное: все ситуации будут вымышленные, а совпадения случайны. 
+For illustration, let's launch a new credit product — a Credit Card. The customer will be the retail business unit, the primary contractor will be an external vendor (we'll use the outsourcing model common in many organizations), and internal IT serves a supporting function. And most importantly: all situations described are fictional, and any resemblance is coincidental.
 
 ![Markdowm Image][2]{: class="block-right" style="width:360px"}
 
-Заказчик начинает реализацию проекта, проводит встречи с Исполнителем. Результат формирование паспорта проекта на реализацию продукта.
+The customer begins project implementation, holding meetings with the contractor. The result is a project charter for the product.
 
-В паспорт попадают все требования и процессы, которые описывает наш Заказчик, основываюсь на процессе продажи:
+The charter includes all requirements and processes described by our customer, based on the sales process:
 
-* Поля анкеты клиента;
-* Требования к фронт системе (продажа, верификация);
-* Ролевая модель;
-* Требования к интеграции с системами;
-* Драфт процесса продажи.
+* Customer application form fields;
+* Front-end system requirements (sales, verification);
+* Role model;
+* System integration requirements;
+* Draft sales process.
 
-И тут мы приходим к первой ошибке: после утверждения концепта и старта работ оказываются непроработанными (или неучтенными): участие фин. мониторинга в процессе идентификации продукта (черные списки, списки террористов и т.д).
+And here we encounter the first mistake: after the concept is approved and work begins, certain aspects turn out to be unaddressed (or overlooked): the involvement of financial monitoring in product identification (blacklists, terrorist lists, etc.).
 
-Потребуется доработка процесса продажи, изменение форм, добавление интеграций, новых ролей. Как следствие: изменение сроков и бюджета проекта. Как часто бывает — одно подразделение не может знать всех процессов других подразделений.
-    
+This requires reworking the sales process, changing forms, adding integrations and new roles. As a consequence: changes to the project timeline and budget. As often happens — one department cannot know all the processes of other departments.
+
 ---
 ![Markdowm Image][3]{: class="block-left" style="width:360px"}
 
-Наш Заказчик проводит встречи со всеми бизнес подразделениями, процесс становится максимально проработанным, но отсутствует архитектурное описание реализации функционала в бизнес системах. Заказчик описывает представление продуктового каталога, исполнитель реализовывает продуктовый каталог в своей системе (то есть в системе, которую он знает). В процессе пилота оказывается, что часть параметров должны быть настроены в АБС (основной учетной системе Банка), в противном случае будет отсутствовать возможность корректного начисления процентов. 
+Our customer holds meetings with all business departments, the process becomes thoroughly developed, but there is no architectural description of how the functionality will be implemented in business systems. The customer describes the product catalog design, and the contractor implements the product catalog in their own system (i.e., the system they know). During the pilot, it turns out that some parameters need to be configured in the CBS (the Bank's core banking system), otherwise correct interest calculation won't be possible.
 
-Что имеем – дополнительные расходы на синхронизацию систем (параметров кредитного продукта) или трудозатраты перенос ведения продуктового каталога в АБС. В первом случае увеличиваются операционные расходы на сопровождение продукта, во втором увеличение сроков и бюджета проекта.
-    
+The result — additional costs for system synchronization (credit product parameters) or labor costs for migrating product catalog management to the CBS. In the first case, operational costs for product maintenance increase; in the second, the project timeline and budget expand.
+
 ---
 ![Markdowm Image][4]{: class="block-right" style="width:360px"}
 
-Третий возможный случай – параллельные изменения в основных системах, инициированные другими подразделениями или изменений требований законодательства. Самый простой пример, добавление или изменение полей анкеты клиента, изменение их обязательности. 
-    
+The third possible scenario — parallel changes in core systems initiated by other departments or regulatory requirement changes. The simplest example is adding or modifying customer application fields or changing their mandatory status.
+
 ---
-    
-### Поиск решения
 
-Наша задача была выстроить эффективный процесс внедрения, для этого необходимо было вовлечь все бизнес подразделения в процесс управления изменениями, а также снизить конфликты за ресурс ИТ. Для этого мы стали смотреть в сторону гибких методологий, чтобы использовать их артефакты в улучшении внутренних процессов.
+### Finding a Solution
 
-Первое – мы стали смотреть как происходит внедрение в аналогичных организациях. Но многие крупные организации внедряют гибкие процессы лишь формально – приходит руководитель к ИТ отделу и говорит: «Так, с сегодняшнего дня начальник отдела становится скрам мастером, проводим стендапы и рисует спринты». Данное изменение в корне ничего не меняет, кроме названий (руководители проводят краткосрочное планирование, совещания с подчиненными и т.д.). Иногда к обсуждению команды ИТ приглашают одного человека из бизнеса, но обсуждения на таких встречах носит сугубо технический характер, поэтому профита от этого не получается.
+Our task was to build an effective implementation process. To achieve this, we needed to involve all business departments in the change management process and reduce conflicts over IT resources. We began looking toward agile methodologies to use their artifacts for improving internal processes.
+
+First, we examined how similar organizations were adopting agile. But many large organizations implement agile processes only formally — a manager comes to the IT department and says: "Starting today, the department head becomes the scrum master, we'll hold standups and draw sprints." This change fundamentally alters nothing except the terminology (managers conduct short-term planning, meetings with subordinates, etc.). Sometimes one business representative is invited to IT team discussions, but the conversations at these meetings are purely technical, so no real benefit comes from it.
 
 ![Markdowm Image][5]{: style="width:780px" }
 
-Мы предложили совсем другую модель, объединиться вокруг продуктов, включив в команду представителей от всех подразделений участвующих в процессах, связанных с данных продуктов(как продажа, так и обслуживание). Второе значимое нововведение – жизненный цикл банковского продукта начинается от лида и заканчивается в момент закрытия или перепродажи сделки. 
+We proposed an entirely different model: organizing around products, including representatives from all departments involved in processes related to those products (both sales and servicing). The second significant innovation was that the banking product lifecycle begins from the lead and ends at the moment of deal closure or resale.
 
-#### Этап 1 – Фиксация идеи, Подготовка CR, Предварительная оценка.
-Любой участник команды описывает реализуемое изменение для предварительного анализа, используя для этого формат user-story, которое в итоге попадает в беклог бизнес-аналитика. Бизнес аналитик организовывает еженедельные встречи, где изменения обсуждаются с участием владельца продукта, аналитиков и других бизнес подразделений, участвующих в процессе. После этого этапа изменения попадают в беклог продукта.
+#### Stage 1 — Capturing the Idea, Preparing the CR, Preliminary Assessment
+Any team member describes the proposed change for preliminary analysis using the user-story format, which then goes into the business analyst's backlog. The business analyst organizes weekly meetings where changes are discussed with the product owner, analysts, and other business departments involved in the process. After this stage, changes move into the product backlog.
 
-#### Этап 2 – Установка приоритетов и планирование реализации
-Планирование задач заключается в определении перечня задач из беклога, которые будут включены в ближайший спринт. За приоритезацию задач отвечает непосредственно владелец продукта, он же несет ответственность за экономическую целесообразность работ и качество реализованного продукта. Команда добивается успеха или совершает ошибки как единое целое.
+#### Stage 2 — Setting Priorities and Planning Implementation
+Task planning involves determining which tasks from the backlog will be included in the upcoming sprint. The product owner is directly responsible for task prioritization, as well as for the economic viability of the work and the quality of the delivered product. The team succeeds or fails as a whole.
 
-#### Этап 3 – Разработка, тестирование, релиз.
-Владелец продукта получает результат каждого спринта на тестирование и может влиять на дальнейший ход, например, корректировать перечень дальнейших работ. Все изменения продукта объединяются в релизы, которые состоят из нескольких спринтов длительностью 2-4 недели. 
+#### Stage 3 — Development, Testing, Release
+The product owner receives the results of each sprint for testing and can influence the further course, for example, by adjusting the scope of upcoming work. All product changes are combined into releases, which consist of several sprints lasting 2-4 weeks.
 
 ![Markdowm Image][6]{: style="width:780px"}
 
-### Заключение
+### Conclusion
 
-Как завершение статьи, приведу пример команды из розничного бизнеса, за которой может быть закреплен наш вымышленный продукт — Кредитная карта:
+To conclude this article, here's an example of a retail business team that could be assigned our fictional product — the Credit Card:
 
-Управление кредитных карт и эквайринга (Владелец продукта)
+Credit Cards and Acquiring Department (Product Owner)
 
-* Управление финансового мониторинга
-* Управление контроля финансовых и операционных рисков
-* Управление сопровождения банковских операций
-* Управление информационных технологий
-* Управление платежных систем
+* Financial Monitoring Department
+* Financial and Operational Risk Control Department
+* Banking Operations Support Department
+* Information Technology Department
+* Payment Systems Department
 
-[1]: /assets/images/posts/2017-09-14/1.png
-[2]: /assets/images/posts/2017-09-14/2.png
-[3]: /assets/images/posts/2017-09-14/3.png
-[4]: /assets/images/posts/2017-09-14/4.png
-[5]: /assets/images/posts/2017-09-14/5.png
-[6]: /assets/images/posts/2017-09-14/6.png
+[1]: /assets/images/posts/2017-09-14/1.svg
+[2]: /assets/images/posts/2017-09-14/2.svg
+[3]: /assets/images/posts/2017-09-14/3.svg
+[4]: /assets/images/posts/2017-09-14/4.svg
+[5]: /assets/images/posts/2017-09-14/5.svg
+[6]: /assets/images/posts/2017-09-14/6.svg

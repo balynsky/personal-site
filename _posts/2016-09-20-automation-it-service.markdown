@@ -1,5 +1,5 @@
 ---
-title: "Автоматизация работы ИТ службы"
+title: “Automating IT Service Operations”
 layout: post
 date: 2016-09-20 10:00
 image: /assets/images/markdown.jpg
@@ -11,150 +11,150 @@ tag:
 category: blog
 author: balynsky
 sitemap: false
-description: Автоматизация работы ИТ службы в Банке
+description: Automating IT service operations in a Bank
 ---
-#### Начало
-Поделюсь небольшим опытом в организации работы ИТ службы Банка. Статья не будет нагруженной описанием бюрократических составляющих, которые я выполнял для достижения цели и, надеюсь, мой опыт будет вам полезен.
+#### Introduction
+I'd like to share my experience in organizing the work of a Bank's IT department. This article won't be loaded with descriptions of the bureaucratic processes I had to navigate to achieve the goal, and I hope my experience will be useful to you.
 
-Все началось с того, что в начале 2016 года меня пригласили работать в небольшой украинский Банк в качестве архитектора информационных систем (ИС). И одной из задач, которая перешла мне от прошлой команды, была задача организации работы ИТ службы в соответствии с сервисно-ресурсной модели. Да, задача безусловно не относится к архитектуре ИС, но послужила для меня своеобразным вызовом.
+It all started when, in early 2016, I was invited to work at a small Ukrainian Bank as an Information Systems (IS) architect. One of the tasks inherited from the previous team was to organize the IT department's operations according to a service-resource model. While this task was clearly outside the scope of IS architecture, it became a personal challenge for me.
 
-Факторы, повлиявшие на успех выполнения задачи:
+Key factors that contributed to the success of this initiative:
 
-Поддержка руководства (уровень правления Банка);
-Желание модернизировать ИТ службу (как со стороны бизнес пользователей, так и со стороны работников ИТ службы);
-Личный опыт работы в данной модели управления на предыдущих местах работы.
+- Executive sponsorship (at the Bank's board level);
+- Desire to modernize the IT department (from both business users and IT staff);
+- Personal experience working within this management model at previous positions.
 
-Все активности, которые были выполнены в рамках данного процесса, я разделил условно на ряд этапов:
+All activities carried out as part of this process were roughly divided into several stages:
 
-![Markdowm Image][1]{: style="width:780px"}
+![Markdowm Image][1]{: style=”width:780px”}
 
-#### 1 Этап. Изучение нормативной документации
+#### Stage 1. Reviewing Regulatory Documentation
 
-Первым этапом работы стало изучение существующей модели работы ИТ службы, которую я начал с изучения нормативных документов Банка.
+The first stage was studying the existing IT department operating model, starting with the Bank's regulatory documents.
 
-Основные нормативные документы, зарегистрированные в системе электронного документооборота(СЭД) и регламентирующие деятельность ИТ службы:
+Key regulatory documents registered in the electronic document management system (EDMS) governing IT department operations:
 
-Порядок постановки задач для модификации существующего ПО и автоматизации бизнес процессов
-Порядок проведения анализа заявок на модификацию ПО и автоматизации бизнес процессов
-Порядок про модификацию ПО
-Порядок разработки ПО
-Порядок тестирования ПО
-Порядок централизованной настройки продуктов и услуг
-Порядок организации синхронизации времени в корпоративной сети
-Порядок управления проектами
-Порядок обработки обращений внутренних пользователей.
+- Procedure for submitting tasks for existing software modification and business process automation
+- Procedure for analyzing software modification and business process automation requests
+- Software modification procedure
+- Software development procedure
+- Software testing procedure
+- Centralized product and service configuration procedure
+- Corporate network time synchronization procedure
+- Project management procedure
+- Internal user request handling procedure
 
-Так же существовало еще два десятка положений, некоторые из которых вообще не относятся к работе ИТ службы, но ИТ служба выступала владельцем данных положений.
+There were also about two dozen other policies, some of which were not even related to IT operations, yet the IT department was listed as the owner of those policies.
 
-После изучения документов деятельность ИТ службы (если бы она полностью функционировала по данным процессам) стала напоминать своеобразный пэчворк. А процессы, регламентируемые данными документами, отодвигали ИТ службу от бизнеса, снижая эффективность организации (мнение автора).
+After reviewing the documents, the IT department's operations (had they fully followed these processes) resembled a kind of patchwork. The processes governed by these documents were pushing the IT department away from the business, reducing overall organizational efficiency (in my opinion).
 
-#### 2. Этап. Оценка текущей ситуации в ИТ службе
+#### Stage 2. Assessing the Current State of the IT Department
 
-Вторым этап я для себя наметил формирование снимка рабочего дня работника ИТ службы. Выбрал несколько работников из трех основных направлений (Развитие, Поддержка, Инфраструктура). После проведения ряда встреч с контрольной группой(интервьюирование) и подготовки (обучения, инструктаж) к процессу «фотографирования» были подготовлены бланки наблюдения, в которых была отражена выбранная классификация затрат времени и дан старт сбору информации.
+For the second stage, I planned to create a snapshot of a typical workday for IT department employees. I selected several employees from the three main areas (Development, Support, Infrastructure). After a series of meetings with the control group (interviews) and preparation (training, briefing) for the “photographing” process, observation forms were prepared reflecting the chosen time expenditure classification, and data collection began.
 
-Цели, поставленные в рамках данной работы:
+Goals set for this exercise:
 
-Определение структуры рабочего времени
-Выявление потерь времени в рабочем процесса
-Выявление причин невыполнения норм
+- Determining the structure of working time
+- Identifying time losses in work processes
+- Identifying reasons for non-compliance with standards
 
-На протяжении выбранного периода контрольная группа формировала документацию. После окончания процесса был взят тайм-аут на обработку полученных результатов.
+Throughout the selected period, the control group documented their activities. After the process ended, a timeout was taken to analyze the results.
 
-Ключевые выводы, которые были получены в ходе анализа:
+Key findings from the analysis:
 
-Множество каналов поступления задач (почта, звонок, смс, вайбер и т.д.)
-80% задач поступают ad hoc
-Приоритеты задач постоянно меняются
-Руководители не имеют возможности планировать работы
-Отсутствует гармоничность в развитии информационных систем
-Нет «установленных правил игры» при реализации изменений
+- Multiple channels for incoming tasks (email, phone calls, SMS, Viber, etc.)
+- 80% of tasks arrive ad hoc
+- Task priorities constantly change
+- Managers have no ability to plan work
+- No coherent approach to information systems development
+- No “established rules of the game” for implementing changes
 
-Как итог, предоставление сервиса значительно отставало от потребностей бизнеса.
+As a result, service delivery was significantly lagging behind business needs.
 
-#### Этап 3. Классификация обращений в ИТ
+#### Stage 3. Classifying IT Requests
 
-Следующий этап – построение сервисной модели ИТ службы. Для этого была выстроена модель взаимодействия между бизнес подразделениями и ИТ службой на основе обращений, при этом был выбран классический подход (максимально оперативное решение инцидентов и проблем, в части минимизации простоя работы бизнеса).
+The next stage was building the IT department's service model. An interaction model between business units and the IT department was established based on request types, using a classic approach (resolving incidents and problems as quickly as possible to minimize business downtime).
 
-Все обращения, поступающие в ИТ, были классифицированы на 3 основных вида:
+All requests coming to IT were classified into 3 main types:
 
-Запрос на изменение (ЗНИ, CR, RfC)
-Инцидент (включая тип «Проблема»)
-Запрос на обслуживание (ЗНО, SR, RfS)
+- Change Request (CR, RfC)
+- Incident (including “Problem” type)
+- Service Request (SR, RfS)
 
-Запрос на обслуживание(ЗНО) был разделен на несколько составных обращений: Стандартное ЗНО, Нестандартное ЗНО, Запрос на получение информации. 
+Service Requests (SR) were further divided into several sub-types: Standard SR, Non-standard SR, and Information Request.
 
-Визуально схему можно представить так:
+The visual representation of this scheme:
 
-![Markdowm Image][2]{: style="width:780px" }
+![Markdowm Image][2]{: style=”width:780px” }
 
-Деление на линии поддержки было организовано и работало в существующем процессе и это сильно облегчало переход на новую модель управления. В существующей модели, 1 и 3 линия поддержки были для Банка услугой, покупаемой на рынке (аутсорсинг). Изменения в данной стратегии ИТ-службы в ближайшей перспективе не предполагалось.
+The division into support tiers was already organized and functioning in the existing process, which greatly facilitated the transition to the new management model. In the existing model, Tier 1 and Tier 3 support were outsourced services. No changes to this IT department strategy were planned in the near term.
 
-Таким образом в Банке присутствовало 3 источника поступления обращений к ИТ службе Банка:
+Thus, there were 3 sources of requests to the Bank's IT department:
 
-1 линия поддержки (Основные обращения: инцидент, консультация, проблема)
-Бизнес пользователь (Основные обращения: ИТ услуга, консультация, изменение функциональности ПО)
-3 линия поддержки (Основные обращения: изменение конфигурации, консультация)
+- Tier 1 support (Primary requests: incidents, consultations, problems)
+- Business users (Primary requests: IT services, consultations, software functionality changes)
+- Tier 3 support (Primary requests: configuration changes, consultations)
 
-Дополнительно в рамках данного этапа был сформирован каталог ИТ-услуг, экспертным путем установлен SLA на предоставление услуги, подготовлено описание услуг для заключения SLA с бизнесом.
+Additionally, during this stage, an IT service catalog was created, SLAs for service delivery were established through expert assessment, and service descriptions were prepared for SLA agreements with the business.
 
-#### 4 Этап. Построение сервисной модели и подготовка нормативной документации
+#### Stage 4. Building the Service Model and Preparing Regulatory Documentation
 
-Вернувшись к существующим документам было принято решение полностью отменить их действие. А в основу новых документов лег “ITIL собственного приготовления”. Из существующих нормативных документов планировалось оставить только документ по управлению проектами.
+Returning to the existing documents, the decision was made to completely revoke them. The new documents were based on a “homegrown ITIL.” From the existing regulatory documents, only the project management document was planned to be retained.
 
-На картинке ниже визуализировано ожидаемое состояние ИТ службы и процессы, регламентирующие работу подразделения.
+The image below visualizes the expected state of the IT department and the processes governing its operations.
 
-![Markdowm Image][3]{: style="width:780px" }
+![Markdowm Image][3]{: style=”width:780px” }
 
-На формирование документов ушел приблизительно месяц. Очень много внимания было уделено процессу управления изменениями, так как задача была оптимизироваться в части Time-To-Market, а классический процесс (являющийся частью ITIL) сильно тормозил данный показатель. В процесс управления изменений вошли элементы Scrum.
+Document preparation took approximately one month. A great deal of attention was paid to the change management process, as the goal was to optimize Time-To-Market, while the classic process (part of ITIL) was significantly slowing down this metric. Elements of Scrum were incorporated into the change management process.
 
-#### 5 Этап. Выбор инструмента для автоматизации работы ServiceDesk
+#### Stage 5. Selecting a ServiceDesk Automation Tool
 
-После классификации всех возможных обращений и регламентации процессов встала задача автоматизации деятельности и внедрения системы ServiceDesk. 
+After classifying all possible request types and formalizing processes, the task of automating operations and implementing a ServiceDesk system arose.
 
-На ServiceDesk возлагались следующие функции:
+The ServiceDesk was expected to fulfill the following functions:
 
-Единая точка входа для пользователей Банка
-Контроль времени выполнения обращений
-Возможность четкой приоритизации обращений
-База знаний
-Управляемость и контроль изменений ИТ инфраструктуры
-Построение отчетности
+- Single point of entry for Bank users
+- Request completion time tracking
+- Clear request prioritization capability
+- Knowledge base
+- IT infrastructure change management and control
+- Reporting
 
-Выбор осуществлялся между несколькими решениями: Atlassian Jira (положительный опыт работы вне Банка), HP Service Manager (рекомендации контрагентов), IBM Control Desk (решение от стратегического партнера).
+The selection was made between several solutions: Atlassian Jira (positive experience outside the Bank), HP Service Manager (contractor recommendations), and IBM Control Desk (solution from a strategic partner).
 
-Для проведения пилота, победа была отдана компании Atlassian(trial версия), ключевыми факторами стали скорость внедрения и поддержка методологии Scrum (возможно в след. статье расскажу какие части методологии были перенесены и использованы в части управления изменениями и какой положительный эффект удалось достигнуть в связи с внедрением).
+For the pilot, Atlassian was chosen (trial version), with key factors being speed of implementation and Scrum methodology support (I may cover in a future article which parts of the methodology were adopted for change management and what positive effects were achieved as a result).
 
-#### 6 Этап. Внедрение новой модели ИТ службы
+#### Stage 6. Implementing the New IT Service Model
 
-После того как все приготовления были выполнены, я приступил к практической части вопроса, в том числе кастомизации системы ServiceDesk. В рамках задачи необходимо было выполнить:
+Once all preparations were complete, I moved on to the practical side, including ServiceDesk system customization. The following tasks needed to be completed:
 
-Заведение проектов, типов обращений, настройка полей, описание бизнес процессов (workflow)
-Настройка каталога услуг, SLA счетчиков
-Описание и настройка ролевой модели
-Наполнение базы CMDB (конфигурационная база данных)
-Подготовка обучающих материалов для пользователей
+- Setting up projects, request types, field configuration, business process descriptions (workflows)
+- Configuring the service catalog and SLA counters
+- Defining and configuring the role model
+- Populating the CMDB (Configuration Management Database)
+- Preparing user training materials
 
-В детализацию данных работ мы не будет погружаться, так как по выполненному объему работ можно написать отдельную статью. Но хочется отметить именно построение CMDB базы. Так как между КЭ(конфигурационные элементы) строятся связи, то после построения логической структуры CMDB была получена следующая картинка:
+We won't dive into the details of this work, as the volume alone could fill a separate article. However, I'd like to highlight the CMDB construction specifically. Since relationships are built between CIs (Configuration Items), after building the logical CMDB structure, the following picture emerged:
 
-![Markdowm Image][4]{: style="width:780px" }
+![Markdowm Image][4]{: style=”width:780px” }
 
-Следующий шаг — формирование пилотной группы со стороны бизнеса, чьи обращения планировалось на первом шаге перевести на новую модель взаимодействия. Было проведено несколько этапов обучения ИТ службы, в части которых принимала участие пилотная группа из числа бизнес пользователей Банка. 
+The next step was forming a pilot group from the business side, whose requests would be the first to transition to the new interaction model. Several rounds of IT department training were conducted, with the pilot group of Bank business users participating in some sessions.
 
-Далее системы была запущена в пилотной режиме, были откатаны все моменты, произведены донастройки для автоматизации системы (донастроены workflow, пользовательские поля, справочники, экраны).
+The system was then launched in pilot mode, all aspects were tested, and additional configurations were made to automate the system (workflows, custom fields, directories, and screens were fine-tuned).
 
-После завершения пилота было принято решение о внедрении решения и переход к опытно промышленной эксплуатации, была проведена коммуникация на все подразделения Банка, настроен первоначальный каталог услуг, определен переходной период приема обращений через устаревшие каналы.
+After the pilot was completed, the decision was made to implement the solution and transition to production operations. Communication was sent to all Bank departments, the initial service catalog was configured, and a transition period was established for accepting requests through legacy channels.
 
-Еще одним важным моментом во внедрении ServiceDesk было настройка услуги «Удовлетворенность клиента». Что это значит – после завершения обработки заявки на инициатора уходит электронное письмо с текстом, где предлагается оценить работы ИТ службы (5-бальная оценка). Кликая по оценке, дополнительно открывалось окно браузера, в котором можно было оставить комментарий. Естественно все данные сохранялись в рамках обращения.
+Another important aspect of the ServiceDesk implementation was configuring the “Customer Satisfaction” service. This meant that after a request was resolved, the initiator received an email asking them to rate the IT department's work (on a 5-point scale). Clicking on a rating also opened a browser window where they could leave a comment. Naturally, all data was stored within the request.
 
-#### Заключение
+#### Conclusion
 
-В ходе проектирования и внедрения новой сервисно-ресурсной модели управления ИТ службы были определены критерии качества работы и сформированы механизмы контроля и мониторинга процессов. Были созданы новые и перераспределены существующие роли, определены зоны ответственности и полномочий работников ИТ службы. И, что не мало важно, была внедрена автоматизированная система (ServiceDesk), поддерживающая исполнение процессов по управлению ИТ службой.
+During the design and implementation of the new service-resource model for IT department management, quality criteria were defined and mechanisms for process control and monitoring were established. New roles were created and existing ones redistributed, with areas of responsibility and authority for IT staff clearly defined. And, importantly, an automated system (ServiceDesk) was implemented to support IT department management processes.
 
-Прошел месяц с момента начала опытно-промышленной эксплуатации системы ServiceDesk, была собрана статистика, получены отзывы пользователей. В системе официально зарегистрировано 700 обращений, 109 пользовательских отзывов, средняя оценка ИТ службы 4.8 (из 5 баллов), более 80% задач были выполнены с учетом выставленных SLA.
+One month after the start of production operations of the ServiceDesk system, statistics were collected and user feedback was gathered. The system officially registered 700 requests, 109 user reviews, an average IT department rating of 4.8 (out of 5), and over 80% of tasks were completed within the established SLAs.
 
-Дальнейшие шаги – оптимизация процессов, интеграция с системами Банка (IDM, СЭД, внутрикорпоративный портал), совершенствование организационной структуры ИТ службы, перевод контрагентов Банка на взаимодействие с ИТ службой через систему ServiceDesk Банка.
+Next steps included process optimization, integration with Bank systems (IDM, EDMS, internal corporate portal), improving the IT department's organizational structure, and transitioning Bank contractors to interact with the IT department through the Bank's ServiceDesk system.
 
-[1]: /assets/images/posts/2016-09-20/1.png
-[2]: /assets/images/posts/2016-09-20/2.png
-[3]: /assets/images/posts/2016-09-20/3.png
+[1]: /assets/images/posts/2016-09-20/1.svg
+[2]: /assets/images/posts/2016-09-20/2.svg
+[3]: /assets/images/posts/2016-09-20/3.svg
 [4]: /assets/images/posts/2016-09-20/4.png

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 580" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7CB5E2"/>
+      <stop offset="100%" stop-color="#5B9BD5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===== Box 1: Product Development ===== -->
+  <rect x="75" y="10" width="230" height="35" rx="17" fill="url(#bg)"/>
+  <text x="190" y="33" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Product Development</text>
+
+  <!-- Red annotations -->
+  <text fill="#333" font-size="9" font-style="italic">
+    <tspan x="18" y="60">Customer describes</tspan>
+    <tspan x="18" dy="12">the task partially</tspan>
+  </text>
+  <text fill="#D03030" font-size="9" font-style="italic">
+    <tspan x="218" y="55">Complete process description</tspan>
+    <tspan x="218" dy="12">and architectural solution</tspan>
+    <tspan x="218" dy="12">is missing</tspan>
+  </text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="190" y1="45" x2="190" y2="100" stroke="#C4A830" stroke-width="2.5"/>
+  <polygon points="184,96 190,108 196,96" fill="#C4A830"/>
+
+  <!-- ===== Box 2: Task Assignment to Contractor ===== -->
+  <rect x="45" y="110" width="290" height="35" rx="17" fill="url(#bg)"/>
+  <text x="190" y="133" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Task Assignment to Contractor</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="190" y1="145" x2="190" y2="156" stroke="#C4A830" stroke-width="2.5"/>
+  <polygon points="184,152 190,164 196,152" fill="#C4A830"/>
+
+  <!-- ===== Box 3: Customer Work Approval ===== -->
+  <rect x="45" y="166" width="290" height="35" rx="17" fill="url(#bg)"/>
+  <text x="190" y="189" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Customer Work Approval</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="190" y1="201" x2="190" y2="212" stroke="#C4A830" stroke-width="2.5"/>
+  <polygon points="184,208 190,220 196,208" fill="#C4A830"/>
+
+  <!-- ===== Box 4: Development ===== -->
+  <rect x="85" y="222" width="210" height="35" rx="17" fill="url(#bg)"/>
+  <text x="190" y="245" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Development</text>
+
+  <!-- Red annotations -->
+  <text fill="#333" font-size="9" font-style="italic">
+    <tspan x="18" y="274">Overlooked aspects</tspan>
+    <tspan x="18" dy="12">emerge during work</tspan>
+  </text>
+  <text fill="#D03030" font-size="9" font-style="italic">
+    <tspan x="222" y="270">Customer tries to</tspan>
+    <tspan x="222" dy="12">supplement the task</tspan>
+    <tspan x="222" dy="12">assignment</tspan>
+  </text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="190" y1="257" x2="190" y2="306" stroke="#C4A830" stroke-width="2.5"/>
+  <polygon points="184,302 190,314 196,302" fill="#C4A830"/>
+
+  <!-- ===== Box 5: Contacting IT Department ===== -->
+  <rect x="55" y="316" width="270" height="35" rx="17" fill="url(#bg)"/>
+  <text x="190" y="339" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Contacting IT Department</text>
+
+  <!-- Red annotations -->
+  <text fill="#333" font-size="9" font-style="italic">
+    <tspan x="18" y="368">IT department tries to</tspan>
+    <tspan x="18" dy="12">solve the problem</tspan>
+    <tspan x="18" dy="12">ad hoc</tspan>
+  </text>
+  <text fill="#D03030" font-size="9" font-style="italic">
+    <tspan x="210" y="364">IT landscape quality suffers,</tspan>
+    <tspan x="210" dy="12">systems develop chaotically,</tspan>
+    <tspan x="210" dy="12">operational support costs</tspan>
+    <tspan x="210" dy="12">grow</tspan>
+  </text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="190" y1="351" x2="190" y2="420" stroke="#C4A830" stroke-width="2.5"/>
+  <polygon points="184,416 190,428 196,416" fill="#C4A830"/>
+
+  <!-- ===== Box 6: Refinement ===== -->
+  <rect x="85" y="430" width="210" height="35" rx="17" fill="url(#bg)"/>
+  <text x="190" y="453" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Refinement</text>
+
+  <!-- Arrow 6→7 -->
+  <line x1="190" y1="465" x2="190" y2="476" stroke="#C4A830" stroke-width="2.5"/>
+  <polygon points="184,472 190,484 196,472" fill="#C4A830"/>
+
+  <!-- ===== Box 7: Testing ===== -->
+  <rect x="85" y="486" width="210" height="35" rx="17" fill="url(#bg)"/>
+  <text x="190" y="509" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Testing</text>
+
+  <!-- Arrow 7→8 -->
+  <line x1="190" y1="521" x2="190" y2="532" stroke="#C4A830" stroke-width="2.5"/>
+  <polygon points="184,528 190,540 196,528" fill="#C4A830"/>
+
+  <!-- ===== Box 8: Release ===== -->
+  <rect x="85" y="542" width="210" height="35" rx="17" fill="url(#bg)"/>
+  <text x="190" y="565" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Release</text>
+
+  <!-- ===== Green loop arrow: Contacting IT Department → Development ===== -->
+  <polyline points="55,333 10,333 10,239 78,239" fill="none" stroke="#6BAF3A" stroke-width="4" stroke-linejoin="miter"/>
+  <polygon points="75,232 87,239 75,246" fill="#6BAF3A"/>
+</svg>

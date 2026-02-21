@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" font-family="Arial, Helvetica, sans-serif">
+
+  <!-- Top: Bank Business Departments -->
+  <rect x="20" y="10" width="740" height="55" rx="8" fill="#6BAF3A"/>
+  <text x="390" y="45" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-style="italic">Bank Business Departments</text>
+
+  <!-- Double arrows (business ↔ IT processes) -->
+  <line x1="80" y1="65" x2="80" y2="130" stroke="#E8A317" stroke-width="2.5"/>
+  <polygon points="75,68 80,58 85,68" fill="#E8A317"/>
+  <polygon points="75,127 80,137 85,127" fill="#E8A317"/>
+
+  <line x1="210" y1="65" x2="210" y2="130" stroke="#E8A317" stroke-width="2.5"/>
+  <polygon points="205,68 210,58 215,68" fill="#E8A317"/>
+  <polygon points="205,127 210,137 215,127" fill="#E8A317"/>
+
+  <line x1="340" y1="65" x2="340" y2="130" stroke="#E8A317" stroke-width="2.5"/>
+  <polygon points="335,68 340,58 345,68" fill="#E8A317"/>
+  <polygon points="335,127 340,137 345,127" fill="#E8A317"/>
+
+  <line x1="470" y1="65" x2="470" y2="130" stroke="#E8A317" stroke-width="2.5"/>
+  <polygon points="465,68 470,58 475,68" fill="#E8A317"/>
+  <polygon points="465,127 470,137 475,127" fill="#E8A317"/>
+
+  <line x1="600" y1="65" x2="600" y2="130" stroke="#E8A317" stroke-width="2.5"/>
+  <polygon points="595,68 600,58 605,68" fill="#E8A317"/>
+  <polygon points="595,127 600,137 605,127" fill="#E8A317"/>
+
+  <line x1="710" y1="65" x2="710" y2="130" stroke="#E8A317" stroke-width="2.5"/>
+  <polygon points="705,68 710,58 715,68" fill="#E8A317"/>
+  <polygon points="705,127 710,137 715,127" fill="#E8A317"/>
+
+  <!-- Middle yellow process boxes (on blue background) -->
+  <rect x="20" y="140" width="740" height="170" rx="0" fill="#5B9BD5"/>
+
+  <!-- 6 yellow boxes -->
+  <rect x="30" y="148" width="115" height="52" rx="4" fill="#F0D060" stroke="#C4A830" stroke-width="1"/>
+  <text x="87" y="168" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">Service Level Mgmt</text>
+  <text x="87" y="182" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">(Service Catalog)</text>
+
+  <rect x="155" y="148" width="115" height="52" rx="4" fill="#F0D060" stroke="#C4A830" stroke-width="1"/>
+  <text x="212" y="168" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">Incident &amp; Problem</text>
+  <text x="212" y="182" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">Management</text>
+
+  <rect x="280" y="148" width="100" height="52" rx="4" fill="#F0D060" stroke="#C4A830" stroke-width="1"/>
+  <text x="330" y="168" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">Release</text>
+  <text x="330" y="182" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">Management</text>
+
+  <rect x="390" y="148" width="115" height="52" rx="4" fill="#F0D060" stroke="#C4A830" stroke-width="1"/>
+  <text x="447" y="168" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">Change</text>
+  <text x="447" y="182" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">Management</text>
+
+  <rect x="515" y="148" width="110" height="52" rx="4" fill="#F0D060" stroke="#C4A830" stroke-width="1"/>
+  <text x="570" y="168" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">Project</text>
+  <text x="570" y="182" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">Management</text>
+
+  <rect x="635" y="148" width="115" height="52" rx="4" fill="#E8923A" stroke="#C47020" stroke-width="1"/>
+  <text x="692" y="168" text-anchor="middle" fill="white" font-size="10" font-weight="bold">SR</text>
+  <text x="692" y="182" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Management</text>
+
+  <!-- IT label -->
+  <text x="390" y="258" text-anchor="middle" fill="white" font-size="26" font-weight="bold" font-style="italic">Information Technology Department (IT)</text>
+
+  <!-- Bottom row: 5 boxes -->
+  <rect x="20" y="320" width="140" height="52" rx="4" fill="#F7E0C0" stroke="#E8923A" stroke-width="1.5"/>
+  <text x="90" y="340" text-anchor="middle" fill="#333" font-size="9.5" font-weight="bold">IT Standards</text>
+  <text x="90" y="354" text-anchor="middle" fill="#333" font-size="9.5" font-weight="bold">Approval &amp; Application</text>
+
+  <rect x="172" y="320" width="130" height="52" rx="4" fill="#F7E0C0" stroke="#E8923A" stroke-width="1.5"/>
+  <text x="237" y="340" text-anchor="middle" fill="#333" font-size="9.5" font-weight="bold">Computing Env.</text>
+  <text x="237" y="354" text-anchor="middle" fill="#333" font-size="9.5" font-weight="bold">Management</text>
+
+  <rect x="314" y="320" width="150" height="52" rx="4" fill="#FFF3CD" stroke="#C4A830" stroke-width="1.5"/>
+  <text x="389" y="340" text-anchor="middle" fill="#333" font-size="9.5" font-weight="bold">Capacity &amp;</text>
+  <text x="389" y="354" text-anchor="middle" fill="#333" font-size="9.5" font-weight="bold">Availability Mgmt</text>
+
+  <rect x="476" y="320" width="155" height="52" rx="4" fill="#FFF3CD" stroke="#C4A830" stroke-width="1.5"/>
+  <text x="553" y="340" text-anchor="middle" fill="#333" font-size="9.5" font-weight="bold">Configuration DB</text>
+  <text x="553" y="354" text-anchor="middle" fill="#333" font-size="9.5" font-weight="bold">Management</text>
+
+  <rect x="643" y="320" width="117" height="52" rx="4" fill="#FFF3CD" stroke="#C4A830" stroke-width="1.5"/>
+  <text x="701" y="340" text-anchor="middle" fill="#333" font-size="9.5" font-weight="bold">IT Service</text>
+  <text x="701" y="354" text-anchor="middle" fill="#333" font-size="9.5" font-weight="bold">Continuity Mgmt</text>
+</svg>

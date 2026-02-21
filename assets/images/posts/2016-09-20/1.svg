@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 760" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#E8A317"/>
+    </marker>
+    <marker id="b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#5B9BD5"/>
+    </marker>
+  </defs>
+
+  <!-- ============ BOXES (centered around x=410) ============ -->
+
+  <!-- Row 1: Analysis (w=210, center=410) -->
+  <rect x="305" y="15" width="210" height="44" rx="6" fill="#6BAF3A"/>
+  <text x="410" y="43" text-anchor="middle" fill="white" font-size="17" font-weight="bold">Analysis</text>
+
+  <!-- Row 2: Regulatory Base + Workday Snapshot (each w=230, gap=100) -->
+  <rect x="80" y="100" width="230" height="44" rx="6" fill="#5B9BD5"/>
+  <text x="195" y="128" text-anchor="middle" fill="white" font-size="15" font-weight="bold">Regulatory Base</text>
+
+  <rect x="510" y="100" width="230" height="44" rx="6" fill="#5B9BD5"/>
+  <text x="625" y="128" text-anchor="middle" fill="white" font-size="15" font-weight="bold">Workday Snapshot</text>
+
+  <!-- Row 3: Model Building (w=230, center=410) -->
+  <rect x="295" y="190" width="230" height="44" rx="6" fill="#6BAF3A"/>
+  <text x="410" y="218" text-anchor="middle" fill="white" font-size="17" font-weight="bold">Model Building</text>
+
+  <!-- Row 4: 3 boxes, gap=40 → total=780, start=20 -->
+  <rect x="20" y="280" width="230" height="52" rx="6" fill="#5B9BD5"/>
+  <text x="135" y="301" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Request Classification</text>
+  <text x="135" y="319" text-anchor="middle" fill="white" font-size="13" font-weight="bold">&amp; Formalization</text>
+
+  <rect x="290" y="280" width="250" height="52" rx="6" fill="#5B9BD5"/>
+  <text x="415" y="301" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Regulatory &amp; Training</text>
+  <text x="415" y="319" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Documentation</text>
+
+  <rect x="580" y="280" width="220" height="52" rx="6" fill="#5B9BD5"/>
+  <text x="690" y="301" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Automation System</text>
+  <text x="690" y="319" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Selection</text>
+
+  <!-- Row 5: Implementation (w=230, center=410) -->
+  <rect x="295" y="380" width="230" height="44" rx="6" fill="#6BAF3A"/>
+  <text x="410" y="408" text-anchor="middle" fill="white" font-size="17" font-weight="bold">Implementation</text>
+
+  <!-- Row 6: 3 boxes, gap=40 → total=720, start=50 -->
+  <rect x="50" y="470" width="220" height="44" rx="6" fill="#5B9BD5"/>
+  <text x="160" y="497" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Software Configuration</text>
+
+  <rect x="310" y="470" width="210" height="44" rx="6" fill="#5B9BD5"/>
+  <text x="415" y="497" text-anchor="middle" fill="white" font-size="14" font-weight="bold">User Training</text>
+
+  <rect x="560" y="470" width="210" height="44" rx="6" fill="#5B9BD5"/>
+  <text x="665" y="497" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Pilot Execution</text>
+
+  <!-- Row 7: Analysis & Processing (w=340, center=410) -->
+  <rect x="240" y="560" width="340" height="44" rx="6" fill="#6BAF3A"/>
+  <text x="410" y="588" text-anchor="middle" fill="white" font-size="15" font-weight="bold">Analysis &amp; Processing of Results</text>
+
+  <!-- Row 8: Improvement Planning (w=340, center=410) -->
+  <rect x="240" y="645" width="340" height="52" rx="6" fill="#6BAF3A"/>
+  <text x="410" y="668" text-anchor="middle" fill="white" font-size="15" font-weight="bold">Process Improvement</text>
+  <text x="410" y="688" text-anchor="middle" fill="white" font-size="15" font-weight="bold">Planning</text>
+
+  <!-- ============ SEQUENTIAL ARROWS ============ -->
+
+  <!-- 1. Analysis → Regulatory Base (elbow: left then down) -->
+  <polyline points="305,37 195,37 195,100" fill="none" stroke="#E8A317" stroke-width="2.5" stroke-linejoin="miter" marker-end="url(#a)"/>
+
+  <!-- 2. Regulatory Base → Workday Snapshot (horizontal) -->
+  <line x1="310" y1="122" x2="508" y2="122" stroke="#E8A317" stroke-width="2.5" marker-end="url(#a)"/>
+
+  <!-- 3. Workday Snapshot → Model Building (elbow: down then left) -->
+  <polyline points="625,144 625,212 527,212" fill="none" stroke="#E8A317" stroke-width="2.5" stroke-linejoin="miter" marker-end="url(#a)"/>
+
+  <!-- 4. Model Building → Classification (elbow: left then down) -->
+  <polyline points="295,212 135,212 135,280" fill="none" stroke="#E8A317" stroke-width="2.5" stroke-linejoin="miter" marker-end="url(#a)"/>
+
+  <!-- 5. Classification → Documentation (horizontal) -->
+  <line x1="250" y1="306" x2="288" y2="306" stroke="#E8A317" stroke-width="2.5" marker-end="url(#a)"/>
+
+  <!-- 6. Documentation → System Selection (horizontal) -->
+  <line x1="540" y1="306" x2="578" y2="306" stroke="#E8A317" stroke-width="2.5" marker-end="url(#a)"/>
+
+  <!-- 7. System Selection → Implementation (elbow: down then left) -->
+  <polyline points="690,332 690,402 527,402" fill="none" stroke="#E8A317" stroke-width="2.5" stroke-linejoin="miter" marker-end="url(#a)"/>
+
+  <!-- 8. Implementation → Software Config (elbow: left then down) -->
+  <polyline points="295,402 160,402 160,470" fill="none" stroke="#E8A317" stroke-width="2.5" stroke-linejoin="miter" marker-end="url(#a)"/>
+
+  <!-- 9. Software Config → User Training (horizontal) -->
+  <line x1="270" y1="492" x2="308" y2="492" stroke="#E8A317" stroke-width="2.5" marker-end="url(#a)"/>
+
+  <!-- 10. User Training → Pilot (horizontal) -->
+  <line x1="520" y1="492" x2="558" y2="492" stroke="#E8A317" stroke-width="2.5" marker-end="url(#a)"/>
+
+  <!-- 11. Pilot → Analysis & Processing (elbow: down then left) -->
+  <polyline points="665,514 665,582 582,582" fill="none" stroke="#E8A317" stroke-width="2.5" stroke-linejoin="miter" marker-end="url(#a)"/>
+
+  <!-- 12. Analysis & Processing → Improvement Planning (straight down) -->
+  <line x1="410" y1="604" x2="410" y2="643" stroke="#E8A317" stroke-width="2.5" marker-end="url(#a)"/>
+
+  <!-- 13. Dashed loop: Improvement Planning → right → up → back to Analysis -->
+  <polyline points="580,671 810,671 810,37 517,37" fill="none" stroke="#5B9BD5" stroke-width="2.5" stroke-dasharray="12,7" stroke-linejoin="miter" marker-end="url(#b)"/>
+</svg>
