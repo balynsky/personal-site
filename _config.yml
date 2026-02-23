@@ -108,7 +108,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-gist
   - jekyll-feed
-  - jekyll-admin
+
   - jekyll-paginate
   - jekyll-sitemap
 
