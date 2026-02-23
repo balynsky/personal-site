@@ -27,7 +27,7 @@ resume-url: https://www.linkedin.com/in/balynsky
 url: https://www.balynsky.com
 # your url: http://USERNAME.github.io
 
-permalink: /:title/
+permalink: /blog/:title/
 
 # To enable google analytics, supply your token below
 # analytics-google: 'UA-MYANALYTICS'
