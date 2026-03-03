@@ -1,5 +1,5 @@
 ---
-title: “Automating IT Service Operations”
+title: Automating IT Service Operations
 layout: post
 date: 2016-09-20 10:00
 image: /assets/images/markdown.jpg
