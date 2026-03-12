@@ -1,5 +1,5 @@
 ---
-title: "Implementing Agile Elements in a Bank"
+title: "Implementing Agile Artifacts in a Bank"
 layout: post
 date: 2017-09-14 10:00
 image: /assets/images/markdown.jpg
