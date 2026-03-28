@@ -267,6 +267,11 @@ nav.sticky .menu-btn {
     justify-content: left;
 }
 
+.blog-list {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
 .blog-details .left {
     width: 35%;
     text-align: center;
@@ -293,6 +298,72 @@ nav.sticky .menu-btn {
     float: right;
 }
 
+/* Blog cards */
+.blog-card {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 1.2em 0;
+}
+
+.blog-card:first-child {
+    padding-top: 0;
+}
+
+.blog-card:last-child {
+    border-bottom: none;
+}
+
+.blog-card-link {
+    text-decoration: none;
+    display: block;
+}
+
+.blog-card-link:hover .blog-card-title {
+    color: #4070f4;
+}
+
+.blog-card-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #292929;
+    line-height: 1.3;
+    margin: 0 0 0.2em 0;
+    transition: color 0.2s ease;
+}
+
+.blog-card-description {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #757575;
+    margin: 0 0 0.4em 0;
+}
+
+.blog-card-meta {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #999;
+}
+
+.blog-card-readtime {
+    margin-left: 2px;
+}
+
+.blog-card-tags {
+    margin-top: 0.4em;
+}
+
+.blog-card-tag {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    color: #4070f4;
+    background: #F0F8FF;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-right: 4px;
+    display: inline-block;
+}
+
 /* Posts */
 .post {
     /*background: #F0F8FF;*/
@@ -317,10 +388,11 @@ nav.sticky .menu-btn {
 
 .post .post-tags {
     color: #F0F8FF;
-    text-transform: uppercase;
-    text-align: center;
+    text-transform: none;
+    text-align: left;
     display: block;
-    margin-bottom: 6rem;
+    max-width: 680px;
+    margin: 0 auto 3rem auto;
 }
 
 .post .post-tags .item {
@@ -335,13 +407,106 @@ nav.sticky .menu-btn {
 }
 
 .post-details {
-    width: 95%;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #292929;
+    letter-spacing: -0.003em;
+    word-break: break-word;
+}
+
+.post-details p {
+    margin-bottom: 2em;
+}
+
+.post-details h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #292929;
+    margin-top: 2.2em;
+    margin-bottom: 0.5em;
+    line-height: 1.22;
+    letter-spacing: -0.012em;
+}
+
+.post-details h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #292929;
+    margin-top: 1.8em;
+    margin-bottom: 0.4em;
+    line-height: 1.28;
+}
+
+.post-details strong {
+    color: #292929;
+    font-weight: 700;
+}
+
+.post-details em {
+    font-style: italic;
+}
+
+.post-details ul,
+.post-details ol {
+    margin-bottom: 2em;
+    padding-left: 30px;
+}
+
+.post-details ul li,
+.post-details ol li {
+    margin-bottom: 0.6em;
+    line-height: 1.58;
+    color: #292929;
+    font-weight: 400;
+}
+
+.post-details blockquote {
+    border-left: 3px solid #292929;
+    padding: 0 0 0 20px;
+    margin: 2em 0 2em -23px;
+    font-style: italic;
+    color: #292929;
+}
+
+.post-details blockquote p {
+    margin-bottom: 0;
+}
+
+.post-details a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.3);
+    text-underline-offset: 2px;
+}
+
+.post-details a:hover {
+    text-decoration-color: rgba(0, 0, 0, 0.8);
+}
+
+.post-details hr {
+    border: none;
+    text-align: center;
+    margin: 2em 0;
+}
+
+.post-details hr::before {
+    content: '...';
+    font-size: 28px;
+    letter-spacing: 0.6em;
+    color: #292929;
 }
 
 .post-details img {
     display: block;
-    margin: 0 auto;
-    padding:20px;
+    margin: 2em auto;
+    max-width: 100%;
+    padding: 0;
 }
 
 .post .blog-navigation {
@@ -406,25 +571,38 @@ nav.sticky .menu-btn {
 }
 
 .post .content .title {
-    text-align: center;
-    margin-bottom: 3rem
+    text-align: left;
+    max-width: 680px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.post .content .title span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #292929;
+    line-height: 1.2;
+    letter-spacing: -0.016em;
 }
 
 .post .content .date,
 .post .content .post-tags {
-    font-weight: 300;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: none;
+    text-align: left;
+    max-width: 680px;
+    margin: 0 auto 0.5rem auto;
     display: block;
-    letter-spacing: 1px;
+    letter-spacing: 0;
+    color: #757575;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility
+    text-rendering: optimizeLegibility;
 }
 
 .post .content .date {
-    margin-bottom: 1rem
+    margin-bottom: 0.5rem;
 }
 
 .post .content .post-tags .item {
@@ -806,104 +984,85 @@ nav.sticky .menu-btn {
     background-color: #EAF2F5
 }
 
-/* List Section */
-.tags .list {
-    margin-top: 30px;
-    padding: 40px 0;
+/* Tags page */
+.tags .content {
+    max-width: 680px;
+    margin: 40px auto;
 }
 
-.tags .list h1,
-.tags .tag-list h1 {
-    display: block;
-    font-size: 2rem;
-    letter-spacing: -1px;
-    color: #222;
-    font-weight: 500;
+.tags-cloud {
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid #e6e6e6;
 }
 
-.tags .list h2,
-.tags .tag-list h2 {
-    font-size: 1.4rem;
-    font-weight: 500;
-}
-
-.tags .list h3,
-.tags .tag-list h3 {
-    margin: 0;
-    width: 75% !important;
-    font-weight: normal;
-    transition: all ease-in-out .2s;
-    font-size: 1.1rem;
-    line-height: 1.5rem;
-}
-
-.tags .list .item {
-    background: #F0F8FF;
+.tags-cloud-item {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
     color: #4070f4;
-    padding: 2px 8px;
-    border-radius: 3px;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    margin: 3px 1px;
+    background: #F0F8FF;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin: 0 4px 8px 0;
     text-decoration: none;
     display: inline-block;
+    transition: background 0.2s ease;
 }
 
-.tags .list .item:visited {
-    color: #4070f4;
+.tags-cloud-item:hover {
+    background: #4070f4;
+    color: #fff;
 }
 
-.tag-list {
-    padding-top: 10px;
+.tag-list-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #292929;
+    margin: 2em 0 0.6em 0;
 }
 
-.tag-list .title {
-    display: block;
-    margin-bottom: 40px;
-    margin-top: 40px;
-}
-
-.tags .tag-list .list {
+.tag-list-posts {
+    list-style: none;
     padding: 0;
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 40px;
-}
-
-.tags .tag-list .list .item {
-    background: transparent !important;
-    display: block;
-    width: 80%;
-    line-height: 1.1rem;
-    font-size: 1.1rem;
-    color: #666;
-}
-
-.tag-list .list .item .url {
-    color: #4070f4;
-    width: 100%;
-    display: block;
-    padding: 5px 0;
-    text-decoration: none;
-}
-
-.tag-list .list .item .url:visited {
-    color: #4070f4;
-}
-
-.tag-list .list aside {
-    position: relative;
-    top: 2px;
     margin: 0;
-    width: 25%;
-    float: right;
-    color: #aaa;
-    text-align: right;
-    transition: all ease-in-out .2s;
+}
+
+.tag-list-item {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tag-list-item:last-child {
+    border-bottom: none;
+}
+
+.tag-list-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.6em 0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.tag-list-link:hover .tag-list-post-title {
+    color: #4070f4;
+}
+
+.tag-list-post-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #292929;
+    transition: color 0.2s ease;
+}
+
+.tag-list-date {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #999;
+    white-space: nowrap;
+    margin-left: 1em;
 }
 
 /* About Section Styling */
