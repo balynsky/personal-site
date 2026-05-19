@@ -2,7 +2,7 @@
 <footer>
     <div class="text">
         <span>{{ site.name }} © {{ site.time | date: '%Y' }}</span>
-        <a href="{{ site.url }}/feed.xml" target="_blank" rel="noopener noreferrer">
+        <a href="{{ site.url }}/feed.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS Feed">
             <svg fill="#FFF">
                 <use xlink:href="#icon-rss"></use>
             </svg>
@@ -14,5 +14,5 @@
     <a href="#home"><i class="fas fa-arrow-up"></i></a>
 </div>
 
-<script src="/assets/js/script-new.js"></script>
+<script src="/assets/js/script-new.js" defer></script>
 
