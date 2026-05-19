@@ -1,47 +1,63 @@
 <!-- About Section Start -->
 <section class="about" id="about">
     <div class="content">
-        <div class="title"><span>About Me</span></div>
-        <div class="about-details">
-            <div class="left">
+        <span class="section-tag">About</span>
+        <h2 class="about-heading">Built in fintech. Sharpened in cybersecurity.<br>Now running AI-powered protection for enterprises worldwide.</h2>
+        <div class="about-grid">
+            <div class="about-photo">
                 <img src="{{ site.picture }}" alt="{{ site.name }}">
+                <div class="about-photo-meta">
+                    <div class="about-photo-name">{{ site.name }}</div>
+                    <div class="about-photo-role">SVP of Engineering</div>
+                </div>
             </div>
-            <div class="right">
-                <!--
-                                <div class="topic">About Me</div>
-                -->
+            <div class="about-narrative">
                 {% assign current_year = site.time | date: '%Y' | plus: 0 %}
                 {% assign years_exp = current_year | minus: site.career_start %}
-                <p>Engineering executive based in <b>Los Angeles, CA</b> with {{ years_exp }}+ years of experience
+                <p class="reveal">Engineering executive based in <b>Los Angeles, CA</b> with {{ years_exp }}+ years of experience
                     delivering mission-critical solutions in cloud security, fintech, and enterprise SaaS.
                     I specialize in scaling engineering teams and building products that protect business-critical data.
                 </p>
-                <br/>
-                <p>
-                    <img src="/assets/images/spin_logo.png"
-                         style="float: left; width:140px; margin-left:35px; margin-right: 35px" alt="Spin Technology"/>
-                    As SVP of Engineering at <b>Spin.AI</b> (<a href="https://spin.ai">spin.ai</a>),
-                    I lead engineering and product teams building an AI-powered SaaS security platform
-                    that protects <b>1,500+ organizations worldwide</b>. The company raised
-                    <b>$16M+</b> in Series A funding from Blueprint Equity and Santa Barbara Venture Partners, and in 2026 secured a strategic growth investment from <b>K1 Investment Management</b>.
-                </p>
-                <br/>
-                <p>
-                    <b>What I've accomplished:</b><br/>
-                    • Scaled engineering team and delivered platform serving <b>1,500+ organizations</b> worldwide<br/>
-                    • Led product development recognized with <b>Global InfoSec Awards</b> across multiple years, including <b>5x wins at <a href="https://www.newsfilecorp.com/release/290205/Spin.AI-Named-Winner-of-the-Coveted-Global-InfoSec-Awards-During-RSAC-Conference-2026">RSAC 2026</a></b><br/>
-                    • Built integrations resulting in <b>Google Cloud Partnership</b> and <a href="https://spin.ai/news/spin-ai-brings-powerful-all-in-one-saas-security-platform-to-google-cloud-marketplace/">Marketplace availability</a><br/>
-                    • Drove product recognition by <b>Forrester, Gartner, and GigaOm</b> as industry leader in SSPM<br/>
-                    • Named to <b>Forbes America's Best Startup Employers</b> for 3 consecutive years (2024–2026)<br/>
-                    • Became the <b>platform company for K1 Investment Management</b> (2026) — one of the largest investors in AI-powered enterprise software with 275+ portfolio companies<br/>
-                    • Led technical due diligence and post-merger integration of <b>Revyz</b> (2026), expanding platform protection to the Atlassian ecosystem (Jira &amp; Confluence)
-                </p>
-                <br/>
-                <p>
-                    Previously led engineering teams at fintech startups and banking institutions, managing 100+ engineers.
-                    M.S. from Donetsk National Technical University (comparable to a U.S. graduate-level program in Management Information Systems).
-                </p>
-                <div class="button">
+                <div class="company-card reveal">
+                    <div class="company-logo" style="padding-top:4px">
+                        <img src="/assets/images/spin_logo.png" alt="Spin AI" style="width:100%;filter:none"/>
+                    </div>
+                    <div class="company-body">
+                        <p>As SVP of Engineering at <b>Spin.AI</b> (<a href="https://spin.ai">spin.ai</a>),
+                        I lead engineering and product teams building an AI-powered SaaS security platform
+                        that protects <b>1,500+ organizations worldwide</b>. The company raised
+                        <b>$16M+</b> in Series A funding from Blueprint Equity and Santa Barbara Venture Partners,
+                        and in 2026 secured a strategic growth investment from <b>K1 Investment Management</b>.</p>
+                    </div>
+                </div>
+                <span class="milestones-label">Key Achievements</span>
+                <div class="milestone is-recent reveal">
+                    <span class="milestone-year">2026</span>
+                    <div class="milestone-content">Drove engineering integration of <b>Revyz</b> following acquisition; key participant in technical due diligence — expanding platform protection to the Atlassian ecosystem (Jira &amp; Confluence)</div>
+                </div>
+                <div class="milestone is-recent reveal">
+                    <span class="milestone-year">2026</span>
+                    <div class="milestone-content">Became the <b>platform</b> company for <b>K1 Investment Management</b> — one of the largest investors in AI-powered enterprise software with 275+ portfolio companies</div>
+                </div>
+                <div class="milestone is-award reveal">
+                    <span class="milestone-year">2026</span>
+                    <div class="milestone-content">Named to <b>Forbes America's Best Startup Employers</b> for 3 consecutive years (2024–2026)</div>
+                </div>
+                <div class="milestone is-award reveal">
+                    <span class="milestone-year">2026</span>
+                    <div class="milestone-content">Led product development recognized with <b>Global InfoSec Awards</b> across multiple years, including <b>5x wins at <a href="https://www.newsfilecorp.com/release/290205/Spin.AI-Named-Winner-of-the-Coveted-Global-InfoSec-Awards-During-RSAC-Conference-2026">RSAC 2026</a></b></div>
+                </div>
+                <div class="milestone reveal">
+                    <span class="milestone-year">2023</span>
+                    <div class="milestone-content">Built integrations resulting in <b>Google Cloud Partnership</b> and <a href="https://spin.ai/news/spin-ai-brings-powerful-all-in-one-saas-security-platform-to-google-cloud-marketplace/">Marketplace availability</a></div>
+                </div>
+                <div class="milestone reveal">
+                    <span class="milestone-year">—</span>
+                    <div class="milestone-content">Drove product recognition by <b>Forrester, Gartner, and GigaOm</b> as industry leader in SSPM</div>
+                </div>
+                <p class="about-footer-note reveal">Previously led engineering teams at fintech startups and banking institutions, managing 100+ engineers.
+                    M.S. from Donetsk National Technical University (comparable to a U.S. graduate-level program in Management Information Systems).</p>
+                <div class="button reveal">
                     <a href="https://www.linkedin.com/in/balynsky"><button>View Full Profile</button></a>
                 </div>
             </div>

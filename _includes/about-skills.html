@@ -1,59 +1,40 @@
-<!-- My Skill Section Start -->
-<!-- Section Tag and Other Div will same where we need to put same CSS -->
+<!-- Skills Section Start -->
 <section class="skills" id="skills">
     <div class="content">
-        <div class="title"><span>My Skills</span></div>
-        <div class="skills-details">
-            <div class="text">
-                <div class="topic">Technical Expertise</div>
-                <ul>
-                    <li><b>AI/ML</b>: TensorFlow, LLMs, Data Analytics</li>
-                    <li><b>Frameworks</b>: Spring, React, React Native, Kafka, RabbitMQ</li>
-                    <li><b>DevOps</b>: Kubernetes, Docker, Terraform, CI/CD</li>
-                    <li><b>Databases</b>: PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch</li>
-                    <li><b>Languages</b>: Java, Python, TypeScript, JavaScript</li>
-                    <li><b>Cloud</b>: AWS, GCP, Azure</li>
-                </ul>
-                {% assign current_year = site.time | date: '%Y' | plus: 0 %}
-                {% assign years_exp = current_year | minus: site.career_start %}
-                <div class="experience">
-                    <div class="num">{{ years_exp }}</div>
-                    <div class="exp">Years of <br> Experience</div>
-                </div>
+        <span class="section-tag">Experience</span>
+        <h2 class="skills-heading">Broad experience across<br>industries and disciplines.</h2>
+        <div class="domain-grid reveal">
+            <div class="domain-card">
+                <div class="domain-num">2+</div>
+                <div class="domain-label">Startups built</div>
             </div>
-            <div class="boxes">
-                <div class="box">
-                    <div class="topic">Startups</div>
-                    <div class="per">2+ products</div>
-                </div>
-                <div class="box">
-                    <div class="topic">Team Management</div>
-                    <div class="per">7+ teams</div>
-                </div>
-                <div class="box">
-                    <div class="topic">Architecture</div>
-                    <div class="per">15+ solutions</div>
-                </div>
-                <div class="box">
-                    <div class="topic">Analytics</div>
-                    <div class="per">4+ projects</div>
-                </div>
-                <div class="box">
-                    <div class="topic">Cloud Security</div>
-                    <div class="per">3+ projects</div>
-                </div>
-                <div class="box">
-                    <div class="topic">Banking/FinTech</div>
-                    <div class="per">10+ projects</div>
-                </div>
-                <div class="box">
-                    <div class="topic">Mobile development</div>
-                    <div class="per">2+ projects</div>
-                </div>
-                <div class="box">
-                    <div class="topic">Marketing/Sales</div>
-                    <div class="per">1+ startup</div>
-                </div>
+            <div class="domain-card">
+                <div class="domain-num">7+</div>
+                <div class="domain-label">Engineering teams managed</div>
+            </div>
+            <div class="domain-card">
+                <div class="domain-num">15+</div>
+                <div class="domain-label">Architecture solutions</div>
+            </div>
+            <div class="domain-card">
+                <div class="domain-num">10+</div>
+                <div class="domain-label">Banking &amp; FinTech projects</div>
+            </div>
+            <div class="domain-card">
+                <div class="domain-num">4+</div>
+                <div class="domain-label">Analytics platforms</div>
+            </div>
+            <div class="domain-card">
+                <div class="domain-num">3+</div>
+                <div class="domain-label">Cloud security products</div>
+            </div>
+            <div class="domain-card">
+                <div class="domain-num">2+</div>
+                <div class="domain-label">Mobile products</div>
+            </div>
+            <div class="domain-card">
+                <div class="domain-num">100+</div>
+                <div class="domain-label">Engineers led</div>
             </div>
         </div>
     </div>

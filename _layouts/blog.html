@@ -6,13 +6,14 @@ sitemap: false
 
 <section class="blog" id="blog">
     <div class="content">
-        <div class="title"><span>Blog</span></div>
+        <span class="section-tag">Writing</span>
+        <h1 class="blog-heading">Blog</h1>
         <div class="blog-list">
             {{ content }}
         </div>
     </div>
 </section>
 
-{% include about-contactme.html %}
+{% comment %}{% include about-contactme.html %}{% endcomment %}
 
 {% include footer.html %}

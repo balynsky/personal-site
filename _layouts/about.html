@@ -6,12 +6,37 @@ custom_schema: true
 
 <!-- Home Section Start -->
 <section class="home" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
     <div class="home-content">
-        <div class="text">
-            <div class="text-one">Hello,</div>
-            <div class="text-two">I'm {{ site.name }}</div>
-            <div class="text-three">{{ site.bio }}</div>
+        <div class="hero-eyebrow">Engineering Executive · Los Angeles, CA</div>
+        <div class="hero-name">{{ site.name }}</div>
+        <div class="hero-role">SVP of Engineering · Spin.AI</div>
+        <div class="hero-divider"></div>
+        <div class="hero-stats">
+            {% assign current_year = site.time | date: '%Y' | plus: 0 %}
+            {% assign years_exp = current_year | minus: site.career_start %}
+            <div class="hero-stat">
+                <span class="hero-stat-num">{{ years_exp }}+</span>
+                <span class="hero-stat-label">Years Experience</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-num">100+</span>
+                <span class="hero-stat-label">Engineers Led</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-num">7+</span>
+                <span class="hero-stat-label">Teams Managed</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-num">15+</span>
+                <span class="hero-stat-label">Solutions Shipped</span>
+            </div>
         </div>
+    </div>
+    <div class="hero-scroll">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
     </div>
 </section>
 
