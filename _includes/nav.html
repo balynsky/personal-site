@@ -16,8 +16,10 @@
             <li><a href="{{ site.url }}/#skills">Skills</a></li>
             {% comment %}<li><a href="{{ site.url }}/#services">Services</a></li>{% endcomment %}
             {% comment %}<li><a href="{{ site.url }}/#contact">Contact</a></li>{% endcomment %}
-            <li class="cancel-btn" role="presentation">
-                <i class="fas fa-times"></i>
+            <li aria-hidden="true">
+                <button class="cancel-btn" aria-label="Close navigation menu">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
             </li>
         </ul>
         <div class="media-icons">

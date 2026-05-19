@@ -1,3 +1,15 @@
+// Async-load non-critical stylesheets after initial render
+(function() {
+  function loadCSS(href) {
+    var l = document.createElement('link');
+    l.rel = 'stylesheet';
+    l.href = href;
+    document.head.appendChild(l);
+  }
+  loadCSS('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+  loadCSS('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+})();
+
 // Sticky nav + scroll-to-top
 let nav = document.querySelector("nav");
 let scrollBtn = document.querySelector(".scroll-button a");
