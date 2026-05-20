@@ -3,7 +3,7 @@ bio: Engineering Executive
 career_start: 2008
 
 # SEO settings
-title: Sergiy Balynsky - Engineering Executive, Cloud Security & SaaS Expert
+title: "Sergiy Balynsky · Engineering Executive"
 tagline: Engineering executive with roots in fintech, now scaling AI-powered cloud security
 description: Sergiy Balynsky is SVP of Engineering at Spin.AI — engineering executive with 18+ years building and scaling teams across cloud security, fintech, and enterprise SaaS. Started in banking software, now leading AI-powered security platforms. Based in Los Angeles, CA.
 locale: en_US
@@ -13,7 +13,8 @@ external-image: false
 picture: /assets/images/sergiy_main.webp
 
 # Social sharing image (for Twitter/LinkedIn cards)
-og_image: https://avatars2.githubusercontent.com/u/11942037
+og_image: https://www.balynsky.com/assets/images/sergiy_main.webp
+image: /assets/images/sergiy_main.webp
 
 # Twitter card settings
 twitter:
@@ -52,7 +53,7 @@ youtube: balynsky
 # spotify: myspotify
 github: balynsky
 # lastfm: mylastfm
-stackoverflow: 35450849/sergiy-balynsky
+# stackoverflow: 35450849/sergiy-balynsky
 # quora: userquora
 # reddit: username
 medium: balynsky
@@ -61,7 +62,7 @@ medium: balynsky
 email: mail@balynsky.com
 slideshare : SergeyBalynsky
 crunchbase: sergiy-balynsky
-habrahabr: balynsky
+# habrahabr: balynsky
 
 authors:
     balynsky:

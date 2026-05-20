@@ -1,0 +1,79 @@
+<!-- Gallery Section Start -->
+<section class="gallery" id="gallery">
+    <div class="gallery-row">
+        <div class="gallery-track">
+            <div class="gallery-item" data-src="/assets/images/gallery/rsac_2025.webp" data-caption="RSAC 2025 · San Francisco">
+                <img src="/assets/images/gallery/rsac_2025.webp" alt="RSAC 2025 Conference, San Francisco" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/assets/images/gallery/spin_la_office.webp" data-caption="Spin.AI · Los Angeles">
+                <img src="/assets/images/gallery/spin_la_office.webp" alt="Spin.AI team, Los Angeles office" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/assets/images/gallery/spin_la_team.webp" data-caption="Spin.AI team · LA office">
+                <img src="/assets/images/gallery/spin_la_team.webp" alt="Spin.AI full team, Los Angeles" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/assets/images/gallery/spin_office_team.webp" data-caption="Working session">
+                <img src="/assets/images/gallery/spin_office_team.webp" alt="Working session at Spin.AI office" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/assets/images/gallery/team_dinner.webp" data-caption="Team dinner">
+                <img src="/assets/images/gallery/team_dinner.webp" alt="Team dinner" loading="lazy">
+            </div>
+            <!-- duplicates for seamless loop -->
+            <div class="gallery-item gallery-item--clone" data-src="/assets/images/gallery/rsac_2025.webp" data-caption="RSAC 2025 · San Francisco" aria-hidden="true">
+                <img src="/assets/images/gallery/rsac_2025.webp" alt="RSAC 2025 Conference, San Francisco" loading="lazy">
+            </div>
+            <div class="gallery-item gallery-item--clone" data-src="/assets/images/gallery/spin_la_office.webp" data-caption="Spin.AI · Los Angeles" aria-hidden="true">
+                <img src="/assets/images/gallery/spin_la_office.webp" alt="Spin.AI team, Los Angeles office" loading="lazy">
+            </div>
+            <div class="gallery-item gallery-item--clone" data-src="/assets/images/gallery/spin_la_team.webp" data-caption="Spin.AI team · LA office" aria-hidden="true">
+                <img src="/assets/images/gallery/spin_la_team.webp" alt="Spin.AI full team, Los Angeles" loading="lazy">
+            </div>
+            <div class="gallery-item gallery-item--clone" data-src="/assets/images/gallery/spin_office_team.webp" data-caption="Working session" aria-hidden="true">
+                <img src="/assets/images/gallery/spin_office_team.webp" alt="Working session at Spin.AI office" loading="lazy">
+            </div>
+            <div class="gallery-item gallery-item--clone" data-src="/assets/images/gallery/team_dinner.webp" data-caption="Team dinner" aria-hidden="true">
+                <img src="/assets/images/gallery/team_dinner.webp" alt="Team dinner" loading="lazy">
+            </div>
+        </div>
+    </div>
+    <div class="gallery-row gallery-row--reverse">
+        <div class="gallery-track gallery-track--reverse">
+            <!-- clones first — so originals are on screen at animation start (-50%) -->
+            <div class="gallery-item gallery-item--clone" data-src="/assets/images/gallery/team_outdoor.webp" data-caption="Engineering team" aria-hidden="true">
+                <img src="/assets/images/gallery/team_outdoor.webp" alt="Engineering team outdoor event" loading="lazy">
+            </div>
+            <div class="gallery-item gallery-item--clone" data-src="/assets/images/gallery/team_art.webp" data-caption="Team building" aria-hidden="true">
+                <img src="/assets/images/gallery/team_art.webp" alt="Team building — art workshop" loading="lazy">
+            </div>
+            <div class="gallery-item gallery-item--clone" data-src="/assets/images/gallery/spinbackup_team.webp" data-caption="SpinBackup team" aria-hidden="true">
+                <img src="/assets/images/gallery/spinbackup_team.webp" alt="SpinBackup engineering team" loading="lazy">
+            </div>
+            <div class="gallery-item gallery-item--clone" data-src="/assets/images/gallery/spin_outdoor.webp" data-caption="Spin.AI offsite" aria-hidden="true">
+                <img src="/assets/images/gallery/spin_outdoor.webp" alt="Sergiy Balynsky at Spin.AI offsite" loading="lazy" style="object-position: center top">
+            </div>
+            <!-- originals second -->
+            <div class="gallery-item" data-src="/assets/images/gallery/team_outdoor.webp" data-caption="Engineering team">
+                <img src="/assets/images/gallery/team_outdoor.webp" alt="Engineering team outdoor event" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/assets/images/gallery/team_art.webp" data-caption="Team building">
+                <img src="/assets/images/gallery/team_art.webp" alt="Team building — art workshop" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/assets/images/gallery/spinbackup_team.webp" data-caption="SpinBackup team">
+                <img src="/assets/images/gallery/spinbackup_team.webp" alt="SpinBackup engineering team" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/assets/images/gallery/spin_outdoor.webp" data-caption="Spin.AI offsite">
+                <img src="/assets/images/gallery/spin_outdoor.webp" alt="Sergiy Balynsky at Spin.AI offsite" loading="lazy" style="object-position: center top">
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <div class="lightbox-backdrop"></div>
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous photo">&#8249;</button>
+    <button class="lightbox-next" aria-label="Next photo">&#8250;</button>
+    <div class="lightbox-content">
+        <img class="lightbox-img" src="" alt="">
+        <div class="lightbox-caption"></div>
+    </div>
+</div>

@@ -1,2 +1,6 @@
 User-agent: *
 Disallow: /blog/
+Disallow: /assets/images/gallery/
+
+User-agent: Googlebot-Image
+Disallow: /assets/images/gallery/
