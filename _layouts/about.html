@@ -19,13 +19,14 @@ image: /assets/images/sergiy_main.webp
         <div class="hero-stats">
             {% assign current_year = site.time | date: '%Y' | plus: 0 %}
             {% assign years_exp = current_year | minus: site.career_start %}
+            {% assign years_lead = current_year | minus: site.leadership_start %}
             <div class="hero-stat">
                 <span class="hero-stat-num">{{ years_exp }}+</span>
                 <span class="hero-stat-label">Years Experience</span>
             </div>
             <div class="hero-stat">
-                <span class="hero-stat-num">100+</span>
-                <span class="hero-stat-label">Engineers Led</span>
+                <span class="hero-stat-num">{{ years_lead }}+</span>
+                <span class="hero-stat-label">Years Leading Engineering</span>
             </div>
             <div class="hero-stat">
                 <span class="hero-stat-num">7+</span>
