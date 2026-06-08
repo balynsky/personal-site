@@ -33,8 +33,10 @@
                 <div class="domain-label">Mobile products</div>
             </div>
             <div class="domain-card">
-                <div class="domain-num">100+</div>
-                <div class="domain-label">Engineers led</div>
+                {% assign current_year = site.time | date: '%Y' | plus: 0 %}
+                {% assign years_lead = current_year | minus: site.leadership_start %}
+                <div class="domain-num">{{ years_lead }}+</div>
+                <div class="domain-label">Years leading engineering</div>
             </div>
         </div>
     </div>
