@@ -1,7 +1,7 @@
 ---
 title: "Disagree, Commit, and Revisit: What Happens When the Wrong Decision Wins"
 layout: post
-date: 2026-06-29 10:00
+date: 2026-05-04 10:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:

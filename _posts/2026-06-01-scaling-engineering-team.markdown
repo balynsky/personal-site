@@ -1,7 +1,7 @@
 ---
 title: "What Actually Breaks When You Triple Your Engineering Team"
 layout: post
-date: 2026-07-13 10:00
+date: 2026-06-01 10:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:

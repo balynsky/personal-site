@@ -1,7 +1,7 @@
 ---
 title: "How I Run Engineering at Spin.AI: Six Principles We Actually Follow"
 layout: post
-date: 2026-06-15 10:00
+date: 2026-04-06 10:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:

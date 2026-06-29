@@ -1,7 +1,7 @@
 ---
 title: "Engineering Decisions Show Up in Your NPS Score"
 layout: post
-date: 2026-07-27 10:00
+date: 2026-06-29 10:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:

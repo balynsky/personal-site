@@ -1,7 +1,7 @@
 ---
 title: "The Merge Problem That Led Us to Trunk-Based Development"
 layout: post
-date: 2026-06-22 10:00
+date: 2026-04-20 10:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:

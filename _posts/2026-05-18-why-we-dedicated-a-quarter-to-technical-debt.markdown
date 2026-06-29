@@ -1,7 +1,7 @@
 ---
 title: "Why We Dedicated a Full Quarter to Technical Debt"
 layout: post
-date: 2026-07-06 10:00
+date: 2026-05-18 10:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:

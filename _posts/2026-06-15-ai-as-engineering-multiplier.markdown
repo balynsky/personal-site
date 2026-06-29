@@ -1,7 +1,7 @@
 ---
 title: "AI as a Scalability Lever, Not a Headcount Substitute"
 layout: post
-date: 2026-07-20 10:00
+date: 2026-06-15 10:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
