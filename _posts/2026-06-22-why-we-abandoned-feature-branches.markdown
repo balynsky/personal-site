@@ -18,9 +18,9 @@ description: How a pattern of large pull requests led us to abandon feature bran
 
 For about a quarter, one of our engineering teams had a recurring problem. Pull requests were getting large — sometimes several hundred lines, occasionally more than a thousand. Code reviews were happening but taking longer than they should have. Merge conflicts were a regular source of friction. Release cycles felt sluggish in a way that was hard to pin down precisely.
 
-The obvious diagnosis was that engineers were batching work. So we did the obvious things: set informal size expectations for pull requests, added a step to the PR template asking authors to verify they'd broken changes into logical chunks, talked about it in sprint retrospectives.
+The obvious diagnosis was that engineers were batching work. So we did the obvious things: set informal size expectations for pull requests, added a step to the PR template asking authors to verify they'd broken changes into logical chunks, talked about it in retrospectives.
 
-Things improved for a sprint or two. Then drifted back.
+Things improved for a few weeks. Then drifted back.
 
 It took us longer than it should have to realize we were solving the wrong problem.
 
@@ -36,9 +36,9 @@ The problem wasn't the engineers. The problem was the branching model.
 
 ## What was actually happening
 
-One of the principles we run engineering on is that we investigate mistakes to find and eliminate root causes. The same principle applies to process problems: when a behavior pattern persists across personnel and sprints, the pattern is usually in the system, not the individuals.
+One of the principles we run engineering on is that we investigate mistakes to find and eliminate root causes. The same principle applies to process problems: when a behavior pattern persists across personnel and weeks of work, the pattern is usually in the system, not the individuals.
 
-The tell was this: we'd have a sprint where pull request size improved — usually right after we'd talked about it explicitly — followed by a sprint where it drifted back. When a behavior change doesn't hold, it's usually because the incentive structure that produced the original behavior hasn't changed. People are trying harder, but the system hasn't changed what "trying harder" produces.
+The tell was this: we'd have a few weeks where pull request size improved — usually right after we'd talked about it explicitly — followed by a stretch where it drifted back. When a behavior change doesn't hold, it's usually because the incentive structure that produced the original behavior hasn't changed. People are trying harder, but the system hasn't changed what "trying harder" produces.
 
 Once we framed it that way, the fix became clearer. We didn't need to change engineer behavior. We needed to change the system that was producing the behavior.
 

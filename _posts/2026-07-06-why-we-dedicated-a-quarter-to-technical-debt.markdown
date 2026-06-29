@@ -16,7 +16,7 @@ description: For years we deferred technical debt to keep moving. Then we stoppe
 
 For most of the company's early years, technical debt was a known quantity that nobody had time to address.
 
-This wasn't negligence. It was the rational response to the situation we were in. We were a cybersecurity company in a market that was still being defined — exploring product directions, testing different customer segments, shipping features to find out what actually mattered. In that environment, stopping to pay down technical debt feels like painting the walls while the foundation is being poured. There will always be a more important sprint.
+This wasn't negligence. It was the rational response to the situation we were in. We were a cybersecurity company in a market that was still being defined — exploring product directions, testing different customer segments, shipping features to find out what actually mattered. In that environment, stopping to pay down technical debt feels like painting the walls while the foundation is being poured. There will always be something more urgent in the queue.
 
 So we kept moving. The debt accumulated.
 
@@ -38,7 +38,7 @@ We'd just finished a planning cycle for the year, and one of the senior engineer
 
 The proposal was to take one quarter — a full three months — and stop new feature development almost entirely. No new capabilities, no new integrations. Just focused investment in the things that should have been built better the first time: test coverage, code quality, architectural cleanup, documentation.
 
-The business case wasn't complicated, but it required a certain kind of organizational maturity to accept. You're asking the business to give up a quarter of feature velocity in exchange for a quality improvement that will pay back over the following quarters. The payback is real, but it's not on the next sprint board. It requires trusting that the investment is worth making.
+The business case wasn't complicated, but it required a certain kind of organizational maturity to accept. You're asking the business to give up a quarter of feature velocity in exchange for a quality improvement that will pay back over the following quarters. The payback is real, but it won't show up on next week's board. It requires trusting that the investment is worth making.
 
 We made the case, and leadership agreed.
 
@@ -58,7 +58,7 @@ The results were clearer than I expected, and faster.
 
 Backend test coverage went from under 5% to over 20% — more than a 4x improvement in the space of one focused quarter plus the two that followed it. Code duplication dropped by nearly 75%. The parts of the codebase that had been the most friction-prone to modify became significantly more tractable.
 
-The most striking metric came in the year that followed: customer-reported bugs dropped to the lowest level in the company's history — down by roughly 80% compared to the prior year. Engineering velocity in the quarters after was meaningfully higher, because the same amount of work was producing fewer quality incidents and requiring less manual verification.
+The most striking metric came in the year that followed: customer-reported bugs dropped to the lowest level in the company's history — down by roughly 80% compared to the prior year. Engineering throughput in the quarters after was meaningfully higher, because the same amount of work was producing fewer quality incidents and requiring less manual verification.
 
 The debt quarter paid for itself within two quarters.
 
