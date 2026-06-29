@@ -34,7 +34,7 @@ Engineering quality isn't visible in the way a UI redesign is visible. Customers
 
 Every bug that reaches a customer is an engineering quality event. Every slow response to a reported issue is an engineering quality event. Every time a new feature ships and breaks something that used to work, that's an engineering quality event.
 
-When you're carrying significant technical debt, these events happen more often — not because engineers are less capable but because the codebase is harder to change safely. The changes that should be contained turn out to have unintended side effects. The bugs that testing should catch get through because the coverage is thin. The responses to customer-reported issues take longer because the team is juggling a support burden that better quality would have prevented.
+When you're carrying significant technical debt, these events happen more often — not because engineers are less capable but because the codebase is harder to change safely. The resolution speed matters as much as the frequency: on our team, 65% of live bugs are resolved within one day of being reported, and 95% within five days. Customers don't see those metrics directly, but they feel the difference between a team that moves fast on issues and one that doesn't. The changes that should be contained turn out to have unintended side effects. The bugs that testing should catch get through because the coverage is thin. The responses to customer-reported issues take longer because the team is juggling a support burden that better quality would have prevented.
 
 Customers experience all of this as product quality. They don't know or care that it's a consequence of accumulated technical debt. They know the product worked better or worse than they expected.
 

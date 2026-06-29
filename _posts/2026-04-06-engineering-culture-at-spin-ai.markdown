@@ -56,7 +56,9 @@ In many engineering cultures, admitting you're stuck is a subtle form of failure
 
 We work against this explicitly. The principle is: ask for help when you're stuck; help others when they ask. Neither half is optional.
 
-The second half matters as much as the first. I've worked with engineers who were quick to ask for help but slow to offer it — who treated knowledge as something to request rather than share. That's not the culture we build. When someone shares knowledge, they stay with it until the other person understands completely. That takes longer in the moment. It produces better engineers over time.
+The second half matters as much as the first. I've worked with engineers who were quick to ask for help but slow to offer it — who treated knowledge as something to request rather than share. That's not the culture we build. When someone shares knowledge, they stay with it until the other person understands completely.
+
+In practice, this shows up as roughly 25 internal knowledge-sharing sessions per year — not all-hands announcements, but working sessions where engineers teach what they've learned to the rest of the team. That number isn't a target we manage to; it's what happens when the norm is real. That takes longer in the moment. It produces better engineers over time.
 
 ## Disagree and Commit: The rules are different before and after
 
