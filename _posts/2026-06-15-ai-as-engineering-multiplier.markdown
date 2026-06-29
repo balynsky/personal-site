@@ -53,7 +53,7 @@ The structure we settled on maps AI to four phases of how engineering work actua
 
 **Inception** — AI drafts specs and proposals, engineers validate and revise. This is where context quality is most critical; a poorly specified document produces poorly specified code downstream.
 
-**Construction** — the highest-ROI phase. Multi-agent orchestration with human-in-the-loop for code generation, security review, and architecture review. A concrete example: we built an internal `/fix-stacktrace` agent that takes a production stack trace and produces a root-cause analysis, applies a patch, generates updated unit tests, and writes QA acceptance criteria — in one command, with a human approving each destructive step. The architecture is a coordinator plus four specialized sub-agents. Stack traces are treated as untrusted data; secrets are redacted before reaching any agent.
+**Construction** — the highest-ROI phase. Multi-agent orchestration with human-in-the-loop for code generation, security review, and architecture review. In practice this means multi-step workflows — root-cause analysis, patch generation, test updates, acceptance criteria — triggered by a single command, with a human approving each destructive step. The control model is consistent: agent proposes, engineer approves.
 
 **Operations** — AI assists root-cause analysis; humans lead incident response. The agent proposes, the engineer approves.
 
