@@ -48,13 +48,13 @@ What wasn't obvious was how to handle the conversation about it.
 
 ## The conversation that matters
 
-There's a version of this conversation that's corrosive: "I told you this would happen." Even when it's accurate, it establishes a pattern where being right becomes a social asset and being wrong becomes a liability. In that environment, people advocate harder for their positions than the evidence warrants because the cost of losing is high. That's the opposite of the culture we're trying to build.
+The corrosive version is "I told you this would happen" — accurate but counterproductive. It establishes a pattern where being right becomes a social asset and being wrong becomes a liability. People start advocating harder for their positions than the evidence warrants because losing is expensive. That's the opposite of the culture we're trying to build.
 
-There's also a version that's dishonest in the other direction: pretending the earlier disagreement didn't happen, treating the decision as if it were made in a vacuum rather than against specific objections that turned out to be correct.
+The dishonest version pretends the earlier disagreement didn't happen — treats the decision as if it were made in a vacuum rather than against specific objections that turned out to be correct.
 
 The conversation we had was a third version. I went to the engineer directly, acknowledged that her original concern had been right, and asked her to lead the architecture work for the event-driven implementation. Not as a consolation prize — because she'd already done the reasoning about the problem we were solving, and her mental model was the most accurate one we had.
 
-I also wanted to be explicit about what the original decision cost: not to relitigate it, but because treating "we were wrong" as a costless fact obscures the actual lesson. The migration was expensive. Customers experienced something we'd said wouldn't be an issue for a while. Both of those are real consequences worth acknowledging clearly.
+I also named what the original decision cost — not to relitigate it, but because glossing over it would have obscured the actual lesson. The migration was expensive. Customers experienced something we'd said wouldn't be an issue for a while. Both of those are real consequences worth acknowledging clearly.
 
 ## What we changed in the decision process
 
@@ -62,7 +62,7 @@ The root cause wasn't that the original call was wrong. Wrong calls happen. The 
 
 In the design session, we'd implicitly committed to a belief: that detection latency wouldn't be a meaningful customer complaint at the scales we were targeting, not for a while. That belief was falsifiable. We didn't write it down as something to test.
 
-After this, we added a simple practice to architecture decisions: explicit, dated assumptions. When we make a call that involves a tradeoff, we write down the assumptions that make that tradeoff acceptable — "customers at X scale won't surface Y as critical feedback before we can add Z" — and when to revisit them. It sounds bureaucratic. In practice it takes a few minutes and creates a structured way to notice when the world has changed.
+After this, we added a simple practice to architecture decisions: explicit, dated assumptions. When we make a call that involves a tradeoff, we write down the assumptions that make that tradeoff acceptable — "customers at X scale won't surface Y as critical feedback before we can add Z" — and when to revisit them. It takes a few minutes per decision and gives you a structured way to notice when your assumptions no longer hold.
 
 The senior engineer's original objection was essentially an assumption about customer behavior at scale. If we'd written it down at the time — even as "we believe X, she believes Y, we're committing to X, revisit when customer base reaches N" — we'd have caught the feedback signal earlier and framed the revisit as scheduled rather than remedial.
 
@@ -76,4 +76,4 @@ That's hard. The engineer who disagrees has an incentive to bring it up early as
 
 What I've found works: when a revisit is warranted, do it explicitly and early. Don't let the evidence accumulate until the original decision looks obviously wrong. Name the revisit as a revisit, not as damage control. And when someone was right to disagree, say so directly — not as a conclusion of a post-mortem but as a normal acknowledgment of how the decision process worked.
 
-The goal isn't to make committing feel safe for people who are wrong. It's to make it feel safe for people who are right.
+The point isn't to protect bad decisions. It's to make it safe to commit to a decision you think is wrong — and say so clearly when it turns out to be.

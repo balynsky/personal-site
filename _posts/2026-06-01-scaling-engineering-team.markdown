@@ -28,7 +28,7 @@ This doesn't scale. The moment the team grows beyond what can fit in one room, t
 
 **Around fifteen to twenty-five**, the thing that breaks is decision clarity. When you had a dozen engineers, you could hold all the relevant context for most decisions in your head. Further along, the surface area of decisions has grown but your bandwidth hasn't. Decisions start taking longer, or they get made informally by whoever has the most context and the rest of the team learns about it after the fact.
 
-This is the stage where most teams paper over the problem by adding process — more meetings, more documents, more approvals. The right answer is something different: defining explicitly what kind of decisions belong to whom, and trusting people to make them. The meetings and documents are often a symptom of not trusting the decision-makers you have, which is a hiring and culture problem, not a process problem.
+This is the stage where most teams paper over the problem by adding process — more meetings, more documents, more approvals. The fix is deciding explicitly who owns which decisions, then trusting them to make them. Adding meetings and documents is usually a symptom of not trusting the decision-makers you have — which is a hiring and culture problem, not a process problem.
 
 **Beyond twenty-five**, the thing that breaks is culture transmission. The people who absorbed the culture by osmosis in the early days can't transmit it to ten new engineers just by example. The mental models that were obvious to the founding engineering team are not obvious to someone who joined eighteen months later and only knows the team as it is now, not as it was.
 
@@ -40,7 +40,7 @@ At our current scale, we see roughly one offer for every sixty candidates who ap
 
 I think about those two numbers a lot. The first one is a function of standards — we're looking for something specific and most applicants don't fit it. The second one is a function of reputation. When someone gets to the end of our process and sees what the team actually looks like — the quality of the work, the ownership model, how decisions get made — they want to be part of it.
 
-The only way to keep that second number high as you scale is to not compromise on what made it high in the first place. Every team that grows quickly has to choose, usually implicitly, between maintaining hiring standards and filling roles on schedule. The teams that compromise on standards to hit headcount targets end up with a culture dilution problem that is much harder to fix than an understaffing problem.
+The only way to keep that second number high as you scale is to not compromise on what made it high in the first place. Every team that grows quickly has to choose, usually implicitly, between maintaining hiring standards and filling roles on schedule. When you compromise on standards to hit headcount targets, you trade an understaffing problem for a culture dilution problem. The second one is much harder to fix.
 
 We've stayed at six percent engineering turnover through three years of growth. I don't attribute that to compensation. I attribute it to engineers feeling like the work is genuinely theirs — that they own something real, understand how it connects to the product, and have the authority to make meaningful decisions about it.
 
@@ -58,6 +58,6 @@ Three things that survived the growth intact because we rebuilt them deliberatel
 
 The conventional advice for scaling an engineering team focuses on process: planning cadence, on-call rotations, deployment workflows. All of that matters. But process isn't what makes this hard.
 
-Every time you add engineers, the culture you had at the previous size has to be actively reconstructed at the new size. It doesn't transfer automatically. The team you have at 46 is not the team you had at 11+ with four times the people added. It's a different team that needs to deliberately build what the small team had organically.
+Every time you add engineers, the culture has to be actively reconstructed. It doesn't transfer automatically — and the new engineers don't know what they're missing.
 
 The engineers who have been there since the beginning are culture carriers. But culture carriers can only do so much at scale. At some point the culture has to live in the structures and the written agreements and the norms that are visible to someone joining on their first day. The engineer who joined six months ago knows the team as it is now. They need the structures to tell them why.

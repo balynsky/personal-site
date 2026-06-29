@@ -15,7 +15,7 @@ sitemap: false
 description: How a flat QA team more than tripled test coverage in three years — by investing in automation infrastructure rather than headcount
 ---
 
-The quality problem in most growing engineering teams looks the same: the product surface keeps expanding, bugs keep slipping through, and the instinct is to hire more QA engineers. We tried something different.
+Our product surface kept expanding, bugs kept slipping through, and the obvious answer was to hire more QA engineers. We didn't.
 
 For roughly four years, our QA team's headcount stayed flat while the product it covered kept growing. What changed over that time was everything else: coverage, tooling, automation depth, and ultimately the role the QA function plays in the engineering org.
 
@@ -23,9 +23,9 @@ For roughly four years, our QA team's headcount stayed flat while the product it
 
 When I inherited this team, test coverage across our product integrations was uneven to put it charitably. Some areas were well-covered; others had virtually no automated tests at all. The QA team was doing valuable manual work but it wasn't compounding — each release cycle required roughly the same manual effort as the last one.
 
-That's the tell. Quality work that doesn't compound means you're spending budget on detection rather than prevention, and you're capped by how fast people can click through test cases.
+Quality work that doesn't compound means you're paying people to find bugs rather than prevent them, and you're capped by how fast people can click through test cases.
 
-The other tell: no clear ownership split between automation and manual testing. Both were happening, but without specialization, neither was done as well as it could be.
+The second problem was structural: no clear split between automation and manual testing. Both were happening, but without specialization, neither was done as well as it could be.
 
 ## What we changed
 
@@ -65,9 +65,9 @@ That shift required different skills and, honestly, different people in some rol
 
 Quality infrastructure doesn't scale linearly — it compounds. An automated test suite that existed three years ago is worth more today than when it was written, because it's been running every night across a codebase that's grown significantly since.
 
-The ROI looks bad early. You're spending engineering time writing tests instead of building features. Four years later you're shipping faster on the same headcount, and nobody is asking whether the quality investment was worth it.
+The ROI looks bad early. You're spending engineering time writing tests instead of building features. Four years later you're shipping faster on the same headcount.
 
-Teams that treat testing as overhead find out what the alternative feels like when they try to move fast in a codebase with no safety net. That debt compounds too.
+We found out what that feels like in the years before the investment. The debt compounds exactly the way the good stuff does.
 
 ---
 

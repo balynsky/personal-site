@@ -28,7 +28,7 @@ The more visible signal was quality. Customer-reported bugs were at a level that
 
 The other signal was engineer experience. When you ask engineers where they lose the most time, they'll tell you. The answers were consistent: areas of the codebase with poor test coverage meant changes required manual verification loops. Duplicated code meant the same fix had to be applied in multiple places. The accumulation of small architectural shortcuts created invisible coupling that made seemingly simple changes more complicated than they should have been.
 
-None of this was a crisis. It never is, until one day the accumulation becomes visible. What you notice first is that engineers are slower than they should be and nobody can explain exactly why.
+Engineers are slower than they should be, and the reason isn't obvious until you look at the codebase.
 
 ## The decision
 
@@ -43,8 +43,6 @@ The business case wasn't complicated, but it required a certain kind of organiza
 We made the case, and leadership agreed.
 
 ## What a debt quarter actually looks like
-
-The work is less glamorous than it sounds.
 
 There's no single dramatic fix. It's a sustained sequence of unglamorous improvements — adding tests for code paths that have never had them, identifying and eliminating duplicated logic, documenting the implicit assumptions that exist only in the heads of engineers who've been around long enough to know them. It's work that engineers often find genuinely satisfying once they're doing it, because it's the kind of thing that always gets bumped by "more urgent" priorities. But it doesn't produce a feature announcement or a release note.
 
@@ -62,7 +60,7 @@ The most striking metric came in the year that followed: customer-reported bugs 
 
 The debt quarter paid for itself within two quarters.
 
-## What I'd tell someone making this case
+## Making the case to leadership
 
 The hardest part of this argument isn't the logic — it's the trust it requires. You're asking an organization to accept reduced feature output in the near term for a quality payoff that will show up in metrics that most stakeholders don't track closely.
 
@@ -72,8 +70,8 @@ A few things that helped us make the case:
 
 **Commit to measurable targets.** "We're going to improve code quality" is not a plan. "We're going to increase test coverage from X to Y and reduce duplication by Z" is a plan.
 
-**Protect it completely or don't do it at all.** A half-dedicated debt quarter is worse than no debt quarter, because it creates the impression that the work was done without producing the actual results. If the organization isn't willing to protect the full quarter, the ROI math doesn't work.
+**Protect the quarter fully.** A debt quarter that gets interrupted by "just one urgent feature" produces the impression of progress without the results. If the organization can't commit to protecting the full quarter, the ROI math doesn't work.
 
 The lesson we took from it wasn't just that technical debt quarters are valuable. It was that we should never have needed a full quarter in the first place. The right model is continuous investment — a consistent percentage of capacity dedicated to quality work in every quarter, rather than deferring until the accumulation demands a dedicated response.
 
-We were fast because we had to be. Eventually fast and good stop being in tension. We just took longer to find out than we needed to.
+We stayed fast by deferring quality until we couldn't anymore. It cost more than it would have to just build the quality in from the start.

@@ -14,17 +14,17 @@ sitemap: false
 description: What we learned from a year of structured AI adoption — real multipliers by task type, how we chose our tools, and why the bottleneck moved from writing code to reviewing it
 ---
 
-Most engineering teams have adopted AI tooling in some form by now. What most haven't done is think carefully about the organizational framing — what AI adoption means for how the team is structured, how work is measured, and what "engineering capacity" actually means when most of your team uses AI assistance daily.
+We've spent the last year and a half figuring out what AI tooling actually changes about how an engineering team operates — not which tools to use, but what it means for how the team is structured, how work gets measured, and what "engineering capacity" means when most of your team uses AI assistance daily.
 
-We went through this deliberately over the past year and a half. What I want to write down is not which tools we chose — those details will be obsolete faster than I can publish this. What I want to write down is how we thought about it organizationally, what the numbers actually looked like, and what surprised us.
+What I want to write down is not the tool selection — those details go stale fast. It's the organizational thinking, the real numbers, and what surprised us.
 
-## The wrong framing: AI as headcount reduction
+## Why headcount reduction is the wrong goal
 
 The first instinct many engineering leaders have is cost reduction. If an engineer can produce twice as much with AI assistance, can you do the same work with half the engineers?
 
 This framing misunderstands what actually constrained your engineering output in the first place.
 
-In most engineering organizations, raw code-writing speed is not the bottleneck. The bottleneck is understanding what to build, deciding how to build it, reviewing output carefully enough that it doesn't create downstream problems, and integrating it safely with everything else that exists. AI helps with one part of that chain — translating a clear specification into working code — while leaving the harder parts untouched or more demanding.
+In most engineering organizations, raw code-writing speed is not the bottleneck. The bottleneck is understanding what to build, deciding how to build it, reviewing output carefully enough that it doesn't create downstream problems, and integrating it safely with everything else that exists. AI handles one part of that chain — translating a clear spec into working code. Everything else stays on the engineer, and some of it gets harder.
 
 If you use AI to reduce headcount while keeping the same output targets, you end up with engineers producing code faster than they can review it, understand it, or maintain it. The long-term cost of that trade is not on next week's board.
 
@@ -55,7 +55,7 @@ The structure we settled on maps AI to four phases of how engineering work actua
 
 **Construction** — the highest-ROI phase. Multi-agent orchestration with human-in-the-loop for code generation, security review, and architecture review. In practice this means multi-step workflows — root-cause analysis, patch generation, test updates, acceptance criteria — triggered by a single command, with a human approving each destructive step. The control model is consistent: agent proposes, engineer approves.
 
-**Operations** — AI assists root-cause analysis; humans lead incident response. The agent proposes, the engineer approves.
+**Operations** — AI assists root-cause analysis; humans lead incident response.
 
 **Reflection** — lessons captured manually, skills and agents updated as patterns emerge. This is the phase we've invested in least and where we see the most room to improve.
 
@@ -99,4 +99,4 @@ I expected engineers to feel less ownership over AI-assisted code — that they'
 
 This didn't happen, at least not on our team. The reason: if your name is on the PR, you own the code in it, regardless of how it was produced. That framing kept the ownership culture intact.
 
-The engineers who use AI most effectively are not the ones who use it most. They're the ones who are most deliberate about when to use it and when not to — who know that "plausible-looking" and "correct" are different things, and that distinguishing them is still a human job.
+The engineers getting the most out of AI on our team aren't the ones using it most. They're the ones who know when not to — who've learned that "plausible-looking" and "correct" aren't the same thing.

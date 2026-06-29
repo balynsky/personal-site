@@ -58,7 +58,7 @@ We work against this explicitly. The principle is: ask for help when you're stuc
 
 The second half matters as much as the first. I've worked with engineers who were quick to ask for help but slow to offer it — who treated knowledge as something to request rather than share. That's not the culture we build. When someone shares knowledge, they stay with it until the other person understands completely.
 
-In practice, this shows up as roughly 25 internal knowledge-sharing sessions per year — not all-hands announcements, but working sessions where engineers teach what they've learned to the rest of the team. That number isn't a target we manage to; it's what happens when the norm is real. That takes longer in the moment. It produces better engineers over time.
+That norm shows up in the numbers: roughly 25 internal knowledge-sharing sessions per year — not all-hands announcements, but working sessions where engineers teach what they've learned to the rest of the team. That's not a target we manage to; it's what happens when the expectation is real. It takes longer in the moment. It produces better engineers over time.
 
 ## Disagree and Commit: The rules are different before and after
 
@@ -82,6 +82,6 @@ Transparency also applies to decisions made above the team level. When something
 
 ---
 
-The friction is the test. Any principle that never costs you anything isn't actually being followed.
+Any principle that never costs you anything isn't actually being followed.
 
 The next two posts in this series go into specific situations where these principles got tested: a branching strategy problem that led us to trunk-based development, and an architectural decision we made too quickly and had to revisit.

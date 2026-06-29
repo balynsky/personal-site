@@ -50,7 +50,7 @@ When we went from 30 to 38 — the year after the technical debt quarter — the
 
 The business case for technical debt reduction is usually made in engineering terms: throughput will increase, bugs will decrease, onboarding will be faster. These are all true and none of them are particularly compelling to a business stakeholder who is looking at a quarter where the engineering team will ship no new features.
 
-NPS changes this. NPS is a business metric. If you can show a leadership team that the quarters where engineering invested in quality produced the largest NPS gains — and that NPS gains preceded revenue retention improvements — you've converted a cost-of-engineering conversation into a revenue conversation.
+NPS changes this. NPS changes this. If you can show leadership that the quarters where engineering invested in quality produced the largest NPS gains — and that NPS movement preceded revenue retention improvements — quality stops being a cost discussion and starts being a revenue one.
 
 NPS is also driven by product, support, pricing, and market dynamics — I'm not claiming sole causation. But the correlation between engineering quality investments and NPS movement is strong enough that I treat it as evidence, not coincidence.
 
@@ -60,10 +60,10 @@ The question that changed for me: when I'm making the case for a debt reduction 
 
 There's a version of this pattern that runs in the opposite direction, and it's worth naming.
 
-If engineering quality degrades consistently — if debt accumulates, coverage stays thin, incident rate climbs — the NPS impact doesn't arrive as a dramatic event. It arrives as a slow drift in the wrong direction. Customers who would have become advocates don't. Renewals that should have been easy become conversations. Churn creeps up in ways that are easy to attribute to other causes.
+If engineering quality degrades consistently — if debt accumulates, coverage stays thin, incident rate climbs — the NPS impact doesn't arrive as a dramatic event. It shows up as customers who should have become advocates staying neutral, and renewals that should have been easy becoming conversations. Churn creeps up in ways that are easy to attribute to other causes.
 
 By the time the NPS number makes the problem obvious, the debt that caused it has been accumulating for years. Fixing it requires the kind of dedicated investment that feels enormous precisely because it was deferred so long.
 
-The argument for continuous quality investment — a consistent allocation of engineering capacity to debt reduction and quality work in every quarter — is that it prevents the compounding. You never get to the point where a full quarter of feature freeze is the only way to recover. You trade small, regular investment for a large, disruptive one.
+The argument for investing in quality every quarter — not just when the debt demands a full dedicated sprint — is that it prevents the compounding. You never get to the point where a full quarter of feature freeze is the only way to recover. You trade small, regular investment for a large, disruptive one.
 
-We caught the debt before it became a crisis, fixed it in one quarter, and watched the NPS respond. One quarter of deliberate investment paid back in customer confidence that had been quietly eroding for years.
+We caught the debt before it became a crisis, fixed it in one quarter, and watched the NPS respond.

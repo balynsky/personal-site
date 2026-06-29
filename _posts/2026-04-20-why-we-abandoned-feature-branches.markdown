@@ -42,7 +42,7 @@ The tell was this: we'd have a few weeks where pull request size improved — us
 
 Once we framed it that way, the fix became clearer. We didn't need to change engineer behavior. We needed to change the system that was producing the behavior.
 
-Feature branches create a structural incentive to accumulate work. The longer you stay on the branch, the more you drift from main, the larger the eventual merge, the harder the review, the higher the integration risk.
+Feature branches reward batching. The longer you stay on the branch, the further you drift from main — and the more expensive the eventual merge becomes.
 
 ## What trunk-based development changed
 
@@ -66,7 +66,7 @@ The review experience changed substantially. Pull requests representing one day 
 
 Merge conflicts essentially disappeared. When branches don't live long enough to accumulate drift from trunk, there's nothing to conflict with.
 
-## What I'd tell someone diagnosing this problem
+## What to look for earlier
 
 The change is easy to describe. Diagnosing that you need it — that took us a quarter.
 
@@ -74,4 +74,4 @@ We spent roughly a quarter trying to fix engineer behavior before we realized th
 
 The connection to how we handle mistakes on my team is direct. We don't punish for mistakes, but we make sure they don't happen again — and making sure means asking what changed in the *process* to make the mistake unlikely, not just what changed in the *people*. We were applying that principle to code quality and security incidents without applying it to our own development process. Once we applied it to our own process, the branching model was the obvious culprit.
 
-Trunk-based development was the structural answer to a structural problem. The large pull requests stopped not because engineers tried harder but because the branching model stopped rewarding batching.
+The large PRs stopped when the branching model stopped rewarding batching.

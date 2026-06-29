@@ -26,7 +26,7 @@ What's harder to see from the management layer: how often does this person unblo
 
 These things matter enormously for team performance. An engineer who is individually excellent but creates friction for everyone around them can cost the team more than they contribute. An engineer who isn't the strongest individual contributor but has become the person everyone turns to when they're confused might be worth more to the team's throughput than their output metrics suggest.
 
-Top-down reviews systematically miss this. Not because managers are inattentive, but because the visibility simply isn't there.
+Top-down reviews systematically miss this. Managers can't see what they're not in the room for.
 
 ## What 360 input adds
 
@@ -36,7 +36,7 @@ First, the signal set expands. You now have data on how the person operates acro
 
 Second — and this is the part most people underestimate — it changes how people think about their own role. If you know your performance review includes input from the people you work alongside every day, you naturally pay more attention to those relationships. The implicit signal of "this relationship counts" shapes behavior over time.
 
-360 reviews are only as useful as the quality of the input they gather and the seriousness with which feedback is given and received.
+360 reviews are only as useful as the quality of the input they gather and how seriously people give and take feedback.
 
 ## The honesty problem
 
@@ -50,7 +50,7 @@ On our team, the norm is that mistakes don't get penalized — they get examined
 
 We track engineering turnover carefully. Ours has consistently run well below industry norms — at roughly 6%, compared to a technology sector average that often sits above 20%.
 
-I don't attribute this entirely to the review process. Culture, compensation, the nature of the work, management quality — all of these contribute. But I do think a review system that's perceived as fair and that actually surfaces the contributions people care about making correlates with retention.
+The review process is one piece of it — culture, compensation, and management quality all contribute. But a review system that surfaces the contributions people actually care about making does affect whether they stay.
 
 When engineers feel that their growth and their impact on the team are being seen, they're less likely to go looking for an environment where they will be. When they trust that the feedback they give peers will be used constructively rather than weaponized, they invest more in those relationships.
 
