@@ -1,7 +1,7 @@
 <!-- Press & Mentions Section Start -->
 <section class="press" id="press">
     <div class="content">
-        <span class="section-tag">Press &amp; Mentions</span>
+        <span class="section-tag">Press, Mentions &amp; Articles</span>
         <h2 class="press-heading">In the press.</h2>
         <div class="press-grid reveal">
             <a class="press-card" href="https://cybernews.com/privacy/eight-sleep-pods-go-haywire-during-aws-outage/" target="_blank" rel="noopener noreferrer">
@@ -19,6 +19,20 @@
                 <div class="press-quote">"Building secure, reliable, and scalable SaaS security solutions requires continuous investment and a relentless focus on quality."</div>
                 <div class="press-meta">5&times; Winner — March 2026</div>
             </a>
+        </div>
+        <div class="articles-list reveal">
+            <h3 class="articles-heading">Recent Writing</h3>
+            <ul class="articles-rows">
+                {% for post in site.posts limit:5 %}
+                <li class="articles-row">
+                    <a href="{{ site.url }}{{ post.url }}">
+                        <span class="articles-date">{{ post.date | date: "%b %-d" }}</span>
+                        <span class="articles-title">{{ post.title }}</span>
+                        <span class="articles-arrow">→</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </section>
