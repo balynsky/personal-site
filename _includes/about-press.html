@@ -23,7 +23,7 @@
         <div class="articles-list reveal">
             <h3 class="articles-heading">Recent Writing</h3>
             <ul class="articles-rows">
-                {% for post in site.posts limit:5 %}
+                {% for post in site.posts limit:3 %}
                 <li class="articles-row">
                     <a href="{{ site.url }}{{ post.url }}">
                         <span class="articles-date">{{ post.date | date: "%b %-d" }}</span>
