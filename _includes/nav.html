@@ -53,10 +53,16 @@
             {% endif %}
 
             {% if site.github %}
-            <a class="link" data-title="github.com/{{ site.github }}" href="https://github.com/{{ site.github }}"
-               target="_blank" rel="me noopener noreferrer" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
+            <span class="github-popover-wrapper">
+                <a class="link" data-title="github.com/{{ site.github }}" href="https://github.com/{{ site.github }}"
+                   target="_blank" rel="me noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <span class="github-popover">
+                    <span class="github-popover-title">Active on GitHub</span>
+                    <img src="https://ghchart.rshah.org/{{ site.github }}" alt="GitHub contributions for {{ site.github }}" loading="lazy">
+                </span>
+            </span>
             {% endif %}
 
             {% if site.stackoverflow %}
