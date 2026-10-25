@@ -222,18 +222,6 @@ nav .menu-btn,
   background: var(--navy);
   flex-shrink: 0;
 }
-.hero-photo {
-  display: block;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 24px;
-  border: 3px solid var(--bg);
-  box-shadow: var(--shadow);
-  opacity: 0;
-  animation: fadeUp 0.7s ease 0.15s forwards;
-}
 .hero-name {
   font-size: clamp(52px, 6.5vw, 92px);
   font-weight: 600;
@@ -1318,7 +1306,6 @@ footer .text svg { width: 14px; height: 14px; fill: currentColor; }
   nav .navbar .media-icons { display: none; }
   nav .menu-btn,
   .navbar .menu .cancel-btn { display: block; }
-  .hero-photo { width: 120px; height: 120px; }
   .hero-name { font-size: clamp(40px, 11vw, 64px); }
   .hero-stats { flex-direction: column; gap: 0; width: 100%; border-radius: var(--radius); }
   .hero-stat { padding: 14px 20px; }
